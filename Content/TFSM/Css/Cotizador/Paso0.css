@@ -1,0 +1,474 @@
+﻿/*Fondo de pantalla y sus propiedades*/
+.main-container {
+    margin: 4% 0% 1% 0%;
+    padding: 2% 0% 0% 0%;
+}
+
+.ImageBackground {
+    background: url('../../Images/Paso0/Background0.png') no-repeat;
+}
+
+.ImageBackgroundStyle {
+    margin: 0;
+    background-position: bottom center !important;
+    background-size: 100% !important;
+    max-width: 100%;
+    height: auto;
+}
+
+/******Header******/
+
+/*Relleno necesario para comenzar el header*/
+.Margentop {
+    padding-left: 0;
+    padding-right: 0;
+    align-self: center;
+}
+
+/*Propiedades del Titulo*/
+.Titulo {
+    font-size: large;
+    margin-bottom: 0;
+}
+
+/*Propiedades del Subtitulo*/
+.Subtitulo {
+    font-size: smaller;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+/******Body******/
+
+.PaddingHeight {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+/*Propiedades del Párrafo*/
+.Parrafo {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 39%;
+    color: #707070;
+}
+
+/*Estilos del botón comenzar*/
+.BotonComenzar {
+    margin-top: 0;
+    padding-left: 2.8rem;
+    padding-right: 2.8rem;
+    color: white;
+    background-color: #C91C1C;
+    border: none;
+    font-weight: 700;
+    font-size: 0.5rem;
+}
+
+/*Propiedades y posición de la imagen del tipo de plan*/
+.Centrado_Bottom {
+    align-self: flex-end;
+    text-align: center;
+}
+
+.ImgPlan {
+    max-width: 53%;
+    height: auto;
+}
+
+/****Estilos de los circulos con números del footer del cotizador****/
+
+/*Propiedades de los círculos grises*/
+span.gris {
+    font-size: 1rem;
+    background: white;
+    border-radius: 1em;
+    color: #A3A3A3 !important;
+    display: inline-block;
+    text-align: center;
+    width: 1.7em;
+    height: 1.7em;
+    border: 1.5px solid #C6C6C6;
+}
+
+/*Propiedades de los círculos rojos*/
+span.rojo {
+    font-size: 1rem;
+    background: #C91C1C;
+    border-radius: 1em;
+    color: white !important;
+    display: inline-block;
+    text-align: center;
+    width: 1.7em;
+    height: 1.7em;
+    border: 1.5px solid #C91C1C;
+}
+
+/*Propiedades de los círculos activos*/
+span.activo {
+    font-size: 1rem;
+    background: #C91C1C;
+    border-radius: 1em;
+    color: white !important;
+    display: inline-block;
+    text-align: center;
+    width: 1.9em;
+    height: 1.9em;
+    border: 3.5px solid white;
+    border-style: double;
+}
+
+/*Margenes y relleno de la tabla para los números*/
+.MargenNumeros {
+    margin: 0;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
+}
+
+/*Estilos para los espacios entre la tabla de los números y la linea centrada*/
+.divided {
+    display: flex;
+    align-items: center;
+}
+
+/*Estilos para los espacios entre los numeros y las propiedades de la línea*/
+.divider {
+    flex-grow: 1;
+    border-bottom: 1px solid #707070;
+    margin: 0px;
+}
+
+    .divider.siguiente { /*Linea roja*/
+        border-bottom: 1px solid #C91C1C;
+    }
+
+    .divider.plan { /*Sin linea*/
+        flex-grow: .5;
+        border-bottom: 0px;
+    }
+
+#outerContainer #mainContainer div.toolbar {
+    display: none !important; /* hide PDF viewer toolbar */
+}
+
+/******Inicio de la responsividad******/
+
+@media (min-width: 360px) {
+    .main-container {
+        margin: 19% 0% 1% 0%;
+    }
+
+    .Titulo {
+        font-size: large;
+    }
+
+    .Subtitulo {
+        font-size: smaller;
+        margin-top: 0rem;
+    }
+
+    .Parrafo {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .BotonComenzar {
+        margin-top: 1rem;
+        margin-bottom: 0rem;
+    }
+
+    .MargenNumeros {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    span.gris, span.rojo, span.activo {
+        font-size: larger;
+    }
+}
+
+@media (min-width: 411px) {
+    .main-container {
+        margin: 17% 0% 1% 0%;
+    }
+
+    .Titulo {
+        font-size: small;
+    }
+
+    .Subtitulo {
+        font-size: x-small;
+    }
+
+    .Parrafo {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+
+    .BotonComenzar {
+        margin-top: 2rem;
+    }
+
+    .MargenNumeros {
+        padding-left: 2.5em;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (min-width: 568px) {
+    .main-container {
+        margin: 23% 0% 1% 0%;
+    }
+
+    .Titulo {
+        font-size: large;
+    }
+
+    .Subtitulo {
+        margin-top: 0rem;
+        font-size: smaller;
+    }
+
+    .Parrafo {
+        margin-left: 8rem;
+        margin-right: 8rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 44%;
+    }
+
+    .BotonComenzar {
+        margin-top: 3rem;
+    }
+
+    .MargenNumeros {
+        padding-left: 4.3em;
+        padding-right: 4.3rem;
+    }
+
+    span.gris, span.rojo, span.activo {
+        font-size: large;
+    }
+}
+
+@media (min-width: 640px) {
+    .main-container {
+        margin: 30% 0% 1% 0%;
+    }
+
+    .Titulo {
+        font-size: medium;
+    }
+
+    .Subtitulo {
+        margin-top: 0rem;
+        font-size: small;
+    }
+
+    .Parrafo {
+        margin-left: 7rem;
+        margin-right: 7rem;
+    }
+
+    .MargenNumeros {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (min-width: 731px) {
+    .main-container {
+        margin: 30% 0% 1% 0%;
+    }
+
+    .Subtitulo {
+        margin-top: 0rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        margin: 17% 0% 1% 0%;
+    }
+
+    .Titulo {
+        font-size: x-large;
+    }
+
+    .Subtitulo {
+        margin-top: 0;
+        font-size: large;
+    }
+
+    .Parrafo {
+        margin-left: 11.5rem;
+        margin-right: 11.5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+        font-size: xx-small;
+    }
+
+    .BotonComenzar {
+        margin-top: 6rem;
+        font-size: smaller;
+    }
+
+    .MargenNumeros {
+        padding-left: 5.5rem;
+        padding-right: 5.5rem;
+    }
+
+    span.gris, span.rojo, span.activo {
+        font-size: x-large;
+    }
+}
+
+@media (min-width: 823px) {
+    .main-container {
+        margin: 17% 0% 1% 0%;
+    }
+
+    .Parrafo {
+        margin-left: 11.5rem;
+        margin-right: 11.5rem;
+    }
+
+    .MargenNumeros {
+        padding-left: 5.8rem;
+        padding-right: 5.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-container {
+        margin: 5% 0% 1% 0%;
+    }
+
+    .ImageBackgroundStyle {
+        height: 31rem;
+    }
+
+    .Titulo {
+        font-size: xx-large;
+    }
+
+    .Subtitulo {
+        font-size: x-large;
+    }
+
+    .Parrafo {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        font-size: xx-small;
+    }
+
+    .BotonComenzar {
+        margin-top: 9rem;
+        font-size: medium;
+    }
+
+    span.gris, span.rojo, span.activo {
+        font-size: xx-large;
+    }
+
+    .MargenNumeros {
+        padding-top: 2.3rem;
+        padding-bottom: 2.3rem;
+        padding-left: 8em;
+        padding-right: 8rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-container {
+        margin: 5% 0% 1% 0%;
+    }
+
+    .Titulo {
+        font-size: 234%;
+    }
+
+    .Subtitulo {
+        font-size: 174%;
+    }
+
+    .Parrafo {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        font-size: x-small;
+    }
+
+    .BotonComenzar {
+        margin-top: 8rem;
+        font-size: larger;
+    }
+
+    span.gris, span.rojo, span.activo {
+        font-size: xx-large;
+    }
+
+    .MargenNumeros {
+        padding-top: 2.3rem;
+        padding-bottom: 2.3rem;
+        padding-left: 9rem;
+        padding-right: 9rem;
+    }
+}
+
+@media (min-width: 1366px) {
+    .main-container {
+        margin: 4% 0% 1% 0%;
+    }
+
+    .Titulo {
+        font-size: 2.3rem;
+    }
+
+    .Subtitulo {
+        margin-top: 0;
+    }
+
+    .Parrafo {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .BotonComenzar {
+        font-size: 1.3rem;
+    }
+
+    .MargenNumeros {
+        padding-left: 9em;
+        padding-right: 9em;
+    }
+}
+.AlturaInicialMobile {
+    height: 22rem;
+}
+
+/*
+@media (min-width: 576px) {
+}
+
+@media (min-width: 768px) {
+}
+
+    @media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+*/

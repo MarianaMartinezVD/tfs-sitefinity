@@ -1,0 +1,105 @@
+﻿.InfBur img.Encabezado {
+    margin-top: 4rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.InfBur div.Parrafo {
+    margin-top: 1.7rem;
+    margin-bottom: 1.5rem;
+    color: #707070;
+    font-size: small;
+}
+
+.InfBur label {
+    display:none;
+}
+
+.InfBur div.form-group {
+    margin-bottom: 5rem;
+}
+
+    .InfBur div.form-group select {
+        background: url(../../Images/Paso3/flecha.PNG) no-repeat right white !important;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        font-size: smaller;
+    }
+
+.InfBur .form-control {
+    color: #A7A7A7;
+    border: 1px solid #C91C1C;
+    border-radius: unset;
+}
+
+/*Responsividad*/
+@media (min-width: 568px) {
+    .InfBur img.Encabezado {
+        margin-top: 8rem;
+    }
+
+    .divided {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .InfBur img.Encabezado {
+        margin-top: 10rem;
+    }
+
+    span.activo, span.gris, span.rojo {
+        font-size: 2rem;
+    }
+
+    .InfBur div.form-group select {
+        font-size: large;
+    }
+}
+
+@media (min-width: 768px) {
+    .divided {
+        margin-left: 12rem;
+    }
+
+    .InfBur div.form-group {
+        margin-bottom: 8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .InfBur img.Encabezado {
+        margin-top: 6rem;
+    }
+
+    .InfBur div.Parrafo {
+        margin-top: 3.7rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .divided {
+        margin-left: 1rem;
+        margin-right: 0;
+    }
+
+        .InfBur div.form-group select {
+            font-size: larger;
+        }
+}
+
+@media (min-width: 1200px) {
+    .InfBur img.Encabezado {
+        margin-top: 4rem;
+    }
+
+    .divided {
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .InfBur div.form-group {
+        margin-bottom: 11rem;
+    }
+}

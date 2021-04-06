@@ -1,0 +1,211 @@
+﻿.N_Encabezado.col-lg-12 {
+    margin-top: 4rem;
+    /*height: 29rem;*/
+}
+
+/*.Encabezado img {
+    position: fixed;
+    max-width: 82%;
+}*/
+
+.FondoBlanco {
+    background-color:white;
+}
+
+.N_Introduccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    color: #777777;
+    font-size: medium;
+}
+
+.N_Parrafo {
+    margin-top: 1rem;
+    color: #777777;
+    font-size: small;
+}
+
+.MiniNota div p{
+    margin: 0;
+    color: #777777;
+    font-size: 1%;
+}
+
+.N_Subtitulo1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: x-large;
+}
+
+.MisionVision .card {
+    border: none;
+    align-items: center;
+}
+
+    .MisionVision .card img {
+        width: 76%;
+    }
+
+    .MisionVision .card .card-body {
+        font-size: xx-small;
+        text-align: center;
+    }
+
+        .MisionVision .card .card-body .card-title {
+            font-size: xx-small;
+            font-weight: bold;
+        }
+
+        .MisionVision .card .card-body .card-text {
+            color: #707070;
+        }
+
+.N_Subtitulo2 {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    font-size: x-large;
+}
+
+.InfoFin .card {
+    border: none;
+    align-items: center;
+}
+    .InfoFin .card img {
+        width: 66%;
+    }
+
+    .InfoFin .card .row {
+        color: #707070;
+        align-items: center;
+    }
+
+    .InfoFin .card .col-3 {
+        padding-left: 0;
+        padding-right: .5rem;
+        text-align: right;
+        font-size: x-large;
+    }
+
+    .InfoFin .card .col-9 {
+        padding:0;
+        font-size: xx-small;
+    }
+
+.N_EstilosColBoton .col-12 {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.N_EstilosColBoton a.btn {
+    display: block;
+    background-color: #747474;
+    color: white;
+    font-size: smaller;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: unset;
+}
+
+/*Responsividad*/
+
+@media (min-width: 360px) {
+    .N_Introduccion {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .N_Parrafo {
+        margin-top: 1rem;
+        font-size: small;
+    }
+
+    .N_Subtitulo1 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .N_Subtitulo2 {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .N_EstilosColBoton .col-12 {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .N_EstilosColBoton a.btn {
+        display: block;
+    }
+
+}
+
+@media (min-width: 568px) {
+    .N_Encabezado.col-lg-12 {
+        margin-top: 8rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .N_Encabezado.col-lg-12 {
+        margin-top: 10rem;
+    }
+
+    .N_Subtitulo1 {
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .N_Encabezado.col-lg-12 {
+        margin-top: 6rem;
+    }
+
+    .N_Introduccion {
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .N_Parrafo {
+        margin-top: 4rem;
+        font-size: smaller;
+    }
+
+    .MiniNota div p {
+        font-size: xx-small;
+    }
+
+    .N_Subtitulo1 {
+        margin-top: 5rem;
+        margin-bottom: 4rem;
+    }
+
+    .N_Subtitulo2 {
+        margin-top: 2rem;
+        margin-bottom: 5rem;
+    }
+
+    .N_EstilosColBoton .col-12 {
+        margin-top: 2rem;
+        margin-bottom: 7rem;
+    }
+
+    .N_EstilosColBoton a.btn {
+        display: inline-block;
+        font-size: x-small;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    .N_Encabezado.col-lg-12 {
+        margin-top: 4rem;
+    }
+
+    .N_EstilosColBoton a.btn {
+        font-size: smaller;
+    }
+}

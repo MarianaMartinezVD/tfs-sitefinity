@@ -1,0 +1,273 @@
+﻿/*Características generales footer planes de financiamiento*/
+.footer_izquierdo {
+    background-color: #7E7E7E;
+    color: white;
+    padding-top: 5%;
+    padding-left: 6.3%;
+    padding-right: 2.2%;
+    padding-bottom: 4%;
+    border-right-style: outset;
+    border-right-width: thin;
+}
+
+    .footer_izquierdo p {
+        margin-top: 0;
+        margin-bottom: 4%;
+    }
+
+    .footer_izquierdo a.nav-link:before {
+        content: "●";
+        margin-right: 6px;
+    }
+
+    .footer_izquierdo li.nav-item:first-child {
+        padding-top: 2%;
+    }
+
+    .footer_izquierdo nav {
+        padding-left: 0%;
+    }
+
+    .footer_izquierdo a.nav-link {
+        padding: 0%;
+        color: white;
+        text-decoration: none;
+        background-color: transparent;
+        font-size: x-small;
+        padding-bottom: 1.5%;
+    }
+
+    .footer_izquierdo a.btn.btn-primary {
+        color: #fff;
+        background-color: #7E7E7E;
+        border: 0px;
+        padding-left: 75px
+    }
+
+.footer_centro {
+    background-color: #6C6C6C;
+    color: white;
+    padding-top: 1.5%;
+    padding-left: 6.3%;
+    padding-right: 5.5%;
+    padding-bottom: 1.96%;
+    border-right-style: outset;
+    border-right-width: thin;
+}
+
+
+    .footer_centro a.nav-link {
+        color: white;
+        text-decoration: none;
+        background-color: transparent;
+        font-size: x-small;
+        padding-top: 0%;
+        padding-right: 0%;
+        padding-bottom: 3.5%;
+        padding-left: 0%;
+    }
+    /*
+.footer_centro li.nav-item:first-child {
+    font-family: 'ToyotaType-Bold';
+    padding-top: 2%;
+}*/
+
+    .footer_centro h1 {
+        padding-left: 60px;
+        padding-bottom: 10px;
+        font-size: 20px !important;
+        margin: 0px !important;
+        background-color: transparent;
+    }
+
+    .footer_centro a.btn.btn-primary {
+        color: #fff;
+        background-color: #6C6C6C;
+        border: 0px;
+        padding-left: 55px
+    }
+
+.footer_derecho {
+    background-color: #5F5F5F;
+    color: white;
+    padding-top: 3.5%;
+    /*padding-right: 3.5%;*/
+    padding-bottom: 1%;
+    border-right-style: outset;
+    border-right-width: thin;
+}
+
+    .footer_derecho h1 {
+        padding-right: 82px;
+        padding-bottom: 30px;
+        font-size: 20px !important;
+        margin: 0px !important;
+    }
+
+    .footer_derecho .list-unstyled {
+        text-align: right;
+    }
+
+    .footer_derecho .ml-2 {
+        margin-left: 0rem !important;
+    }
+
+    .footer_derecho .btn-ContactarRojo {
+        font-weight: bold;
+        background-color: #C91C1C;
+        color: #FFFFFF;
+        border-color: black;
+        /*padding-right: 7%;*/
+        /*padding-left: 7%;*/
+        border: black;
+        font-size: 86%;
+        border-radius: unset;
+        vertical-align: -webkit-baseline-middle;
+    }
+
+    .footer_derecho .form-control {
+        height: 100%;
+        font-size: 80%;
+        border-radius: unset;
+    }
+
+    .footer_derecho div.form-group {
+        margin-bottom: 0;
+    }
+
+    .footer_derecho .list-unstyled {
+        margin-top: 4%;
+        margin-bottom: 3%;
+    }
+
+    .footer_derecho .form-inline .form-control {
+        display: inline-block;
+        width: -webkit-fill-available;
+        vertical-align: middle;
+    }
+
+    .footer_derecho div.form-inline {
+        flex-flow: inherit;
+    }
+
+    .footer_derecho h3 {
+        font-size: 75%;
+        margin-bottom: 0%;
+        font-weight: 750;
+    }
+
+    .footer_derecho p {
+        margin-top: -3%;
+        margin-bottom: 5px;
+    }
+
+        .footer_derecho p span {
+            color: white !important;
+        }
+
+    .footer_derecho .sf-Gallery-thumbs a {
+        max-width: 26px;
+        /*display: contents;*/
+        border: 0px solid rgba(0,0,0,0);
+        line-height: 0;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .footer_derecho .d-inline-block {
+        display: contents !important;
+    }
+
+@media (max-widht:770) {
+    .SuscribirVertical {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 576px) {
+    .footer_derecho .form-control {
+        width: 118%;
+    }
+    /*
+    .footer_derecho .btn-ContactarRojo {
+    padding-right: 34%;
+    padding-left: 34%;
+    }*/
+
+    .footer_izquierdo li.nav-item:first-child {
+        padding-top: 2%;
+    }
+
+    .footer_centro li.nav-item:first-child {
+        padding-top: 2%;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer_derecho .form-control {
+        width: 118%;
+    }
+    /*
+    .footer_derecho .btn-ContactarRojo {
+    padding-right: 34%;
+    padding-left: 34%;
+    }*/
+
+    .footer_izquierdo li.nav-item:first-child {
+        padding-top: 2%;
+    }
+
+    .footer_centro li.nav-item:first-child {
+        padding-top: 2%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .footer_derecho .form-control {
+        width: 100%;
+    }
+    /*
+    .footer_derecho .btn-ContactarRojo {
+    padding-right: 34%;
+    padding-left: 34%;
+    }*/
+
+    .footer_izquierdo li.nav-item:first-child {
+        padding-top: 6%;
+    }
+
+    .footer_centro li.nav-item:first-child {
+        padding-top: 6%;
+    }
+
+    .footer_izquierdo {
+        padding-left: 2.2%;
+    }
+
+        .footer_izquierdo nav {
+            padding-left: 11%;
+        }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .footer_derecho .form-control {
+        width: 100%;
+    }
+    /*
+    .footer_derecho .btn-ContactarRojo {
+    padding-right: 34%;
+    padding-left: 34%;
+    }*/
+
+    .footer_izquierdo li.nav-item:first-child {
+        padding-top: 6%;
+    }
+
+    .footer_centro li.nav-item:first-child {
+        padding-top: 6%;
+    }
+}

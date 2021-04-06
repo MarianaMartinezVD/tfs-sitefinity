@@ -1,0 +1,200 @@
+﻿/*Fondo de pantalla y sus propiedades*/
+.ImageBackground3 {
+    background: none;
+    /*background: url("../../Images/Paso3/Background3.png") no-repeat;*/
+}
+
+/******Botones******/
+
+
+/*Estilos de los botones superiores*/
+/*
+.Botones {
+    background-color: white;
+    color: #C91C1C;
+    border: 3px solid #C91C1C;
+    border-radius: .6rem;
+    position: fixed;
+    z-index: 1;
+}
+*/
+
+/*Margen del Boton regresar*/
+.MargenBotonRegresar3 {
+    margin-left: -9.5rem;
+}
+
+.MargenBotonContinuar3 {
+    margin-top: -17rem;
+    margin-left: -0.2rem;
+}
+
+/*
+.PaddingDerechoBotones {
+    padding-right: 1rem;
+}
+
+.PaddingDerechoRegresar {
+    padding-right: 2rem;
+}
+       
+.PaddingIzquierdoContinuar {
+    padding-left: 2rem;
+}
+ */
+
+/******Header******/
+.Margentop3 {
+    padding-top: 4rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+/*
+.Titulo3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.Subtitulo3 {
+    font-size: 1.2rem;
+    margin-top: -0.3rem;
+}
+*/
+/******Body******/
+
+
+.ListForms {
+    margin-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.flechita {
+    padding: 0.5rem;
+}
+
+    .flechita select {
+        background: url(../../Images/Paso3/flecha.PNG) no-repeat right white !important;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+.EstiloForma {
+    padding: .375rem .75rem;
+    color: #A7A7A7;
+    border: 1px solid #C91C1C;
+    border-radius: .25rem;
+    background-color: white;
+}
+
+@media (min-width: 360px) {
+    .MargenBotonRegresar3 {
+        margin-left: -9.5rem;
+    }
+
+    .MargenBotonContinuar3 {
+        margin-top: -6.2rem;
+        margin-left: -0.2rem;
+    }
+
+    .ListForms {
+        margin-top: 0rem;
+        padding-bottom: 0rem;
+    }
+
+    .flechita {
+        padding: 0.5rem;
+ 	margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 411px) {
+    .MargenBotonRegresar3 {
+        margin-left: -11rem;
+    }
+
+    .MargenBotonContinuar3 {
+        margin-top: -5.8rem;
+        margin-left: 1.1rem;
+    }
+}
+
+@media (min-width: 568px) {
+    .MargenBotonRegresar3 {
+        margin-left: -16.1rem;
+    }
+
+    .MargenBotonContinuar3 {
+        margin-top: -6.2rem;
+        margin-left: 5.8rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .MargenBotonRegresar3 {
+        margin-left: -15.2rem;
+    }
+
+    .MargenBotonContinuar3 {
+        margin-left: 5rem;
+    }
+}
+
+/*
+@media (min-width: 731px) {
+
+}
+    */
+
+@media (min-width: 768px) {
+    .MargenBotonRegresar3 {
+        margin-left: -20.8rem;
+    }
+
+    .MargenBotonContinuar3 {
+        margin-top: -7rem;
+        margin-left: 10.5rem;
+    }
+}
+
+@media (min-width: 823px) {
+    .MargenBotonRegresar3 {
+        margin-left: -22.1rem;
+    }
+
+    .MargenBotonContinuar3 {
+        margin-left: 12.2rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .ImageBackground3 {
+        background: url("../../Images/Paso3/Background3.png") no-repeat;
+    }
+
+    .MargenBotonRegresar3 {
+        margin-top: 4.5rem;
+        margin-left: -1rem;
+    }
+
+    .MargenBotonContinuar3 {
+        margin-top: 4.5rem;
+        margin-left: -5.5rem;
+    }
+
+    .ListForms {
+        margin-top: 8rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ListForms {
+        margin-top: 9.5rem;
+        padding-bottom: 5.5rem;
+    }
+}
+/*
+@media (min-width: 1366px) {
+
+}*/

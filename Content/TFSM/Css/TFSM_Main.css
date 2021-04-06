@@ -1,0 +1,615 @@
+﻿/**FUENTAS GLOBALES PARA EL SITIO**/
+
+@font-face {
+    font-family: 'ToyotaType-Black';
+    src: url('../Fonts/ToyotaType-Black.otf') format('opentype');
+}
+@font-face {
+    font-family: 'ToyotaType-Bold';
+    src: url('../Fonts/ToyotaType-Bold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'ToyotaType-Regular';
+    src: url('../Fonts/ToyotaType-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'ToyotaType-SemiBold';
+    src: url('../Fonts/ToyotaType-Semibold.ttf') format('opentype');
+}
+
+
+/*PALETA DE COLORES PARA LOS FONDO*/
+.RellenoRojo .Fondo{
+    background: #C91C1C;
+}
+
+.RellenoAzul .Fondo {
+    background: #333399;
+}
+
+.RellenoNaranja .Fondo {
+    background: #ED7D31;
+}
+
+.RellenoGris .Fondo {
+    background: #989898;
+}
+
+.BotonRojo .btn-plan {
+    background-color: #C91C1C;
+    color: white !important;
+}
+
+.BotonAzul .btn-plan {
+    background-color: #333399;
+    color: white !important;
+}
+
+.BotonNaranja .btn-plan {
+    background-color: #ED7D31;
+    color: white !important;
+}
+
+.BotonGris .btn-plan {
+    background-color: #989898;
+    color: white !important;
+}
+
+.FondoRojo {
+    background: #C91C1C;
+}
+
+.FondoGris {
+    background: #989898;
+}
+
+.FondoGrisOscuro {
+    background: #5F5F5F;
+}
+
+
+
+/*PALETA DE COLORES PARA LAS FUENTES */
+.LetraBlanca {
+    color: white;
+}
+
+.LetraRoja {
+    color: #C91C1C;
+}
+
+.LetraGris {
+    color: #707070;
+}
+
+
+/*ALINEACION DE TEXTOS*/
+.TexAlCenter {
+    text-align: center;
+}
+
+
+.TexAlRight {
+    text-align: right;
+}
+
+.TexAlLeft {
+    text-align: left;
+}
+
+/*ALINEACION DE CONTENIDOS*/
+.AligContentCentrado {
+    align-self: center;
+}
+
+.AlignContentVCentrado {
+    align-items: center;
+}
+
+/*ESTILOS DE FUENTES*/
+.FontToyotaRegular {
+    font-family: 'ToyotaType-Regular';
+}
+
+.FontToyotaBold {
+    font-family: 'ToyotaType-Bold';
+}
+
+.FontToyotaSemiBold {
+    font-family: ToyotaType-SemiBold;
+}
+
+/*TAMANIOS DE FUENTES*/
+
+.FuentePequenita {
+    /*font-size: xx-small !important;*/
+    font-size: medium;
+    margin-left: 1rem;
+}
+
+.Fs11 {
+    font-size: 11px;
+}
+
+.Fs14 {
+    font-size: 14px;
+}
+
+.Fs20 {
+    font-size: 20px;
+}
+
+.Fs24 {
+    font-size: 24px;
+}
+
+.Fs26 {
+    font-size: 26px;
+}
+
+.FontSize2-5 {
+    font-size: 2.5em;
+}
+
+.FontSize2 {
+    font-size: 2em;
+}
+
+.FontSize0-85 {
+    font-size: 0.85em;
+}
+
+.FontSize1-5 {
+    font-size: 1.5em;
+}
+
+.FontSize0-9 {
+    font-size: 0.9em;
+}
+
+.FontSize1 {
+    font-size: 1em;
+}
+
+.FontSize0-75 {
+    font-size: 0.75em;
+}
+
+.FontSize1-8 {
+    font-size: 1.8em;
+}
+
+/* ESTILOS GENERALES */
+.SinPaddingIyD {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.SinPaddingI {
+    padding-left: 0;
+}
+
+.SinPaddingD {
+    padding-right: 0;
+}
+
+.SinPadding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.img-fluid {
+    width:100%;
+}
+
+@media only screen and (max-width :770px)
+{
+    .SinPaddingD {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .SinPaddingI {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .Fs24 {
+        font-size: 1rem;
+    }
+}
+
+.PosicionTotal {
+    position: absolute;
+    height: 100%;
+}
+
+.ElementoCentrado {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.JustificarTexto {
+    justify-content: center;
+}
+
+.FilaCompleta {
+    display: flex;
+    flex-direction: column;
+}
+
+.ElementoSinBorder {
+    border: none !important;
+}
+
+.AlturaAl100 {
+    height: 100%;
+}
+
+/*MARGENES*/
+
+.MargenImagenCot {
+    margin-top: 3.5rem;
+    margin-bottom: -3.5rem;
+}
+
+.MargenAl15 {
+    margin-left: 15%;
+}
+.MargenTopMenos30 {
+    margin-top: -30px;
+}
+
+.MargenTopMenos20 {
+    margin-top: -20px;
+}
+
+.MargenIzquierdoAl7 {
+    margin-left: 7%;
+}
+
+.MargenSeparadorTitulo {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.MargenSeparadorInferior30 {
+    margin-bottom: 30px;
+}
+
+.MargenTop20 {
+    margin-top: 20px;
+}
+
+.MargenTop40 {
+    margin-top: 2.5rem;
+}
+
+.MargenTop48 {
+    margin-top: 3rem;
+}
+
+.MargenBottom20 {
+    margin-bottom: 20px;
+}
+
+
+.SinMarginIzquierdo {
+    margin-left: 0% !important;
+}
+
+div.EtiquetaTipoAutoGris {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+/*CAJAS SEPARADORAS*/
+.EmptyBox5 {
+    display: block;
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+}
+
+.EmptyBox10 {
+    display: block;
+    width: 100%;
+    height: 2rem;
+}
+
+.EmptyBox15 {
+    display: block;
+    width: 100%;
+    height: 15px;
+    overflow: hidden;
+}
+
+.EmptyBox20 {
+    display: block;
+    width: 100%;
+    height: 20px;
+    overflow: hidden;
+}
+
+.EmptyBox37 {
+    display: block;
+    width: 100%;
+    height: 37px;
+    overflow: hidden;
+}
+.EmptyBox30 {
+    display: block;
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+}
+.EmptyBox80 {
+    display: block;
+    width: 100%;
+    height: 80px;
+    overflow: hidden;
+}
+
+.EtiquetaModelosRojo {
+    margin-top: 4rem;
+    margin-bottom: -1rem;
+    color: #CE3232;
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.EtiquetaTipoAutoGris {
+    color: #A7A7A7;
+    text-align: center;
+    font-weight: 499;
+    font-size: larger;
+}
+
+/**Iconos de viñetas rojas**/
+.BeneficiosVineta ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.BeneficiosVineta li {
+    font-size: .76rem;
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+    .BeneficiosVineta li:before {
+        content: "• ";
+        font-size: 18px;
+        font-weight: bold;
+        color: red; /* or whatever color you prefer */
+    }
+
+.container-banner-hero {
+    margin-top: -0.6rem;
+}
+
+
+/*****************INFORMACION CORPORATIVA******************/
+.GrayButtonLink-container {
+border-color: #C91C1C;
+border-width: 1px;
+border-style: solid;
+margin-bottom: 50px;
+padding: 10px;
+}
+.GrayButtonLink-container div {
+color: white;
+padding: 30px;
+background-color: #5F5F5F;
+}
+.GrayButtonLink-container div:hover {
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #AF1818;
+}
+.GrayButtonLink-container a {
+    margin: 5px;
+    color: white;
+}
+
+.container-text {
+overflow-x:scroll;
+max-height:400px;
+}
+
+.slick-arrow:focus {
+    outline:none !important;
+}
+
+/*Responsividad*/
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+.SinPaddingD.FilaCompleta {
+    padding-right: 15px;
+}
+
+.SinPaddingI.FilaCompleta {
+    padding-left: 15px;
+}
+
+.slick-arrow {
+    top: 70%;
+}
+
+.EstilosMensaje .Parrafo {
+    font-size: 43%;
+}
+
+@media (min-width: 274px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 3rem;
+    }
+}
+
+@media (min-width: 407px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 2rem;
+    }
+}
+
+@media (min-width: 411px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 3rem;
+    }
+}
+
+@media (min-width: 440px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 2rem;
+    }
+}
+
+@media (max-width: 415px) {
+    .container-banner-hero {
+        margin-top: 4rem;
+    }
+}
+
+@media (min-width: 548px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 3rem;
+    }
+}
+
+@media (min-width: 568px) {
+    .container-banner-hero {
+        margin-top: 5rem;
+    }
+
+    .slick-arrow {
+        top: 63%;
+    }
+
+    .EstilosMensaje .Parrafo {
+        font-size: small;
+    }
+
+    .SinPaddingISuscribir {
+        align-self: center;
+    }
+}
+
+@media (min-width: 576px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 2rem;
+    }
+
+    .container-banner-hero {
+        margin-top: 8rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .slick-arrow {
+        top:84%;
+    }
+}
+
+@media (min-width: 768px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 3rem;
+    }
+
+    .SinPaddingISuscribir {
+        padding-left: 0 !important;
+        text-align: left;
+    }
+
+    .SinPaddingDSuscribir {
+        padding-right: 0 !important;
+    }
+
+    .slick-arrow {
+        top: 62%;
+    }
+
+    .EstilosMensaje .Parrafo {
+        font-size: medium;
+    }
+    .MargenImagenCot {
+        margin-top: 3.5rem;
+        margin-bottom: -0.5rem;
+    }
+
+    .container-banner-hero {
+        margin-top: 10rem;
+    }
+}
+
+
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 3rem;
+    }
+
+    .SinPaddingD.FilaCompleta {
+        padding-right: 0;
+    }
+
+    .SinPaddingI.FilaCompleta {
+        padding-left: 0;
+    }
+
+    .slick-arrow {
+        top: 50%;
+    }
+
+    .EstilosMensaje .Parrafo {
+        font-size: larger;
+    }
+
+    .container-banner-hero {
+        margin-top: 5rem;
+    }
+}
+
+@media (min-width: 1062px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .ElementoCentrado {
+        margin-top: auto;
+        margin-bottom: auto;
+        height: 2rem;
+    }
+    .MargenImagenCot {
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+/* Div Scrolling*/
+div.scrollV80 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    /*width: 90%;*/
+    height: 80%;
+    overflow-y: scroll;
+}
+.Margin-Top-banner-dist {
+    margin-top: 4rem;
+}

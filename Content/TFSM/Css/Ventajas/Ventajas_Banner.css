@@ -1,0 +1,38 @@
+﻿.AutoFit {
+    display: block;
+    grid-template-columns: auto max-content;
+}
+
+.Background_rojo {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #D62B2B;
+}
+
+.SinRelleno {
+    padding: 0;
+}
+
+.EstilosMensaje {
+    align-self: center;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+}
+
+    .EstilosMensaje .Parrafo {
+        font-size: x-large!important;
+        margin-bottom: 1rem;
+    	margin-top: 1rem;
+    }
+
+/*Breakpoints*/
+
+@media(min-width: 992px) {
+    .AutoFit {
+        display: grid;
+    }
+}

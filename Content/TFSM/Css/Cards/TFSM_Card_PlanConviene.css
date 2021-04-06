@@ -1,0 +1,77 @@
+﻿/*Características del titulo de que plan te conviene*/
+.PlanHeading5 {
+    font-size: medium;
+    color: white;
+    margin: unset;
+    line-height: none;
+}
+
+/*Características generales del boton INICIAR*/
+.PlanBotonIniciar {
+    font-size: smaller;
+    color: #C91C1C;
+    background-color: white;
+    font-weight: 500;
+    border: none;
+    margin-top: 5%;
+}
+
+/*Quitar el espacio entre las columnas de hagamos un plan*/
+.PlanSinPadding {
+    padding: 0;
+}
+
+/*Caracteristicas generales del cuadro rojo de hagamos un plan*/
+.PlanBoxRojo {
+    background-color: #C91C1C;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+/*Inicia la parte de responsividad*/
+
+@media (min-width: 480px) {
+    .PlanHeading5 {
+        font-size: larger;
+    }
+
+    .PlanBotonIniciar {
+        font-size: medium;
+    }
+}
+
+@media (min-width: 768px) {
+    .PlanHeading5 {
+        font-size: x-large;
+    }
+
+    .PlanBotonIniciar {
+        font-size: larger;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .PlanHeading5 {
+        font-size: 144%;
+    }
+
+    .PlanBoxRojo {
+        padding-top: 30%;
+        padding-bottom: 10%;
+    }
+
+    .PlanBotonIniciar {
+        font-size: 1rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .PlanBoxRojo {
+        height: 248px;
+        padding-top: 21%;
+        padding-bottom: 13.6%;
+    }
+}

@@ -1,0 +1,99 @@
+﻿nav.navbar.navbar-expand-md.navbar-light.bg-light {
+    /*padding:0;*/
+    background-color: #FFFFFF !important;
+    /*margin-left: 107px;*/
+}
+
+.MenuFlotante {
+    width: unset;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: #ffffff;
+}
+
+.INICIOCARRUSEL {
+    margin-top: 60px;
+}
+
+#navbar-1 {
+    background-color: #FFFFFF !important;
+    color: #707070 !important;
+    font-weight: bold !important;
+    font-size: small !important;
+    font-family: ToyotaType-Regular !important;
+}
+
+    #navbar-1 a.dropdown-item {
+        color: #707070 !important;
+        font-weight: bold !important;
+        font-size: smaller !important;
+    }
+
+    #navbar-1 .nav-item.Edge {
+        font-size: 0.94em !important;
+    }
+
+.itemMenuStyle1 a {
+    color: #FFFFFF !important;
+    border-color: darkred;
+    border-width: medium;
+    background-color: #C91C1C;
+    text-align: center;
+}
+
+.itemMenuStyle2 a {
+    color: #C91C1C !important;
+    border-color: darkred;
+    border-width: medium;
+    text-align: center;
+    border: 0.1px solid #c91c1c;
+}
+
+@media (min-width: 1200px) {
+    .MenuP {
+        margin-left: 20px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    nav.navbar.navbar-expand-md.navbar-light.bg-light {
+        margin-left: auto;
+    }
+}
+
+/*Menor a 600px*/
+@media only screen and (max-width: 768px) {
+    .MenuFlotante {
+        width: inherit;
+    }
+
+    .ImagenCorporativa {
+        text-align: center;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+/*Menor a 600px*/
+@media only screen and (max-width: 520px) {
+    .ImagenCorporativa {
+        text-align: end;
+        padding-right: 0;
+        padding-left: 0;
+        position: fixed;
+        right: 10px;
+        z-index: 999;
+        /*height: 57px;*/
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .menuVerticalAuto {
+        margin-top: 29%;
+    }
+
+    .ImagenCorporativa {
+        position: fixed;
+    }
+}

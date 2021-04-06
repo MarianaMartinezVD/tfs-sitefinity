@@ -1,0 +1,65 @@
+﻿.slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: -170px;
+    border: none;
+    background: transparent;
+    color: #C91C1C;
+    font-family: monospace;
+    font-size: 5rem;
+    z-index: 300;
+    outline: none;
+}
+
+.slick-prev {
+    /*left: -30px;*/
+    text-align: left;
+}
+
+.slick-next {
+    right: -20px;
+    text-align: right;
+}
+
+.VerMas {
+    background-color: #C91C1C;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+    .VerMas a {
+        font-family: ToyotaType-Regular;
+        color: white;
+        font-size: small;
+        align-self: center;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+@media only screen and (max-width: 1200px) {
+    .VerMas a {
+        font-size: 10px;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    .VerMas a {
+        margin-left: -15px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .VerMas a {
+        margin-left: -15px;
+        font-size: 20px;
+    }
+}
+
+.MarginInferior-15 {
+    margin-bottom: -15%;
+}

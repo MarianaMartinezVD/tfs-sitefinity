@@ -1,0 +1,245 @@
+﻿#mi-banner.fixed {
+    position: fixed;
+    top: 47px;
+    left: 50%;
+    color: white;
+    background-color: #C91C1C;
+    z-index: 1000;
+}
+
+    #mi-banner.fixed a {
+        color: white;
+        text-align: center;
+        font-family: ToyotaType-Regular;
+    }
+
+#mi-banner img {
+    /*padding-top: 2px;
+    padding-bottom: 2px;
+    background-size: contain;*/
+    width: 25px;
+    /*margin-right: 25px;*/
+}
+
+.rotate {
+    transform: rotate(-90deg) translate(-50%, calc(-50% + 110px));
+    /* Legacy vendor prefixes that you probably don't need... */
+    /* Safari */
+    -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 110px));
+    /* Firefox */
+    -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 110px));
+    /* IE */
+    -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 110px));
+    /* Opera */
+    -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 110px));
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.DivWhatsAppLink {
+    transform: translate(12%, 12%);
+}
+
+.DivWhatsAppImg {
+    transform: /*translate(-5px, 13px) */rotate(90deg);
+    /*padding-left: 0px;
+    padding-right: 0px;*/
+}
+
+/***************Comienza Responsividad***********************/
+
+@media (min-width: 360px) {
+
+    #mi-banner.fixed {
+        top: 52px;
+        font-size:x-small;
+    }
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 130px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 130px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 130px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 130px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 130px));
+    }
+}
+
+@media (min-width: 375px) {
+    
+    #mi-banner.fixed {
+        top: 55px;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 118px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 118px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 118px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 118px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 118px));
+    }
+}
+
+@media (min-width: 411px) {
+
+    #mi-banner.fixed {
+        top: 62px;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 135px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 135px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 135px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 135px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 135px));
+    }
+}
+
+@media (min-width: 414px) {
+
+    #mi-banner.fixed {
+        top: 63px;
+        font-size: small;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 157px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 157px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 157px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 157px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 157px));
+    }
+}
+
+@media (min-width: 480px) {
+
+    #mi-banner.fixed {
+        top: 63px;
+        font-size: smaller;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 180px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 180px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 180px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 180px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 180px));
+    }
+}
+
+@media (min-width: 568px) {
+
+    #mi-banner.fixed {
+        top: 114px;
+        font-size: medium;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 235px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 235px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 235px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 235px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 235px));
+    }
+}
+
+@media (min-width: 576px) {
+    #mi-banner.fixed {
+        top: 146px;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 228px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 228px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 228px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 228px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 228px));
+    }
+}
+
+@media (min-width: 768px){
+
+    #mi-banner.fixed {
+        top: 146px;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 318px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 318px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 318px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 318px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 318px));
+    }
+}
+
+@media (min-width: 992px) {
+    #mi-banner.fixed {
+        top: 11.7rem;
+    }
+
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 438px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 438px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 438px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 438px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 438px));
+    }
+}
+
+@media (min-width: 1200px) {
+    .rotate {
+        transform: rotate(-90deg) translate(-50%, calc(-50% + 527px));
+        /* Legacy vendor prefixes that you probably don't need... */
+        /* Safari */
+        -webkit-transform: rotate(-90deg) translate(-50%, calc(-50% + 527px));
+        /* Firefox */
+        -moz-transform: rotate(-90deg) translate(-50%, calc(-50% + 527px));
+        /* IE */
+        -ms-transform: rotate(-90deg) translate(-50%, calc(-50% + 527px));
+        /* Opera */
+        -o-transform: rotate(-90deg) translate(-50%, calc(-50% + 527px));
+    }
+}

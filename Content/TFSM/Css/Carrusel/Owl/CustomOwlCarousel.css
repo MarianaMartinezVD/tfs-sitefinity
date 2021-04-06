@@ -1,0 +1,48 @@
+﻿#Hino2 {
+    margin-bottom: 5%;
+    justify-content: center;
+    align-items: center;
+}
+
+    #Hino2 img {
+        background-size: contain;
+    }
+
+.hino-content-label {
+    background-color: #C91C1C;
+    text-align: center;
+    margin-top:3rem;
+}
+
+.hino-label {
+    color: white;
+    font-family: ToyotaType-Regular;
+}
+
+.hino-label:hover {
+    color: white;
+}
+
+.owl-item {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+    transform: scale(.8);
+}
+
+.owl-item.center {
+opacity: 1;
+transform: scale(1.2);
+z-index: 1000;
+}
+
+.owl-item.center img {
+    opacity: 1;
+    z-index: 1000;
+    margin-top: auto;
+}
+
+    .owl-item.center div.hino-content-label {
+        transform: scale(1.2);
+        margin-top: -20%;
+        max-width: 10rem;
+    }

@@ -1,0 +1,259 @@
+﻿.SubsCenter {
+    align-self: center;
+    text-align: end;
+}
+
+.SubsRenglon1 {
+    font-size: x-large;
+    margin-bottom: 0;
+}
+
+.SubsRenglon2 {
+    font-size: larger;
+}
+
+.SubsCorreo {
+    align-self: center;
+    text-align: center;
+}
+
+.SubsCorreo1 {
+    justify-content: center;
+    padding: 0.5rem 0rem;
+}
+
+.SubsCorreoInput {
+    width: 13rem !important;
+    font-size: small;
+}
+
+input.Newsletter {
+    max-width: 14rem;
+    height: 2.4rem;
+    font-size: 0.84rem;
+}
+
+.HolderRed {
+    background-color: bisque;
+}
+
+    .HolderRed:focus {
+        background-color: bisque;
+    }
+
+p.MargenAl15 {
+    margin-left: 0;
+}
+
+div.MargenAl15 {
+    margin-left: 14%;
+}
+
+.TerminosCondiciones {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 1rem;
+    padding: 5px;
+    font-size: x-small;
+    background-color: #C91C1C;
+}
+
+    .TerminosCondiciones label {
+        margin: 0;
+    }
+
+        .TerminosCondiciones label a {
+            margin-left: 5px;
+            color: white;
+        }
+
+.SinPaddingISuscribir {
+    padding-left: 0;
+}
+
+    .SinPaddingISuscribir .MargenAl15 {
+        margin-bottom: 0;
+    }
+
+.SinPaddingDSuscribir {
+    padding-right: 0;
+}
+
+.WarningMessage {
+    height: 1rem;
+    text-align: center;
+    font-size: x-small;
+    background-color: transparent;
+    color: white;
+}
+
+.footer_derecho {
+    padding-top: 1.5%;
+}
+
+    .footer_derecho div.form-inline {
+        flex: auto;
+        margin-bottom: 1%;
+    }
+
+    .footer_derecho .form-inline .form-control {
+        width: auto;
+    }
+    /*
+    .footer_derecho .btn-ContactarRojo {
+        padding-right: 7%;
+        padding-left: 7%;
+    }*/
+
+    .footer_derecho div.MargenAl15 {
+        margin-left: 0;
+    }
+
+    .footer_derecho .WarningMessage {
+        margin: 0;
+        height: 0.5rem;
+    }
+
+.SuscribirFilaCompleta {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-ContactarRojo {
+    font-weight: bold;
+    background-color: #C91C1C;
+    color: #FFFFFF;
+    border-color: black;
+    padding-top: 7px;
+    /*padding-right: 25px;*/
+    padding-bottom: 7px;
+    /*padding-left: 25px;*/
+    border: black;
+    font-size: 1rem;
+    /*margin-left: -37%;*/
+}
+
+@media (max-width: 980px) {
+    .SinPaddingISuscribir {
+        padding-left: 15px;
+    }
+
+    .SinPaddingDSuscribir {
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .SubsRenglon1 {
+        font-size: larger;
+    }
+
+    .SubsRenglon2 {
+        font-size: large;
+    }
+
+    .SubsCorreoInput {
+        width: 9rem !important;
+        font-size: xx-small;
+    }
+
+    .btn-ContactarRojo {
+        font-size: x-small !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .SubsRenglon1 {
+        font-size: large;
+    }
+
+    .SubsRenglon2 {
+        font-size: x-large;
+    }
+
+    .SubsCorreoInput {
+        width: 11rem !important;
+        font-size: x-small;
+    }
+
+    .btn-ContactarRojo {
+        font-size: small !important;
+    }
+
+    .SubsCorreo .form-inline .form-group {
+        margin-bottom: 0;
+    }
+
+    .SubsCorreo1 .form-group {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .btn-ContactarRojo {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 414px) {
+    .SubsRenglon1 {
+        font-size: smaller;
+    }
+    .SubsRenglon2 {
+        font-size: larger;
+    }
+
+    .SubsCorreoInput {
+        width: 9rem !important;
+        font-size: xx-small;
+    }
+
+    .btn-ContactarRojo {
+        font-size: x-small !important;
+    }
+
+    .SubsCorreo .form-inline .form-group {
+        margin-bottom: 0;
+    }
+
+    .SubsCorreo1 .form-group {
+        margin-bottom: 0;
+    }
+
+    .TerminosCondiciones label a {
+        font-size: xx-small;
+    }
+}
+
+@media (max-width: 360px) {
+    .SubsRenglon1 {
+        font-size: small;
+    }
+
+    .SubsRenglon2 {
+        font-size: medium;
+    }
+
+    .SubsCorreo .form-inline .form-group {
+        margin-bottom: 0;
+    }
+
+    .SubsCorreo1 .form-group {
+        margin-bottom: 0;
+    }
+
+    .SubsCorreoInput {
+        width: 8rem !important;
+        font-size: xx-small;
+    }
+
+    .TerminosCondiciones label a {
+        margin-left: 0;
+        font-size: smaller;
+    }
+
+    .WarningMessage {
+        font-size: xx-small;
+    }
+}

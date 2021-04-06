@@ -1,0 +1,15 @@
+﻿body, html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.BotonRojo {
+    font-weight: bold;
+    background-color: #C91C1C;
+    color: #FFFFFF;
+    border-color: black;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border: black;
+    font-size: 1rem;
+}

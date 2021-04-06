@@ -1,0 +1,42 @@
+﻿
+#mi-banner-flecha.fixed {
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    z-index: 1000;
+    text-align-last: center;
+    transform: translate(-50%, -50%);
+}
+
+#mi-banner-flecha img {
+    width: 48%;
+    height: 73%;
+}
+
+@media (min-width: 120px) {
+    #mi-banner-flecha img {
+        width: 30%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 220px) {
+    #mi-banner-flecha img {
+        width: 30%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 320px) {
+    #mi-banner-flecha img {
+        width: 30%;
+        height: 70%;
+    }
+}
+
+@media (min-width: 420px) {
+    #mi-banner-flecha img {
+        width: 30%;
+        height: 70%;
+    }
+}

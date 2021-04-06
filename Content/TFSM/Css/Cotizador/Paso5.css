@@ -1,0 +1,444 @@
+﻿/*Fondo de pantalla y sus propiedades*/
+.ImageBackground5 {
+    background: url("../../Images/Paso5/Background5.png") no-repeat;
+}
+
+/******Botones******/
+
+/*
+.Botones {
+    background-color: white;
+    color: #C91C1C;
+    border: 3px solid #C91C1C;
+    border-radius: .6rem;
+    position: absolute;
+    z-index: 1;
+}
+    */
+
+.MargenBotonRegresar5 {
+    margin-top: 3.4rem;
+    margin-bottom: 2rem;
+}
+
+.PaddingDerechoBotones5 {
+    padding-right: 1rem;
+}
+
+.PaddingDerechoRegresar5 {
+    padding-right: .5rem;
+}
+
+.StyleBotonMeses {
+    margin-top: .15rem;
+    margin-bottom: .15rem;
+    padding: .1rem .4rem;
+    background-color: #C91C1C;
+    color: white;
+    border-radius: unset;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+    .StyleBotonMeses.Active {
+        background-color: #626262;
+    }
+
+.BotonDistribuidores {
+    background-color: #C91C1C;
+    border-style: solid;
+    border-width: medium;
+    border-color: white;
+    border-radius: 9px;
+    color: white;
+    font-size: .6rem;
+}
+
+input[type=text]::placeholder {
+    color: #A7A7A7;
+}
+
+input[type=checkbox] {
+    vertical-align: sub;
+    margin-left: 0.5rem;
+}
+
+.BotonEnviar {
+    background-color: #959595;
+    color: white;
+}
+
+.BotonQuieroPlan {
+    background-color: white;
+    color: #C91C1C;
+    border: 3px solid #C91C1C;
+    border-radius: .6rem;
+    font-size: x-small;
+}
+
+/******Header******/
+
+.Triangulo5 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    border-color: transparent #C91C1C transparent transparent;
+}
+
+.StyleCardAuto {
+    margin-left: 1rem;
+    color: #707070;
+}
+
+.FontSizeMensualidad {
+    font-size: 1.3rem;
+}
+
+.ImagenAuto {
+    max-width: 111%;
+}
+
+.ImgNombreAuto {
+    max-width: 50%;
+    padding-bottom: 1rem;
+    margin-top:2rem;
+}
+
+h4.TituloResumen {
+    font-size: 1.3rem;
+    padding-bottom: 1rem;
+}
+
+/******Body******/
+
+
+.Margentop5 {
+    margin-top: 3rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.MargenTablaAuto {
+    margin-left: 0;
+    margin-bottom: 1rem;
+}
+
+.MargenTablaResumen {
+    margin-left: 0;
+    padding-bottom: 0;
+}
+
+.Justificado {
+    justify-content: center;
+}
+
+.TablaCotizar5 {
+    max-width: 100%;
+    background-color: white;
+    border: .5px solid #C91C1C;
+    border-radius: 1.25rem;
+    padding-bottom: 0rem;
+    overflow: hidden;
+}
+
+span.mensual {
+    padding-left: .3rem;
+}
+
+.MargenPagos {
+    margin-top: 1.5rem;
+    padding: 0;
+    font-size: initial;
+}
+
+.MargenMontos {
+    margin-left: -16.3rem;
+}
+
+
+.MargenFooterResumen {
+    margin-top: 2rem;
+}
+
+.EstilosTablaBotones {
+    margin-top: 0rem;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-left-style: solid;
+    color: #C91C1C;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+}
+
+p.resumen {
+    margin: 0;
+    margin-left: 2rem;
+    color: #707070;
+    font-size: x-small;
+    text-align: left;
+}
+
+br.precios {
+    content: "";
+    margin: .3em;
+    display: block;
+}
+
+br.resumen {
+    content: "";
+    margin: .5em;
+    display: block;
+}
+
+/******Footer Resumen******/
+
+.StyleDistribuidores {
+    background-color: #626262;
+    margin: 0;
+    text-align: center;
+    padding-top: 0;
+}
+
+.StyleEnviar {
+    justify-content: center;
+    background-color: #C91C1C;
+    margin: 0;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+    .StyleEnviar .form-group .form-inline {
+        justify-content: center;
+    }
+
+.SinBordesBoton {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.SinMargen {
+    margin: 0;
+}
+
+.SinBordesEmail {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+
+.FuenteXSmall {
+    font-size: x-small;
+}
+
+/******Inicio de la responsividad******/
+
+@media (min-width: 360px) {
+    .Margentop5 {
+        margin-top: 3rem;
+    }
+
+    .MargenBotonRegresar5 {
+        margin-top: 0rem;
+    }
+
+    .TablaCotizar5 {
+        max-width: 100%;
+    }
+
+    .Triangulo5 {
+        border-width: 0 0 0 0;
+    }
+
+    .ImagenAuto {
+        max-width: 111%;
+    }
+
+    .MargenMontos {
+        margin-left: -18rem;
+    }
+
+    .MargenPagos {
+        margin-top: 1.5rem;
+        padding: 0;
+    }
+
+    .MargenTablaAuto {
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .MargenTablaResumen {
+        margin-left: 0;
+    }
+
+    .EstilosTablaBotones {
+        margin-top: 0rem;
+        margin-left: 1rem;
+    }
+
+    .StyleDistribuidores {
+        padding-top: 0;
+    }
+
+    .SinBordesEmail {
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+    }
+
+    .SinBordesBoton {
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+    }
+
+    .StyleEnviar {
+        justify-content: center;
+    }
+
+        .StyleEnviar .form-group .form-inline {
+            justify-content: center;
+        }
+
+    .BotonQuieroPlan {
+        font-size: x-small;
+    }
+}
+
+@media (min-width: 411px) {
+    .MargenMontos {
+        margin-left: -21rem;
+    }
+}
+
+@media (min-width: 568px) {
+    .MargenMontos {
+        margin-left: -30rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .MargenMontos {
+        margin-left: -28rem;
+    }
+}
+
+/*
+@media (min-width: 731px) {
+
+}
+    */
+
+@media (min-width: 768px) {
+    .FontSizeMensualidad {
+        text-align: center !important;
+    }
+
+    .MargenPagos {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .MargenMontos {
+        margin-left: -52rem;
+    }
+
+    .EstilosTablaBotones {
+        margin-left: 14rem;
+    }
+}
+
+@media (min-width: 823px) {
+    .MargenMontos {
+        margin-left: -56rem;
+    }
+
+    .EstilosTablaBotones {
+        margin-top: 1rem;
+        margin-left: 14rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .MargenBotonRegresar5 {
+        margin-top: 3.4rem;
+        margin-bottom: 2rem;
+    }
+
+    .TablaCotizar5 {
+        max-width: 44%;
+    }
+
+    .MargenTablaAuto {
+        margin-right: .5rem;
+    }
+
+    .MargenTablaResumen {
+        margin-left: .5rem;
+    }
+
+    .ImagenAuto {
+        max-width: 245%;
+    }
+
+    .Triangulo5 {
+        border-width: 0 134px 95px 0;
+    }
+
+    .FontSizeMensualidad {
+        font-size: 1.2rem;
+        text-align: left !important;
+    }
+
+    .MargenPagos {
+        margin-top: 2.5rem;
+        font-size: small;
+    }
+
+    .MargenMontos {
+        margin-left: -4rem;
+    }
+
+    .EstilosTablaBotones {
+        margin-top: .5rem;
+        margin-left: 0rem;
+    }
+
+    .MargenTablaAuto {
+        margin-bottom: 0rem;
+    }
+
+    .StyleDistribuidores {
+        padding-top: 1.5rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .StyleEnviar {
+        padding-left: .1rem;
+        padding-right: .1rem;
+    }
+
+    .BotonQuieroPlan {
+        font-size: smaller;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .Triangulo5 {
+        border-width: 0 146px 95px 0;
+    }
+
+    .MargenPagos {
+        margin-top: 2.5rem;
+        font-size: initial;
+    }
+}
+/*
+@media (min-width: 1366px) {
+}
+
+*/

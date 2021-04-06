@@ -1,0 +1,241 @@
+﻿/*Fondo de pantalla y sus propiedades*/
+.ImageBackground2 {
+    background: none;
+}
+
+/******Botones******/
+
+/*Estilos de los botones superiores*/
+.Botones {
+    background-color: white;
+    color: #C91C1C;
+    border: 3px solid #C91C1C;
+    border-radius: .6rem;
+    position: absolute;
+    z-index: 1;
+}
+
+/*Margen del Boton regresar*/
+.MargenBotonRegresar {
+    margin-left: -8.5rem;
+}
+
+.PaddingDerechoBotones {
+    padding-right: 1rem;
+}
+
+.PaddingDerechoRegresar {
+    padding-right: 2rem;
+}
+
+.MargenBotonContinuar {
+    margin-top: -6.9rem;
+    margin-left: 1.1rem;
+}
+
+.PaddingIzquierdoContinuar {
+    padding-left: 1.5rem;
+}
+
+/******Header******/
+
+.Margentop2 {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-top: 3rem;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    align-self: center;
+}
+/*
+.Titulo2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.Subtitulo2 {
+    font-size: 1.2rem;
+    margin-top: -0.3rem;
+}
+    */
+/******Body******/
+
+.PaddingCuerpoCards {
+    margin: 0;
+    padding: 0;
+}
+
+.CardAlign {
+    text-align: center;
+    align-items: center;
+    padding: 0;
+    -webkit-appearance: none;
+    border: none;
+}
+/*
+.MargenCardFisica {
+    margin-left: 6.5rem;
+    margin-right: -2.5rem;
+}
+    */
+
+.CardImage {
+    height: 8.3rem;
+    width: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.CardRelleno {
+    background-color: #C91C1C;
+    color: white;
+    font-size: 1.6rem;
+}
+/*
+.MargenCardFisicaE {
+    margin-left: 3.6rem;
+    margin-right: .5rem;
+}
+
+.MargenCardMoral {
+    margin-right: 5rem;
+    margin-left: -0.5rem;
+}
+
+    */
+
+/******Inicio de la responsividad******/
+@media (min-width: 360px) {
+    .MargenBotonRegresar {
+        margin-top: -3rem;
+        margin-left: -6.1rem;
+    }
+
+    .MargenBotonContinuar {
+        margin-top: -3rem;
+        margin-left: -4.2rem;
+    }
+
+    .Margentop2 {
+        margin-left: -6rem;
+        margin-right: -6rem;
+    }
+    .PaddingCuerpoCards {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 411px) {
+    .MargenBotonRegresar {
+        margin-left: -6.9rem;
+    }
+
+    .MargenBotonContinuar {
+        margin-left: -3.5rem;
+    }
+}
+
+@media (min-width: 568px) {
+    .MargenBotonRegresar {
+        margin-left: -8.3rem;
+    }
+
+    .MargenBotonContinuar {
+        margin-left: -1.8rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .MargenBotonRegresar {
+        margin-top: -2rem;
+    }
+    .MargenBotonContinuar {
+        margin-top: -1.8rem;
+    }
+}
+
+
+@media (min-width: 731px) {
+    .MargenBotonRegresar {
+        margin-left: -7.9rem;
+    }
+
+    .MargenBotonContinuar {
+        margin-left: -2.2rem;
+    }
+}
+    
+@media (min-width: 768px) {
+    .MargenBotonRegresar {
+        margin-left: -9.9rem;
+    }
+
+    .MargenBotonContinuar {
+        margin-left: -0.5rem;
+    }
+}
+
+
+@media (min-width: 823px) {
+    .MargenBotonRegresar {
+        margin-left: -9.9rem;
+    }
+    .MargenBotonContinuar {
+        margin-left: -0.3rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .ImageBackground2 {
+        background: url("../../Images/Paso2/Background02.png") no-repeat;
+    }
+
+    .MargenBotonRegresar {
+        margin-left: 0;
+    }
+
+    .MargenBotonContinuar {
+        margin-top: 0;
+        margin-left: -157px;
+    }
+
+    .Margentop2 {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .PaddingCuerpoCards {
+        margin-top: 2rem;
+        padding-left: 5rem;
+        padding-right: 5.2rem;
+        padding-bottom: 3rem;
+    }
+
+    .CardRelleno {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .MargenBotonRegresar {
+        margin-top: 0;
+        margin-left: -5px;
+    }
+
+    .MargenBotonContinuar {
+        margin-left: -10rem;
+    }
+
+    .PaddingCuerpoCards {
+        padding-left: 6rem;
+        padding-right: 6.2rem;
+    }
+}
+/*
+@media (min-width: 1366px) {
+
+}
+    */

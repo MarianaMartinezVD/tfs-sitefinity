@@ -1,0 +1,171 @@
+﻿/*.container-banner-hero {
+    margin-top: 4rem !important;
+}
+*/
+.MargenTop40 {
+    margin-top: 0.5rem;
+}
+
+.MargenTopMenos80 {
+    margin-top: -1rem;
+}
+
+.EstilosMensaje .Parrafo {
+    font-size: 0.4rem;
+}
+
+.SinPaddingIyD {
+    padding-left: 0.9375rem !important;
+    padding-right: 0.9375rem !important;
+}
+
+
+.Plan .Encabezado {
+    /*margin-top: 0rem;*/
+    width: 100%;
+}
+
+.Plan {
+    display: inline-flex;
+    align-items: center;
+}
+
+    .Plan.AP {
+        align-items: flex-end;
+    }
+
+    .Plan .TipoPlan.LetraRoja {
+        font-size: 3.5rem;
+    }
+
+    .Plan .TipoPlan.MargenTopMenos20 {
+        font-size: 2.5rem;
+    }
+
+    .Plan .TipoPlanF.MargenTopMenos20 {
+        font-size: 1.3rem;
+    }
+
+    .Plan .TipoPlanP.MargenTopMenos20 {
+        font-size: 1.32rem;
+    }
+
+    .Plan .TipoPlanA.MargenTopMenos20 {
+        font-size: 1.6rem;
+    }
+
+    .Plan .TipoPlan.LetraBlanca {
+        margin: .5rem;
+        font-size: 0.8rem;
+    }
+
+div.cardCaracteristica div.card-body {
+    padding: 0.25rem;
+}
+
+.PlanOpciones {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+}
+
+.MargenHPlan {
+    margin-bottom: -2px;
+}
+
+.BeneficiosVineta {
+    text-align:justify;
+}
+
+.playpause {
+    background-image: url('../../Images/Video/play.png');
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: auto;
+    background-size: contain;
+    background-position: center;
+}
+
+/*Responsividad*/
+@media (min-width: 568px) {
+    /*.Plan .Encabezado {
+        margin-top: 4rem;
+    }*/
+
+    .MargenTop40 {
+        margin-top: 1rem;
+    }
+
+    .SinPaddingIyD {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+@media (min-width: 640px) {
+    /*.Plan .Encabezado {
+        margin-top: 6rem;
+    }*/
+
+    .SinPaddingIyD {
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .MargenTop40 {
+        margin-top: 2rem;
+    }
+
+    .MargenTopMenos80 {
+        margin-top: -5rem;
+    }
+
+    .SinPaddingIyD {
+        padding-left: 3.5rem !important;
+        padding-right: 3.5rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    /*.Plan .Encabezado {
+        margin-top: 2rem;
+    }*/
+
+    .MargenTop40 {
+        margin-top: 2.5rem;
+    }
+
+    .Plan .TipoPlan.LetraBlanca {
+        padding: .7rem;
+        font-size: 0.9rem;
+    }
+
+    .SinPaddingIyD {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+
+    .PlanOpciones {
+    	text-align: left;
+    	margin-left: 1rem;
+    }
+}
+
+@media (min-width: 1062px) {
+    /*.Plan .Encabezado {
+        margin-top: 0rem;
+    }*/
+}
+
+.bullet-planes{
+    font-size: medium;
+    margin-bottom: 1rem;
+}

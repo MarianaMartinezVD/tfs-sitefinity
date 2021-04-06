@@ -1,0 +1,73 @@
+﻿/*Estilos para contactar*/
+.DivContacarWhatsApp {
+    position: absolute;
+    left: 9%;
+    top: 68%;
+}
+
+
+.DivPosicionRelativa {
+    position: relative;
+}
+
+
+.btn-ContactarBlanco {
+    font-weight: bold;
+    background-color: #FFFFFF;
+    border-color: black;
+    padding-top: 5%;
+    padding-right: 21%;
+    padding-bottom: 5%;
+    padding-left: 21%;
+    border: black;
+    font-size: 76%;
+}
+
+.FontCardComunicate {
+    font-size: medium;
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 414px) {
+    .FontCardComunicate {
+        font-size: larger;
+    }
+}
+
+@media (min-width: 576px) {
+    .btn-ContactarBlanco {
+            padding-right: 17%;
+            padding-left: 17%;
+            font-size: 86%;
+    }  
+}
+
+@media (min-width: 768px) {
+    .btn-ContactarBlanco {
+            padding-right: 12%;
+            padding-left: 12%;
+            font-size: 119%;
+    }
+
+    .FontCardComunicate {
+        font-size: x-large;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .btn-ContactarBlanco {
+            padding-right: 17%;
+            padding-left: 17%;
+            font-size: 141%;
+    }  
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .btn-ContactarBlanco {
+        padding-right: 21%;
+        padding-left: 21%;
+        font-size: 155%;
+    }    
+}

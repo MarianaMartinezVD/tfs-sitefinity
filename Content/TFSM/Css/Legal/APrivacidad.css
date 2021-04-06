@@ -1,0 +1,13 @@
+﻿.APriv.container-banner-hero {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.APriv .BordeTexto {
+    border: 1px #707070 solid;
+}
+
+.APriv .EstilosTexto {
+    font-size: small;
+    color: #707070;
+}

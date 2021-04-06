@@ -1,0 +1,22 @@
+﻿/*Estilos Custom para Bootstrap*/
+.btn-default, .btn-default:hover, .btn-default:active, .btn-default:visited {
+    background-color: white !important;
+    color: #C91C1C !important;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: none !important;
+    border-radius: .25rem;
+}
+
+.btn-danger, .btn-danger:hover, .btn-danger:active, .btn-danger:visited {
+    background-color: #C91C1C !important;
+    color: white !important;
+}
