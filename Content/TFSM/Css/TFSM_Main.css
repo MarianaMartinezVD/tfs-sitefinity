@@ -2,19 +2,19 @@
 
 @font-face {
     font-family: 'ToyotaType-Black';
-    src: url('../Fonts/ToyotaType-Black.otf') format('opentype');
+    src: url('/Fonts/ToyotaType-Black.otf') format('opentype');
 }
 @font-face {
     font-family: 'ToyotaType-Bold';
-    src: url('../Fonts/ToyotaType-Bold.otf') format('opentype');
+    src: url('/Fonts/ToyotaType-Bold.otf') format('opentype');
 }
 @font-face {
     font-family: 'ToyotaType-Regular';
-    src: url('../Fonts/ToyotaType-Regular.otf') format('opentype');
+    src: url('/Fonts/ToyotaType-Regular.otf') format('opentype');
 }
 @font-face {
     font-family: 'ToyotaType-SemiBold';
-    src: url('../Fonts/ToyotaType-Semibold.ttf') format('opentype');
+    src: url('/Fonts/ToyotaType-Semibold.ttf') format('opentype');
 }
 
 
