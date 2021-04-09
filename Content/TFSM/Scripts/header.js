@@ -1,3 +1,3 @@
-$("#openMenuBtn").click(() => {
+function toggleMenu(){
     alert("click");
-})
+}
