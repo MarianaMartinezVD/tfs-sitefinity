@@ -1,9 +1,20 @@
 $(document).ready(function(){
-    $("#openMenuBtn").click(() => {
-        $("#menuOverlay").fadeToggle('fade');
-    });
-    $(document.body).css("overflow","hidden !important");
-    $("body").css("background-color","blue !important");
+    $(".toggleMenu").click(() => {
+        let overlay = $("#menuOverlay").css("display");
+        document.body.style.overflow = "hidden";
 
+        $.when(
+            $("#openMenuBtn").toggle(),
+            $("#closeMenuBtn").toggle(),
+            $("#menuOverlay").fadeToggle(100),
+            $("#drawerMenu").toggle("slide", {direction: 'right'})
+        )
+        .then(() => {
+            if(overlay === "block"){
+                document.body.style.overflow = "auto";
+            }
+        })
+
+    })
 });
 
