@@ -1,0 +1,3 @@
+$("#openMenuBtn").click(() => {
+    alert("click");
+})
