@@ -38,6 +38,7 @@ body {
 .links a{
 	margin-left: 40px;
 	font-size: 14px;
+	cursor: pointer;
 }
 
 .linkFinanciamiento{
@@ -87,15 +88,15 @@ body {
 .menuLink{
 	margin: 0px;
 	color: #58595B;
+	padding-left: 50px;
+}
+
+.drawerMenu>div:hover, .menuLink:hover{
+	background-color: #e0dfdf;
 }
 
 .deployable{
 	display: block;
-}
-
-.subOptions{
-	padding-left: 20px;
-	/* display: block !important; */
 }
 
 .pointDown { 
