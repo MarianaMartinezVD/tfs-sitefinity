@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $("#openMenuBtn").click(() => alert("onclick"));
+    $("#openMenuBtn").click(() => {
+        $("#menuOverlay").show();
+    });
 
 });
 
