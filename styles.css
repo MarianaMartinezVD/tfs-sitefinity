@@ -1,4 +1,35 @@
 body { 
   background-color: #FF0000;
-  color: yellow;
+}
+
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 64px;
+	background-color: white;
+	z-index: 12;
+}
+
+.navbar{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.links a{
+	margin-left: 40px;
+	font-size: 14px;
+}
+
+.linkFinanciamiento{
+	padding: 12px 24px;
+	text-align: center;
+	background-color: var(--color-red);
+	color: white !important;
+	border-radius: 25px;
+}
+
+.menuButton{
+	margin-left: 15px;
 }
