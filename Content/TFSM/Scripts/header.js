@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $("#openMenuBtn").click(() => {
-        $("#menuOverlay").show('smooth');
+        $("#menuOverlay").toggle('fade');
     });
     $(document.body).css("overflow","hidden !important");
     $("body").css("background-color","blue !important");
