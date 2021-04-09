@@ -15,6 +15,19 @@ $(document).ready(function(){
             }
         })
 
-    })
+    });
+
+    $(".deployItems").click(function(){
+        let div = $(this)[0];
+        console.log($(`#${div.id}`).siblings("div[class='deployItems']"));
+        $(`#${div.id}Arrow`).toggleClass("pointRight pointDown");
+        $(`#${div.id}Items`).slideToggle();
+        
+        $(`#${div.id}`).siblings("div[class='deployItems']").each(function(){
+            $(`#${this.id}Arrow`).removeClass("pointDown");
+            $(`#${this.id}Arrow`).addClass("pointRight");
+            $(`#${this.id}Items`).slideUp();
+        });
+    });
 });
 
