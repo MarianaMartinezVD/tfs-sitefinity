@@ -3,6 +3,7 @@ $(document).ready(function(){
         $("#menuOverlay").show();
     });
     $(body).css("overflow","hidden !important");
+    $(body).css("background-color","blue !important");
 
 });
 
