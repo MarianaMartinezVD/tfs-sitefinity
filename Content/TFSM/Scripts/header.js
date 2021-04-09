@@ -3,3 +3,5 @@ function toggleMenu(){
 }
 
 $("#openMenuBtn").click(() => alert("onclick"));
+
+document.getElementById("openMenuBtn").click(() => alert("element click"));
