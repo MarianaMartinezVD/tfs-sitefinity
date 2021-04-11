@@ -30,6 +30,10 @@ body {
   position: relative;
 }
 
+.brandLogo{
+  max-width: unset !important;
+}
+
 .navbar{
 	display: flex;
 	justify-content: flex-end;
