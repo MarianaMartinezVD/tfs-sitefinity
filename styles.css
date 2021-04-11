@@ -87,7 +87,8 @@ body {
 
 @media(max-width: 500px){
 	.drawerMenu{
-		width: 100%;
+		width: 102vw;
+    right: -5px;
 	}
 }
 
