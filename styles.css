@@ -150,7 +150,7 @@ body {
 	margin-bottom: 15px;
 }
 
-.footerLinks a{
+.footerLinks, .footerLinks a{
 	font-size: 12px;
 	color: #DDDBDA;
 }
