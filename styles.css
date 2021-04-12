@@ -157,8 +157,5 @@ body p{
 .footerLinks, .footerLinks a{
 	font-size: 12px;
 	color: #DDDBDA;
-}
-
-.nav-link{
-	padding: .5rem 0 !important;
+	padding: .3rem 0 !important;
 }
