@@ -27,6 +27,10 @@ body {
 	background-color: darkseagreen;
 }
 
+body p{
+	margin: 0;
+}
+
 .header {
 	background-color: white;
 	z-index: 12;
