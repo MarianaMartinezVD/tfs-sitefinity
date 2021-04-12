@@ -83,7 +83,7 @@ body p{
 
 .drawerMenu {
 	position: absolute;
-	top: 64px;
+	top: 63px;
 	right: 0;
 	width: 400px;
 	height: 100vh;
@@ -238,12 +238,15 @@ body p{
   height: 40px;
   background: #CC0000;
   border-radius: 20px; 
-  border: #CC0000;
+  border: 1px solid #CC0000;
 } 
-.btn.btn-primary.custom-button:hover { 
+.btn.btn-primary.custom-button:hover, 
+.linkFinanciamiento:hover,
+.linkFinanciamiento:active
+{ 
   background: #FFF; 
   color: #CC0000;
-  border: #CC0000;
+  border: 1px solid #CC0000;
 }
 .carousel-caption { 
   top: 25%; 
