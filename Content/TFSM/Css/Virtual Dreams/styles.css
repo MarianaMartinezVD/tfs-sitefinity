@@ -1,0 +1,117 @@
+.texto-carousel-mb { 
+  width: 40vw; 
+  text-align: left; 
+  font-style: normal;
+  font-weight: 600;  
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #FAFAFA; 
+}
+.texto-carousel { 
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3.25rem; 
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  color: #FAFAFA; 
+  text-align: left;  
+  width: 35vw;
+}
+.btn.btn-primary.custom-button, 
+.btn.btn-primary.custom-button:active, 
+.btn.btn-primary.custom-button:focus { 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  position: absolute;
+  width: 180px;
+  height: 40px;
+  background: #CC0000;
+  border-radius: 20px; 
+  border: #CC0000;
+} 
+.btn.btn-primary.custom-button:hover { 
+  background: #FFF; 
+  color: #CC0000;
+  border: #CC0000;
+}
+.carousel-caption { 
+  top: 25%; 
+  right: 70% !important; 
+  left: 12% !important;
+} 
+.carousel-caption-mb { 
+  top: 25%; 
+  right: 65% !important; 
+}
+.main { 
+  max-width: 1600px; 
+  margin: 0 auto;
+}
+.custom-margin { 
+  margin-top: -7%; 
+}
+.custom-margin-container { 
+  margin-top: 2.5%; 
+}
+.custom-card { 
+  border-radius: 0.6rem; 
+  background-color: #FFF; 
+  border: #FFF; 
+} 
+.titulo-card { 
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.1em;
+  line-height: 28px;
+  /* display: flex; */
+  align-items: center;
+  color: #121212; 
+  margin-bottom: 0px;
+} 
+.separador-card { 
+  margin-top: 2.5px; 
+  margin-bottom: 2.5px; 
+  border-top: 1px solid #CC0000;
+}
+.parrafo-card { 
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.9em;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #706E6B; 
+  margin-top: 0px; 
+}
+.custom-text { 
+  font-family: 'ToyotaType-Regular';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 56px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #121212;
+}
+.card-body-custom { 
+  padding: 0px !important;
+} 
+.card-body { 
+  padding: 3rem; 
+  min-height: 165px;
+}
+glyphicon-chevron-left:before { 
+  content: "" !important; 
+}
+glyphicon-chevron-right:before { 
+  content: "" !important;}
+.carousel-control-custom { 
+  margin-top: 50%; 
+  margin-left: 50%;
+}
