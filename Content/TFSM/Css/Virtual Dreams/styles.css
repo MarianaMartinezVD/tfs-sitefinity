@@ -57,7 +57,7 @@ body p{
 	padding: 12px 24px;
 	text-align: center;
 	background-color: var(--color-red);
-	color: white !important;
+	color: white;
 	border-radius: 25px;
 }
 
