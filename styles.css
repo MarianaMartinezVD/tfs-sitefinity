@@ -140,15 +140,17 @@ body {
 .footer{
 	background-color: black;
 	color: white;
+	padding: 32px 104px
 }
 
 .footerSectionTitle{
 	font-weight: 600;
 	font-size: 16px;
 	color: #FAFAFA;
+	margin-bottom: 15px;
 }
 
-.footerLinks{
+.footerLinks a{
 	font-size: 12px;
 	color: #DDDBDA;
 }
