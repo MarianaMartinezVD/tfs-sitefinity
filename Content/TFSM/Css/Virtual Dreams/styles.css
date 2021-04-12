@@ -324,3 +324,7 @@ glyphicon-chevron-right:before {
   margin-top: 50%; 
   margin-left: 50%;
 }
+
+.container-banner-hero{
+  padding: 0;
+}
