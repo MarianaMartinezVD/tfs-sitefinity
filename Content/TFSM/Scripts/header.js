@@ -34,4 +34,14 @@ $(document).ready(function () {
         $(`#${this.id}Items`).slideUp();
       });
   });
+
+  $("#expandPlanes").click(function () {
+    $("#planesArrow").toggleClass("pointRight pointDown");
+    $("#listPlanes").slideToggle();
+  });
+
+  $("#expandLegales").click(function () {
+    $("#legalesArrow").toggleClass("pointRight pointDown");
+    $("#listLegales").slideToggle();
+  });
 });
