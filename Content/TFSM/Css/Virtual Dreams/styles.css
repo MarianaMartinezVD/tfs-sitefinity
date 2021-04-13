@@ -201,12 +201,16 @@ body p {
   max-width: 85%;
 }
 
+.newsletter button{
+  position: static;
+  padding-bottom: 15px;
+}
+
 .termsCheckbox {
   display: flex;
   align-items: center;
   padding-left: 8px;
   font-size: 14px;
-  margin-top: 5px;
 }
 
 .newsletter input[type="checkbox"] {
