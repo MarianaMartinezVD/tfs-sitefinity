@@ -202,8 +202,8 @@ body p {
 }
 
 .newsletter button{
-  position: static;
-  padding-bottom: 15px;
+  position: static !important;
+  padding-bottom: 15px !important;
 }
 
 .termsCheckbox {
