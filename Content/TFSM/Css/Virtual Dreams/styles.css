@@ -203,7 +203,7 @@ body p {
 
 .newsletter button{
   position: static !important;
-  padding-bottom: 15px !important;
+  margin-bottom: 15px !important;
 }
 
 .termsCheckbox {
