@@ -252,6 +252,10 @@ body p {
   .nav-list {
     margin-left: 32px;
   }
+
+  .newsletter input {
+    max-width: 100%;
+  }
 }
 
 /* SECCIÓN DE LA HOME */
