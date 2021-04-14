@@ -1,0 +1,172 @@
+/**FUENTAS GLOBALES PARA EL SITIO**/
+
+@font-face {
+    font-family: 'ToyotaType-Black';
+    src: url('../Fonts/ToyotaType-Black.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ToyotaType-Bold';
+    src: url('../Fonts/ToyotaType-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ToyotaType-Regular';
+    src: url('../Fonts/ToyotaType-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ToyotaType-SemiBold';
+    src: url('../Fonts/ToyotaType-Semibold.ttf') format('opentype');
+}
+
+:root {
+    --color-red: #CC0000 !important;
+}
+
+.color-red {
+    color: #CC0000;
+}
+
+body {
+    font-family: 'ToyotaType-Regular', Arial, Helvetica, sans-serif;
+}
+
+.customRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    padding: 0 130px;
+}
+
+.content [class^="col"] {
+    padding: 0;
+}
+
+/*ESTILOS DE FUENTES*/
+
+.FontToyotaRegular {
+    font-family: 'ToyotaType-Regular';
+}
+
+.FontToyotaBold {
+    font-family: 'ToyotaType-Bold';
+}
+
+.FontToyotaSemiBold {
+    font-family: 'ToyotaType-SemiBold';
+}
+
+/* FORMULARIO */
+
+hr {
+    border-top: 1px solid #DDDBDA;
+}
+
+.header {
+    height: 64px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DDDBDA;
+}
+
+.links {
+    display: inline-block;
+}
+
+.links a {
+    padding: 0 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.header-icon {
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: 30px;
+}
+
+.sectionTitle {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 40px;
+    color: #3E3E3C;
+}
+
+.sectionSubtitle {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+
+.text-small {
+    font-size: 14px;
+}
+
+.text-medium {
+    font-size: 16px;
+}
+
+.color-gray-2 {
+    color: #706E6B;
+}
+
+.color-gray-4 {
+    color: #3E3E3C;
+}
+
+.row-margin>div>div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-red, .btn-red:active, .btn-red:focus, .btn-red_inverted:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #CC0000;
+    border-radius: 20px;
+    border: 1px solid #CC0000;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.btn-red_inverted, .btn-red_inverted:active, .btn-red_inverted:focus, .btn-red:hover {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    height: 40px;
+    background: #FFF;
+    color: #CC0000;
+    border: 1px solid #CC0000;
+    transition: all 3ms;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.toyotaForm input{
+    font-size: 14px;
+}
+
+.float-container {
+    position: relative;
+}
+
+.float-label {
+    font-size: 14px;
+    position: absolute;
+    transform-origin: top left;
+    transform: translate(0, 7px) scale(1);
+    transition: all .1s ease-in-out;
+    padding-left: 12px;
+    color: #706E6B;
+}
+
+.float-container.active label {
+    transform: translate(0, -18px) scale(.75);
+}
