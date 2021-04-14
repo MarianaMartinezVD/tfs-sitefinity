@@ -204,6 +204,7 @@ body p {
 .newsletter button{
   position: static !important;
   margin-bottom: 15px !important;
+  margin-top: 20px;
 }
 
 .termsCheckbox {
@@ -248,13 +249,15 @@ body p {
   margin-right: 15px;
 }
 
+@media(max-width: 991px){
+  .newsletter input {
+    max-width: 100%;
+  }
+}
+
 @media(max-width: 767px) {
   .nav-list {
     margin-left: 32px;
-  }
-
-  .newsletter input {
-    max-width: 100%;
   }
 }
 
