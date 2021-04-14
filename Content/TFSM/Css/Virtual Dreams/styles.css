@@ -257,7 +257,7 @@ body p {
 
 @media(max-width: 767px) {
   .nav-list {
-    margin-left: 32px;
+    padding-left: 32px !important;
   }
 }
 
