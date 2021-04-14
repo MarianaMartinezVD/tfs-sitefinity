@@ -222,7 +222,7 @@ body p {
 
 .footerSectionTitle {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.6rem;
   color: #FAFAFA;
   margin-bottom: 15px;
   display: flex;
@@ -262,7 +262,7 @@ body p {
 }
 
 @media(max-width: 692px){
-  .footerSectionTitle{
+  .newsletterTitle{
     font-size: 17px;
   }
 }
