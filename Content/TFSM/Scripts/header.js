@@ -2,7 +2,6 @@ $(document).ready(function () {
   $(".toggleMenu").click(() => {
     let overlay = $("#menuOverlay").css("display");
     document.body.style.overflow = "hidden";
-    alert('click');
 
     $.when(
       $("#openMenuBtn").toggle(),
