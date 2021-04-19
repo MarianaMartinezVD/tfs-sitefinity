@@ -97,7 +97,7 @@ body p {
   top: 63px;
   right: 0;
   width: 400px;
-  height: 100vh;
+  height: calc(100vh-63px);
   background-color: white;
   box-shadow: 0px 20px 24px rgba(18, 18, 18, 0.2);
   z-index: 11;
@@ -152,25 +152,6 @@ body p {
   transform: rotate(0);
   transition: all 200ms;
 }
-
-/* .footer{
-	background-color: black;
-	color: white;
-	padding: 32px 104px
-}
-
-.footerSectionTitle{
-	font-weight: 600;
-	font-size: 16px;
-	color: #FAFAFA;
-	margin-bottom: 15px;
-}
-
-.footerLinks, .footerLinks a{
-	font-size: 12px;
-	color: #DDDBDA;
-	padding: .3rem 0 !important;
-} */
 
 .footer {
   background-color: black;
