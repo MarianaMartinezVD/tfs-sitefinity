@@ -1,20 +1,42 @@
+<!-- HEADER -->
 <div class="header content">
-    <div>
-        <img style="height: 55px;" src="G:\Tomas\Proyectos\sitefinity-html-test\Content\image\imagen-1.png" />
-    </div>
-    <div class="d-flex align-items-center">
-        <nav class="links">
-            <a>Inicio</a>
-            <a>Mis Pagos</a>
-            <a>Mis contratos</a>
-            <a>Comprobantes fiscales</a>
-            <a>Preguntas frecuentes</a>
-            <a>Mis casos</a>
-            <a>Agencias</a>
-        </nav>
-        <div class="d-inline-block pt-2 ml-2">
-            <span class="material-icons header-icon">notifications</span>
-            <span class="material-icons header-icon color-red">account_circle</span>
+    <span class="container d-flex justify-content-between">
+        <div>
+            <img style="height: 55px;" src="G:\Tomas\Proyectos\sitefinity-html-test\Content\image\imagen-1.png" />
         </div>
+        <div class="d-flex align-items-center">
+            <nav class="links d-none d-md-block">
+                <a>Inicio</a>
+                <a>Mis Pagos</a>
+                <a>Mis contratos</a>
+                <a>Comprobantes fiscales</a>
+                <a>Preguntas frecuentes</a>
+                <a>Mis casos</a>
+                <a>Agencias</a>
+            </nav>
+            <div class="d-inline-block ml-2">
+                <span class="material-icons header-icon">notifications</span>
+                <span class="material-icons header-icon color-red d-none d-md-inline-block">account_circle</span>
+                <span id="openMenuBtn" class="material-icons header-icon color-red d-md-none">menu</span>
+                <span id="closeMenuBtn" class="material-icons header-icon color-red"
+                    style="display: none;">close</span>
+            </div>
+        </div>
+    </span>
+</div>
+<!-- DRAWER MENU -->
+<div id="menu" class="drawer-menu">
+    <div class="menu-item_user">
+        <span class="material-icons color-red" style="font-size: 50px;">account_circle</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span>Mi Cuenta</span>
     </div>
+    <hr />
+    <div class="menu-item"><a>Inicio</a></div>
+    <div class="menu-item"><a>Mis Pagos</a></div>
+    <div class="menu-item"><a>Mis contratos</a></div>
+    <div class="menu-item"><a>Comprobantes fiscales</a></div>
+    <div class="menu-item"><a>Preguntas frecuentes</a></div>
+    <div class="menu-item"><a>Mis casos</a></div>
+    <div class="menu-item"><a>Agencias</a></div>
 </div>

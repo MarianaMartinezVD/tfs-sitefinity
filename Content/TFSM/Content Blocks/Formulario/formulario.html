@@ -1,9 +1,11 @@
-<div class="content">
+<!-- FORMULARIO -->
+<div class="content container">
     <div class="my-5">
+        <!-- VEHÍCULO SELECCIONADO -->
         <div class="sectionTitle">Vehículo seleccionado</div>
         <hr />
-        <div class="customRow text-medium color-gray-4 row-margin">
-            <div class="col-5">
+        <div class="row text-medium color-gray-4 row-margin">
+            <div class="col-12 col-md-5">
                 <div>Corolla 2020</div>
                 <div>Version LE</div>
                 <div>Desde $379,600 M.N.</div>
@@ -12,7 +14,7 @@
                     <span class="color-gray-2">Plan Balloon</span>
                 </div>
             </div>
-            <div class="col-7">
+            <div class="col-12 col-md-7">
                 <div>
                     <span class="mr-2">Plan de financiamiento seleccionado:</span>
                     <span class="color-gray-2">60 meses</span>
@@ -27,37 +29,449 @@
                         <select class="form-control color-gray-2 text-small">
                             <option>Toyota Monterrey</option>
                         </select>
-                        <div>
-                            <input class="ml-2" type="checkbox" aria-label="Additional text" />
-                            <label class="color-gray-2 text-small ml-1">Additional text</label>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <hr />
-        <div class="my-4 d-flex justify-content-end">
+        <div class="my-4 d-flex justify-content-center justify-content-md-end">
             <button class="btn-red_inverted mr-3">CAMBIAR DE COTIZACIÓN</button>
             <button class="btn-red">CONTINUAR</button>
         </div>
     </div>
+
+    <!-- INFORMACIÓN DEL SOLICITANTE -->
     <div class="my-5">
         <div class="sectionTitle">Información del solicitante del crédito</div>
         <hr />
+        <!-- DATOS GENERALES -->
         <div class="sectionSubtitle">Datos generales del solicitante</div>
         <div class="toyotaForm">
-            <div class="customRow">
-                <div class="col-12 col-md-4 pr-md-3 float-container">
-                    <label class="float-label" for="inputNombre">Nombre</label>
-                    <input id="inputNombre" class="form-control" data-placeholder="Nombre"/>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputName">Nombre</label>
+                    <input id="inputName" class="form-control" data-placeholder="Nombre" />
                 </div>
-                <div class="col-12 col-md-4 pr-md-3 float-container">
-                    <label class="float-label" for="inputApellidoPaterno">Apellido paterno</label>
-                    <input id="inputApellidoPaterno" class="form-control" data-placeholder="Apellido paterno"/>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputPaternalLastname">Apellido paterno</label>
+                    <input id="inputPaternalLastname" class="form-control" data-placeholder="Apellido paterno" />
                 </div>
-                <div class="col-12 col-md-4 pr-md-3 float-container">
-                    <label class="float-label" for="inputApellidoMaterno">Apellido materno</label>
-                    <input id="inputApellidoMaterno" class="form-control" data-placeholder="Apellido materno"/>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputMaternalLastname">Apellido materno</label>
+                    <input id="inputMaternalLastname" class="form-control" data-placeholder="Apellido materno" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputEmail">Correo electrónico</label>
+                    <input id="inputEmail" class="form-control" data-placeholder="Correo electrónico" />
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputConfirmEmail">Reingrese el correo electrónico</label>
+                    <input id="inputConfirmEmail" class="form-control"
+                        data-placeholder="Reingrese el correo electrónico" />
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectEducationLevel">Nivel educativo</label>
+                    <select id="selectEducationLevel" class="form-control">
+                        <option selected disabled>Nivel educativo</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <label class="float-label active" for="inputBirthdate">Fecha de nacimiento</label>
+                            <input id="inputBirthdate" type="date" class="form-control"
+                                data-placeholder="DD/MM/AAAA" />
+                        </div>
+                        <div class="float-container col-6">
+                            <label class="float-label" for="inputAge">Edad</label>
+                            <input id="inputAge" class="form-control" data-placeholder="Edad" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectBirthCountry">País de nacimiento</label>
+                    <select id="selectBirthCountry" class="form-control">
+                        <option selected disabled>País de nacimiento</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectNationality">Nacionalidad</label>
+                    <select id="selectNationality" class="form-control">
+                        <option selected disabled>Nacionalidad</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectGender">Genero</label>
+                    <select id="selectGender" class="form-control">
+                        <option selected disabled>Genero</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectTaxRegime">Régimen fiscal</label>
+                    <select id="selectTaxRegime" class="form-control">
+                        <option selected disabled>Régimen fiscal</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 position-relative">
+                    <label class="float-label active" for="inputHomoclave">RFC con Homoclave:</label>
+                    <div data-length="19" id="inputHomoclave" class="numericInputContainer"></div>
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectCivilStatus">Estado civil</label>
+                    <select id="selectCivilStatus" class="form-control">
+                        <option selected disabled>Estado civil</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectMatrimonialRegime">Régimen matrimonial</label>
+                    <select id="selectMatrimonialRegime" class="form-control">
+                        <option selected disabled>Régimen matrimonial</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputFinancialDependents">Número de dependientes
+                        económicos</label>
+                    <input id="inputFinancialDependents" class="form-control"
+                        data-placeholder="Número de dependientes económicos" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectIdType">Tipo de identificación</label>
+                    <select id="selectIdType" class="form-control">
+                        <option selected disabled>Tipo de identificación</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputIdNumber">Número de identificación</label>
+                    <input id="inputIdNumber" class="form-control" data-placeholder="Número de identificación" />
+                </div>
+                <div class="col-12 col-md-4 position-relative">
+                    <label class="float-label active" for="inputCrup">CRUP</label>
+                    <div data-length="19" id="inputCrup" class="numericInputContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOMICILIO DEL SOLICITANTE -->
+        <div class="sectionSubtitle">Domicilio del solicitante</div>
+        <div class="toyotaForm">
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputStreet">Calle</label>
+                    <input id="inputStreet" class="form-control" data-placeholder="Calle" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputExternalNumber">Número exterior</label>
+                    <input id="inputExternalNumber" type="number" class="form-control"
+                        data-placeholder="Número exterior" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputInternalNumber">Número interior</label>
+                    <input id="inputInternalNumber" type="number" class="form-control"
+                        data-placeholder="Número interior" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputPostalCode">Código postal</label>
+                    <input id="inputPostalCode" class="form-control" data-placeholder="Código postal" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputSuburb">Colonia</label>
+                    <input id="inputSuburb" class="form-control" data-placeholder="Colonia" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputTown">Delegación/Municipio</label>
+                    <input id="inputTown" class="form-control" data-placeholder="Delegación/Municipio" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputState">Estado</label>
+                    <input id="inputState" class="form-control" data-placeholder="Estado" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputPhone">Teléfono celular</label>
+                    <input id="inputPhone" class="form-control" data-placeholder="Teléfono celular" />
+                </div>
+                <div class="col-12 col-md-3">
+                    <label class="float-label active text-nowrap">¿Cuánto tiempo has vivido en este
+                        domicilio?</label>
+                    <div class="row">
+                        <div class="float-container col-6">
+                            <!-- <label class="float-label" for="inputBirthdate">Fecha de nacimiento</label> -->
+                            <input id="inputAddressYears" type="number" class="form-control" placeholder="Años" />
+                        </div>
+                        <div class="float-container col-6">
+                            <!-- <label class="float-label" for="inputAge">Edad</label> -->
+                            <input id="inputAddressMonths" type="number" class="form-control" placeholder="Meses" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTIVIDAD ECONÓMICA DEL SOLICITANTE -->
+        <div class="sectionSubtitle">Actividad económica del solicitante</div>
+        <div class="toyotaForm">
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectEconomicActivity">Actividad económica</label>
+                    <select id="selectEconomicActivity" class="form-control">
+                        <option selected disabled>Actividad económica</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectEconomicSubactivity">Sub actividad económica</label>
+                    <select id="selectEconomicSubactivity" class="form-control">
+                        <option selected disabled>Sub actividad económica</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectJobType">Tipo de empleo</label>
+                    <select id="selectJobType" class="form-control">
+                        <option selected disabled>Tipo de empleo</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputCompany">Empresa</label>
+                    <input id="inputCompany" class="form-control" data-placeholder="Empresa" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="selectBusinessSector">Giro de la empresa</label>
+                    <select id="selectBusinessSector" class="form-control">
+                        <option selected disabled>Giro de la empresa</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputMonthlyIncome">Ingreso neto mensual</label>
+                    <input id="inputMonthlyIncome" class="form-control" data-placeholder="Ingreso neto mensual" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputOtherIncomes">Otros ingresos</label>
+                    <input id="inputOtherIncomes" class="form-control" data-placeholder="Otros ingresos" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputBossName">Nombre del jefe inmediato</label>
+                    <input id="inputBossName" class="form-control" data-placeholder="Nombre del jefe inmediato" />
+                </div>
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label active text-nowrap">¿Qué antigüedad tienes en tu empleo?</label>
+                    <div class="row">
+                        <div class="float-container col-6">
+                            <!-- <label class="float-label" for="inputBirthdate">Fecha de nacimiento</label> -->
+                            <input id="inputJobYears" type="number" class="form-control" placeholder="Años" />
+                        </div>
+                        <div class="float-container col-6">
+                            <!-- <label class="float-label" for="inputAge">Edad</label> -->
+                            <input id="inputJobMonths" type="number" class="form-control" placeholder="Meses" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 position-relative">
+                    <label class="float-label active" for="inputSocialSecurity">Número de seguridad social</label>
+                    <div data-length="19" id="inputSocialSecurity" class="numericInputContainer"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOMICILIO DEL LUGAR DE TRABAJO DEL SOLICITANTE -->
+        <div class="sectionSubtitle">Domicilio del lugar de trabajo del solicitante</div>
+        <div class="toyotaForm">
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputJobStreet">Calle</label>
+                    <input id="inputJobStreet" class="form-control" data-placeholder="Calle" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputJobExternalNumber">Número exterior</label>
+                    <input id="inputJobExternalNumber" type="number" class="form-control"
+                        data-placeholder="Número exterior" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputJobInternalNumber">Número interior</label>
+                    <input id="inputJobInternalNumber" type="number" class="form-control"
+                        data-placeholder="Número interior" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputJobPostalCode">Código postal</label>
+                    <input id="inputJobPostalCode" class="form-control" data-placeholder="Código postal" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputJobSuburb">Colonia</label>
+                    <input id="inputJobSuburb" class="form-control" data-placeholder="Colonia" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputJobTown">Delegación/Municipio</label>
+                    <input id="inputJobTown" class="form-control" data-placeholder="Delegación/Municipio" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputJobState">Estado</label>
+                    <input id="inputJobState" class="form-control" data-placeholder="Estado" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputJobPhone">Teléfono del trabajo</label>
+                    <input id="inputJobPhone" class="form-control" data-placeholder="Teléfono del trabajo" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputJobExtension">Extensión</label>
+                    <input id="inputJobExtension" class="form-control" data-placeholder="Extensión" />
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="my-4 d-flex justify-content-center justify-content-md-end">
+            <button class="btn-red">CONTINUAR</button>
+        </div>
+    </div>
+
+    <!-- REFERENCIAS -->
+    <div class="my-5">
+        <div class="sectionTitle">Referencias</div>
+        <hr />
+
+        <!-- REFERENCIAS FAMILIARES -->
+        <div class="sectionSubtitle">Referencias Familiares</div>
+
+        <!-- 1 -->
+        <div class="sectionSubtitle">1.</div>
+        <div class="toyotaForm">
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectRelationshipRefOne">Parentesco con el solicitante</label>
+                    <select id="selectRelationshipRefOne" class="form-control">
+                        <option selected disabled>Parentesco con el solicitante</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputNameRefOne">Nombre</label>
+                    <input id="inputNameRefOne" class="form-control" data-placeholder="Nombre" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputPaternalLastnameRefOne">Apellido paterno</label>
+                    <input id="inputPaternalLastnameRefOne" class="form-control"
+                        data-placeholder="Apellido paterno" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputMaternalLastnameRefOne">Apellido materno</label>
+                    <input id="inputMaternalLastnameRefOne" class="form-control"
+                        data-placeholder="Apellido materno" />
+                </div>
+                <div class="col-12 col-md-2">
+                    <label class="float-label active" for="inputBirthdateRefOne">Fecha de nacimiento</label>
+                    <input id="inputBirthdateRefOne" type="date" class="form-control"
+                        data-placeholder="DD/MM/AAAA" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputStreetRefOne">Calle</label>
+                    <input id="inputStreetRefOne" class="form-control" data-placeholder="Calle" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputExternalNumberRefOne">Número exterior</label>
+                    <input id="inputExternalNumberRefOne" type="number" class="form-control"
+                        data-placeholder="Número exterior" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputInternalNumberRefOne">Número interior</label>
+                    <input id="inputInternalNumberRefOne" type="number" class="form-control"
+                        data-placeholder="Número interior" />
+                </div>
+                <div class="col-12 col-md-2 float-container">
+                    <label class="float-label" for="inputPostalCodeRefOne">Código postal</label>
+                    <input id="inputPostalCodeRefOne" class="form-control" data-placeholder="Código postal" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputSuburbRefOne">Colonia</label>
+                    <input id="inputSuburbRefOne" class="form-control" data-placeholder="Colonia" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputTownRefOne">Delegación/Municipio</label>
+                    <input id="inputTownRefOne" class="form-control" data-placeholder="Delegación/Municipio" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputCityRefOne">Ciudad</label>
+                    <input id="inputCityRefOne" class="form-control" data-placeholder="Ciudad" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputStateRefOne">Estado</label>
+                    <input id="inputStateRefOne" class="form-control" data-placeholder="Estado" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputPhoneRefOne">Teléfono celular</label>
+                    <input id="inputPhoneRefOne" class="form-control" data-placeholder="Teléfono celular" />
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="sectionSubtitle">2.</div>
+        <div class="toyotaForm">
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="selectRelationshipRefTwo">Parentesco con el solicitante</label>
+                    <select id="selectRelationshipRefTwo" class="form-control">
+                        <option selected disabled>Parentesco con el solicitante</option>
+                        <option>Ejemplo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputNameRefTwo">Nombre</label>
+                    <input id="inputNameRefTwo" class="form-control" data-placeholder="Nombre" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputPaternalLastnameRefTwo">Apellido paterno</label>
+                    <input id="inputPaternalLastnameRefTwo" class="form-control"
+                        data-placeholder="Apellido paterno" />
+                </div>
+                <div class="col-12 col-md-3 float-container">
+                    <label class="float-label" for="inputMaternalLastnameRefTwo">Apellido materno</label>
+                    <input id="inputMaternalLastnameRefTwo" class="form-control"
+                        data-placeholder="Apellido materno" />
+                </div>
+                <div class="col-12 col-md-2">
+                    <label class="float-label active" for="inputBirthdateRefTwo">Fecha de nacimiento</label>
+                    <input id="inputBirthdateRefTwo" type="date" class="form-control"
+                        data-placeholder="DD/MM/AAAA" />
+                </div>
+            </div>
+            <div class="row row-margin-md">
+                <div class="col-12 col-md-4 float-container">
+                    <label class="float-label" for="inputPhoneRefTwo">Teléfono celular</label>
+                    <input id="inputPhoneRefTwo" class="form-control" data-placeholder="Teléfono celular" />
                 </div>
             </div>
         </div>
