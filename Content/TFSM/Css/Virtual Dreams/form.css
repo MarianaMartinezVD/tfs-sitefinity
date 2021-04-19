@@ -265,4 +265,9 @@ hr {
   .sectionTitle {
     font-size: 26px;
   }
+
+  .container::before,
+  .container::after{
+      content: none;
+  }
 }
