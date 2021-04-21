@@ -148,8 +148,9 @@ body p {
 
 .menuLink {
   margin: 0px;
-  color: #58595b;
   padding-left: 50px;
+  color: #58595b !important;
+  text-decoration: none !important;
 }
 
 .drawerMenu > div:hover,
