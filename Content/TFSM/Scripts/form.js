@@ -4,10 +4,12 @@ $(document).ready(function () {
     const handleFocus = (e) => {
       const target = e.target;
       target.parentNode.classList.add("active");
-      target.setAttribute(
-        "placeholder",
-        target.getAttribute("data-placeholder")
-      );
+      target.parentNode.classList.add("focus");
+      
+      var placeholder = target.getAttribute("data-placeholder");
+      if (placeholder) {
+        target.setAttribute("placeholder", placeholder);
+      }
     };
 
     // remove active class
