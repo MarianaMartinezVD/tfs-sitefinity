@@ -86,7 +86,7 @@ body p {
   cursor: pointer;
 }
 
-.linkFinanciamiento {
+.linkFinanciamiento, .linkFinanciamiento:focus {
   padding: 12px 24px;
   text-align: center;
   background-color: var(--color-red);
@@ -178,25 +178,6 @@ body p {
   transform: rotate(0);
   transition: all 200ms;
 }
-
-/* .footer{
-      background-color: black;
-      color: white;
-      padding: 32px 104px
-  }
-  
-  .footerSectionTitle{
-      font-weight: 600;
-      font-size: 16px;
-      color: #FAFAFA;
-      margin-bottom: 15px;
-  }
-  
-  .footerLinks, .footerLinks a{
-      font-size: 12px;
-      color: #DDDBDA;
-      padding: .3rem 0 !important;
-  } */
 
 .footer {
   background-color: black;
@@ -337,6 +318,7 @@ body p {
   background: #cc0000;
   border-radius: 20px;
   border: 1px solid #cc0000;
+  outline: none;
 }
 
 .btn.btn-primary.custom-button:hover,
@@ -345,6 +327,7 @@ body p {
   background: #fff;
   color: #cc0000;
   border: 1px solid #cc0000;
+  outline: none;
 }
 
 .carousel-caption {
