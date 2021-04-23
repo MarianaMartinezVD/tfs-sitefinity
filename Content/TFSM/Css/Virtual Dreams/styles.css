@@ -520,7 +520,7 @@ glyphicon-chevron-right:before {
 }
 
 .perks-container_big {
-  height: 78vh;
+  height: 70vh;
 }
 
 .perks {
@@ -538,7 +538,7 @@ glyphicon-chevron-right:before {
 
 .perks-container_big .perks {
   height: 22%;
-  padding: 5%;
+  padding: 4%;
 }
 
 .perks > div {
