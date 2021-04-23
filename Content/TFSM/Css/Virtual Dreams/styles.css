@@ -90,6 +90,10 @@ body p {
   border-radius: 25px;
 }
 
+.links{
+  align-items: center;
+}
+
 .links a {
   margin-left: 40px;
   font-size: 14px;
