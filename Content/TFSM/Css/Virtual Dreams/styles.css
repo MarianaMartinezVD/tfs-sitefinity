@@ -69,6 +69,7 @@ body p {
   background-color: white;
   z-index: 12;
   position: relative;
+  height: 63px;
 }
 
 .brandLogo {
@@ -78,6 +79,7 @@ body p {
 .customNavbar {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .linkFinanciamiento, .linkFinanciamiento:focus {
@@ -110,10 +112,10 @@ body p {
 
 .overlay {
   width: 100vw;
-  height: calc(100% - 64px);
+  height: calc(100vh - 63px);
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 64px;
+  top: 63px;
   left: 0;
   z-index: 10;
 }
