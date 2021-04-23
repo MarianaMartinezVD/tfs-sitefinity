@@ -748,6 +748,6 @@ glyphicon-chevron-right:before {
 
 @media (max-width: 387px) {
   .perks-container {
-    /* height: 75vh; */
+    height: 95vh;
   }
 }
