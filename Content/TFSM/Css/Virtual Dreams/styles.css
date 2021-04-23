@@ -560,7 +560,7 @@ glyphicon-chevron-right:before {
   padding: 11% 13%;
   display: grid;
   align-items: center;
-  height: 95%;
+  /* height: 95%; */
 }
 
 :focus {
@@ -702,7 +702,7 @@ glyphicon-chevron-right:before {
   }
 
   .form-box {
-    height: 85vh;
+    /* height: 85vh; */
   }
 }
 
