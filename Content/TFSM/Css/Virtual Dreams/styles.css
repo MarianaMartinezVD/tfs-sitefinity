@@ -266,7 +266,7 @@ body p {
 
 .footerItem {
   font-size: 1.3rem;
-  color: #dddbda;
+  color: #dddbda !important;
   padding: 0.3rem 0 !important;
   list-style: none;
 }
