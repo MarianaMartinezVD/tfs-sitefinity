@@ -89,6 +89,7 @@ body p {
   background-color: var(--color-red);
   color: white !important;
   border-radius: 25px;
+  border: 1px solid var(--color-red);
 }
 
 .links {
