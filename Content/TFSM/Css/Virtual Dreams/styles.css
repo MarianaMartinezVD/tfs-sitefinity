@@ -47,7 +47,7 @@
 
 body {
   font-family: "ToyotaType-Regular", Arial, Helvetica, sans-serif;
-  /* background-color: darkseagreen; */
+  font-size: 14px;
 }
 
 body [class^="col"] {
