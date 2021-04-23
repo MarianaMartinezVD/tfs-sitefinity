@@ -84,7 +84,7 @@ body p {
   padding: 12px 24px;
   text-align: center;
   background-color: var(--color-red);
-  color: white;
+  color: white !important;
   border-radius: 25px;
 }
 
@@ -328,7 +328,7 @@ body p {
 .linkFinanciamiento:hover,
 .linkFinanciamiento:active {
   background: #fff;
-  color: #cc0000;
+  color: #cc0000 !important;
   border: 1px solid #cc0000;
   outline: none;
 }
