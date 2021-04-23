@@ -82,7 +82,8 @@ body p {
   align-items: center;
 }
 
-.linkFinanciamiento, .linkFinanciamiento:focus {
+.linkFinanciamiento,
+.linkFinanciamiento:focus {
   padding: 12px 24px;
   text-align: center;
   background-color: var(--color-red);
@@ -90,7 +91,7 @@ body p {
   border-radius: 25px;
 }
 
-.links{
+.links {
   align-items: center;
 }
 
@@ -112,6 +113,16 @@ body p {
   margin-left: 15px;
   display: flex;
   align-items: center;
+}
+
+.menuButton:hover {
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+.menuButton:active {
+  background-color: #dae0e5;
+  border-color: #d3d9df;
 }
 
 .overlay {
@@ -521,7 +532,7 @@ glyphicon-chevron-right:before {
   user-select: none;
 }
 
-.perks-container_big .perks{
+.perks-container_big .perks {
   height: 22%;
   padding: 5%;
 }
@@ -677,7 +688,7 @@ glyphicon-chevron-right:before {
     margin: 20px 0;
   }
 
-  .perks-container{
+  .perks-container {
     height: 70vh;
   }
 
@@ -686,7 +697,7 @@ glyphicon-chevron-right:before {
     width: 100%;
   }
 
-  .form-box{
+  .form-box {
     height: 85vh;
   }
 }
@@ -712,7 +723,7 @@ glyphicon-chevron-right:before {
     line-height: 20px;
   }
 
-  .perks-container_big{
+  .perks-container_big {
     height: 85vh;
   }
 
