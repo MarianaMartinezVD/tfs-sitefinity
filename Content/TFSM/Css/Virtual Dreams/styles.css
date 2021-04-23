@@ -266,9 +266,13 @@ body p {
 
 .footerItem {
   font-size: 1.3rem;
-  color: #dddbda !important;
   padding: 0.3rem 0 !important;
   list-style: none;
+}
+
+.footerItem>a{
+  color: #dddbda !important;
+  text-decoration: none;
 }
 
 .customRow {
