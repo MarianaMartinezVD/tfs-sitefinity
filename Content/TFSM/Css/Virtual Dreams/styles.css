@@ -348,6 +348,7 @@ body p {
   color: #cc0000 !important;
   border: 1px solid #cc0000;
   outline: none;
+  transition: all 3ms ease-in-out;
 }
 
 .carousel-caption {
