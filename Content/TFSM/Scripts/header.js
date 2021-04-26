@@ -56,7 +56,7 @@ $(document).ready(function () {
       "fast"
     );
     if (deviceWidth() <= 767) {
-      $("#newsletterTermsModal").show("fade");
+      $("#newsletterTermsModal").show("slide");
     } else {
       $("#newsletterTermsModal").animate(
         {
@@ -74,7 +74,7 @@ $(document).ready(function () {
     $("#newsletterTermsOverlay").hide("fade");
     console.log(deviceWidth());
     if (deviceWidth() <= 767) {
-      $("#newsletterTermsModal").hide("fade");
+      $("#newsletterTermsModal").hide("slide");
     } else {
       $("#newsletterTermsModal").animate(
         {
