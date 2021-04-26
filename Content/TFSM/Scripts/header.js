@@ -44,4 +44,55 @@ $(document).ready(function () {
     $("#legalesArrow").toggleClass("pointRight pointDown");
     $("#listLegales").slideToggle();
   });
+
+  function openNewsletterTerms() {
+    document.body.style.overflow = "hidden";
+    $("#newsletterTermsOverlay").show("fade");
+    $("#newsletterTermsBody").animate({ scrollTop: $("#newsletterTermsBody").offset().top - 20, }, "fast");
+    $("#newsletterTermsModal").animate(
+      {
+        display: "toggle",
+        opacity: 1,
+        top: "-=50",
+      },
+      400,
+      () => $("#newsletterTermsModal").css({ display: "block" })
+    );
+  }
+
+  function closeNewsletterTerms() {
+    $("#newsletterTermsOverlay").hide("fade");
+    $("#newsletterTermsModal").animate(
+      {
+        opacity: 0,
+        display: "toggle",
+        top: "+=50",
+      },
+      400,
+      () => {
+        $("#newsletterTermsModal").css({ display: "none" });
+      }
+    );
+    document.body.style.overflow = "auto";
+  }
+
+  $("#newsletterTerms").click(openNewsletterTerms);
+  $("#closeNewsletterTerms").click(closeNewsletterTerms);
+  $("#newsletterTermsOverlay").click(closeNewsletterTerms);
+
+  $("#termsCheckbox").click(function (e) {
+    if ($("#termsCheckbox").prop("checked")) {
+      e.preventDefault();
+      openNewsletterTerms();
+    }
+  });
+
+  $("#denyNewsletterTerms").click(function () {
+    $("#termsCheckbox").prop("checked", false);
+    closeNewsletterTerms();
+  });
+  $("#acceptNewsletterTerms").click(function () {
+    $("#termsCheckbox").prop("checked", true);
+    closeNewsletterTerms();
+  });
 });
