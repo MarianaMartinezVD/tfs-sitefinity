@@ -408,7 +408,7 @@ body p {
 #newsletterTermsBody {
   text-align: justify;
   width: 100%;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 70%;
   margin-bottom: 3%;
   padding-right: 5px;
