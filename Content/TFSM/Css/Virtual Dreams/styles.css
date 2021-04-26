@@ -341,6 +341,10 @@ body p {
   margin-top: 20px;
 }
 
+.social-network {
+  cursor: pointer;
+}
+
 .socialNetworks img {
   margin-right: 15px;
 }
@@ -363,7 +367,7 @@ body p {
   }
 }
 
-/* MODAL DE NEWSLETTER */
+/* HOME MODALS */
 
 #modalOverlay {
   display: flex;
