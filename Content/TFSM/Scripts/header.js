@@ -50,7 +50,7 @@ $(document).ready(function () {
 
   function openNewsletterTerms() {
     document.body.style.overflow = "hidden";
-    $("#newsletterTermsOverlay").show("fade");
+    $("#modalOverlay").show("fade");
     $("#newsletterTermsBody").animate(
       { scrollTop: $("#newsletterTermsBody").offset().top - 20 },
       "fast"
@@ -71,7 +71,7 @@ $(document).ready(function () {
   }
 
   function closeNewsletterTerms() {
-    $("#newsletterTermsOverlay").hide("fade");
+    $("#modalOverlay").hide("fade");
     console.log(deviceWidth());
     if (deviceWidth() <= 767) {
       $("#newsletterTermsModal").hide("slide", { direction: "down" });
