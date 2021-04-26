@@ -300,10 +300,10 @@ body p {
 
 .termsCheckbox {
   display: flex;
-  align-items: center;
   padding-left: 8px;
   font-size: 14px;
   margin: 0px;
+  margin-top: 5px;
 }
 
 .newsletter input[type="checkbox"] {
