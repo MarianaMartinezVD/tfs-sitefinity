@@ -844,10 +844,6 @@ glyphicon-chevron-right:before {
   .form-box {
     width: 100%;
   }
-
-  .form-box {
-    /* height: 85vh; */
-  }
 }
 
 @media (max-width: 767px) {
@@ -887,6 +883,22 @@ glyphicon-chevron-right:before {
 
   .form-box {
     padding: 11% 7%;
+  }
+
+  #newsletterTermsModal{
+    width: 100vw;
+    left: 0;
+    top: 0;
+    border-radius: 0;
+    height: 100vh;
+  }
+
+  #newsletterTermsActions{
+    display: block;
+  }
+
+  #newsletterTermsActions>button{
+    margin: 10px 0;
   }
 }
 
