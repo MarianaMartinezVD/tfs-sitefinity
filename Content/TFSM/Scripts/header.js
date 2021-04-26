@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  var deviceWidth = () =>
+    window.innerWidth > 0 ? window.innerWidth : screen.width;
+
   $(".toggleMenu").click(() => {
     let overlay = $("#menuOverlay").css("display");
     document.body.style.overflow = "hidden";
@@ -48,31 +51,43 @@ $(document).ready(function () {
   function openNewsletterTerms() {
     document.body.style.overflow = "hidden";
     $("#newsletterTermsOverlay").show("fade");
-    $("#newsletterTermsBody").animate({ scrollTop: $("#newsletterTermsBody").offset().top - 20, }, "fast");
-    $("#newsletterTermsModal").animate(
-      {
-        display: "toggle",
-        opacity: 1,
-        top: "-=50",
-      },
-      400,
-      () => $("#newsletterTermsModal").css({ display: "block" })
+    $("#newsletterTermsBody").animate(
+      { scrollTop: $("#newsletterTermsBody").offset().top - 20 },
+      "fast"
     );
+    if (deviceWidth() <= 767) {
+      $("#newsletterTermsModal").hide("fade");
+    } else {
+      $("#newsletterTermsModal").animate(
+        {
+          display: "toggle",
+          opacity: 1,
+          top: "-=50",
+        },
+        400,
+        () => $("#newsletterTermsModal").css({ display: "block" })
+      );
+    }
   }
 
   function closeNewsletterTerms() {
     $("#newsletterTermsOverlay").hide("fade");
-    $("#newsletterTermsModal").animate(
-      {
-        opacity: 0,
-        display: "toggle",
-        top: "+=50",
-      },
-      400,
-      () => {
-        $("#newsletterTermsModal").css({ display: "none" });
-      }
-    );
+
+    if (deviceWidth() <= 767) {
+      $("#newsletterTermsModal").hide("fade");
+    } else {
+      $("#newsletterTermsModal").animate(
+        {
+          opacity: 0,
+          display: "toggle",
+          top: "+=50",
+        },
+        400,
+        () => {
+          $("#newsletterTermsModal").css({ display: "none" });
+        }
+      );
+    }
     document.body.style.overflow = "auto";
   }
 

@@ -891,6 +891,7 @@ glyphicon-chevron-right:before {
     top: 0;
     border-radius: 0;
     height: 100vh;
+    padding: 24px;
   }
 
   #newsletterTermsActions{
@@ -899,6 +900,7 @@ glyphicon-chevron-right:before {
 
   #newsletterTermsActions>button{
     margin: 10px 0;
+    width: 100%;
   }
 }
 
