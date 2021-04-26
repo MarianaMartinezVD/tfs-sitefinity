@@ -894,6 +894,11 @@ glyphicon-chevron-right:before {
     padding: 24px;
   }
 
+  #newsletterTermsBody{
+    height: 65%;
+    margin-bottom: 10%;
+  }
+
   #newsletterTermsActions{
     display: block;
   }
