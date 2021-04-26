@@ -906,7 +906,7 @@ glyphicon-chevron-right:before {
     padding: 11% 7%;
   }
 
-  #newsletterTermsModal {
+  #newsletterTermsModal, .siteModal {
     width: 100vw;
     left: 0;
     top: 0;
