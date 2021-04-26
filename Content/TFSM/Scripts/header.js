@@ -72,7 +72,7 @@ $(document).ready(function () {
 
   function closeNewsletterTerms() {
     $("#newsletterTermsOverlay").hide("fade");
-
+    console.log(deviceWidth());
     if (deviceWidth() <= 767) {
       $("#newsletterTermsModal").hide("fade");
     } else {
