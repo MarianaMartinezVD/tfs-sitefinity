@@ -56,7 +56,7 @@ $(document).ready(function () {
       "fast"
     );
     if (deviceWidth() <= 767) {
-      $("#newsletterTermsModal").hide("fade");
+      $("#newsletterTermsModal").show("fade");
     } else {
       $("#newsletterTermsModal").animate(
         {
