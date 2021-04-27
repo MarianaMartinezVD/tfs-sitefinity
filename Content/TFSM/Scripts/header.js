@@ -48,35 +48,39 @@ $(document).ready(function () {
     $("#listLegales").slideToggle();
   });
 
-  function openNewsletterTerms() {
+  function openModal(modalId) {
+    const modal = $(`#${modalId}`);
     document.body.style.overflow = "hidden";
     $("#modalOverlay").show("fade");
-    $("#newsletterTermsBody").animate(
-      { scrollTop: $("#newsletterTermsBody").offset().top - 20 },
-      "fast"
-    );
+    console.log(modal);
+    if (modal.id === "newsletterTermsModal") {
+      let body = modal.querySelector(".modal-body-custom");
+      $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
+    }
+
     if (deviceWidth() <= 767) {
-      $("#newsletterTermsModal").show("slide", { direction: "down" });
+      modal.show("slide", { direction: "down" });
     } else {
-      $("#newsletterTermsModal").animate(
+      modal.animate(
         {
           display: "toggle",
           opacity: 1,
           top: "-=50",
         },
         400,
-        () => $("#newsletterTermsModal").css({ display: "block" })
+        () => modal.css({ display: "block" })
       );
     }
   }
 
-  function closeNewsletterTerms() {
+  function closeModal(modalId) {
+    const modal = $(`#${modalId}`);
     $("#modalOverlay").hide("fade");
-    console.log(deviceWidth());
+
     if (deviceWidth() <= 767) {
-      $("#newsletterTermsModal").hide("slide", { direction: "down" });
+      modal.hide("slide", { direction: "down" });
     } else {
-      $("#newsletterTermsModal").animate(
+      modal.animate(
         {
           opacity: 0,
           display: "toggle",
@@ -84,39 +88,80 @@ $(document).ready(function () {
         },
         400,
         () => {
-          $("#newsletterTermsModal").css({ display: "none" });
+          modal.css({ display: "none" });
         }
       );
     }
     document.body.style.overflow = "auto";
   }
 
-  $("#newsletterTerms").click(openNewsletterTerms);
+  $("#newsletterTerms").click(() => openModal("newsletterTermsModal"));
 
-  $("#closeNewsletterTerms").click(closeNewsletterTerms);
+  $("#closeNewsletterTerms").click(() => closeModal("newsletterTermsModal"));
 
-  $("#modalOverlay").click(closeNewsletterTerms);
+  $("#modalOverlay").click(function () {
+    $(this)
+      .siblings()
+      .each(function () {
+        if ($(this).css("display") !== "none") {
+          closeModal(this.id);
+        }
+      });
+  });
 
   $("#termsCheckbox").click(function (e) {
     if ($("#termsCheckbox").prop("checked")) {
       e.preventDefault();
-      openNewsletterTerms();
+      openModal("newsletterTermsModal");
     }
   });
 
   $("#denyNewsletterTerms").click(function () {
     $("#termsCheckbox").prop("checked", false);
-    closeNewsletterTerms();
+    closeModal("newsletterTermsModal");
   });
 
   $("#acceptNewsletterTerms").click(function () {
     $("#termsCheckbox").prop("checked", true);
-    closeNewsletterTerms();
+    closeModal("newsletterTermsModal");
   });
 
   $(".social-network").click(function () {
-    $("#modalOverlay").show("fade");
-    $(`#${this.id}SiteModal`).show("fade");
-    document.body.style.overflow = "hidden";
+    openModal(`${this.id}Modal`);
+  });
+
+  $("[id$='ModalClose']").click(function () {
+    closeModal(`${this.dataset.modal}Modal`);
+  });
+
+  $("[id$='ModalBack']").click(function () {
+    closeModal(`${this.dataset.modal}Modal`);
+  });
+
+  $("[id$='ModalContinue']").click(function () {
+    closeModal(`${this.dataset.modal}Modal`);
+    switch (this.dataset.modal) {
+      case "instagram":
+        window.open(
+          "https://www.instagram.com/toyotafinancialservicesmexico/",
+          "_blank"
+        );
+        break;
+      case "facebook":
+        window.open("https://www.facebook.com/TFSMexico/", "_blank");
+        break;
+      case "linkedin":
+        window.open(
+          "https://www.linkedin.com/company/toyota-financial-services-mx/",
+          "_blank"
+        );
+        break;
+      case "youtube":
+        window.open(
+          "https://www.youtube.com/c/ToyotaFinancialServicesMexico/",
+          "_blank"
+        );
+        break;
+    }
   });
 });
