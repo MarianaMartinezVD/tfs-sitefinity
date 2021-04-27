@@ -95,7 +95,33 @@ $(document).ready(function () {
     document.body.style.overflow = "auto";
   }
 
-  $("#newsletterTerms").click(() => openModal("newsletterTermsModal"));
+  var termsCheckbox = "#termsCheckbox";
+
+  $("#newsletterTerms").click(() => {
+      termsCheckbox = "#termsCheckbox";
+      openModal("newsletterTermsModal");
+  });
+
+  $("#plansTerms").click(() => {
+    termsCheckbox = "#plansTermsCheckbox";
+    openModal("newsletterTermsModal");
+});
+
+  $("#termsCheckbox").click(function (e) {
+    if ($("#termsCheckbox").prop("checked")) {
+      e.preventDefault();
+      termsCheckbox = "#termsCheckbox";
+      openModal("newsletterTermsModal");
+    }
+  });
+
+  $("#plansTermsCheckbox").click(function (e) {
+    if ($("#plansTermsCheckbox").prop("checked")) {
+      e.preventDefault();
+      termsCheckbox = "#plansTermsCheckbox";
+      openModal("newsletterTermsModal");
+    }
+  });
 
   $("#closeNewsletterTerms").click(() => closeModal("newsletterTermsModal"));
 
@@ -109,20 +135,13 @@ $(document).ready(function () {
       });
   });
 
-  $("#termsCheckbox").click(function (e) {
-    if ($("#termsCheckbox").prop("checked")) {
-      e.preventDefault();
-      openModal("newsletterTermsModal");
-    }
-  });
-
   $("#denyNewsletterTerms").click(function () {
-    $("#termsCheckbox").prop("checked", false);
+    $(termsCheckbox).prop("checked", false);
     closeModal("newsletterTermsModal");
   });
 
   $("#acceptNewsletterTerms").click(function () {
-    $("#termsCheckbox").prop("checked", true);
+    $(termsCheckbox).prop("checked", true);
     closeModal("newsletterTermsModal");
   });
 
