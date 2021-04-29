@@ -143,13 +143,19 @@ hr {
   font-weight: 600;
   line-height: 40px;
   color: #3e3e3c;
+  margin-bottom: -1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sectionSubtitle {
   font-size: 20px;
   line-height: 32px;
-  margin-bottom: 40px;
-  margin-top: 20px;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .text-small {
@@ -186,7 +192,6 @@ hr {
   border: 1px solid #cc0000;
   color: white;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .btn-red_inverted,
@@ -203,7 +208,6 @@ hr {
   transition: all 3ms;
   border-radius: 20px;
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .toyotaForm input,
@@ -253,6 +257,29 @@ hr {
   margin-bottom: 40px;
 }
 
+.section-arrow {
+  font-size: 30px;
+  user-select: none;
+}
+
+.pointDown {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: all 200ms;
+}
+
+.pointRight {
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -o-transform: rotate(0);
+  -ms-transform: rotate(0);
+  transform: rotate(0);
+  transition: all 200ms;
+}
+
 @media (max-width: 767px) {
   .row > div {
     margin-top: 15px;
@@ -266,10 +293,5 @@ hr {
 
   .sectionTitle {
     font-size: 26px;
-  }
-
-  .container::before,
-  .container::after{
-      content: none;
   }
 }
