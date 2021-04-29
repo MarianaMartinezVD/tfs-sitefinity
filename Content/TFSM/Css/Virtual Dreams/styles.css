@@ -960,7 +960,7 @@ glyphicon-chevron-right:before {
   box-shadow: 0px 4px 12px rgba(112, 110, 107, 0.1);
   border-radius: 12px;
   padding: 65px;
-  position: relative;
+  /* position: relative; */
 }
 
 .bloque_contenedor_video {
@@ -975,9 +975,9 @@ glyphicon-chevron-right:before {
   width: 100vw;
 }
 
-.contenedor_superior {
+/* .contenedor_superior {
   position: absolute;
-}
+} */
 
 .imagen_video {
   width: 100%;
