@@ -1048,9 +1048,9 @@ glyphicon-chevron-right:before {
   z-index: 1;
 }
 
-.boton_video:hover {
+/*.boton_video:hover {
   display: none;
-}
+}*/
 
 .contenido_modal {
   background: rgba(0, 0, 0, 0.95);
