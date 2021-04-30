@@ -4,8 +4,7 @@ $(document).ready(function () {
     const handleFocus = (e) => {
       const target = e.target;
       target.parentNode.classList.add("active");
-      target.parentNode.classList.add("focus");
-      
+
       var placeholder = target.getAttribute("data-placeholder");
       if (placeholder) {
         target.setAttribute("placeholder", placeholder);
@@ -62,7 +61,7 @@ $(document).ready(function () {
     const handleKeyDown = (e) => {
       var input = $(`#${e.target.id}`)[0];
       if (e.key === "Backspace") {
-      e.preventDefault();
+        e.preventDefault();
 
         if (input.value) {
           input.value = "";
@@ -71,26 +70,27 @@ $(document).ready(function () {
           input.previousSibling.value = "";
         }
       } else if (e.key >= "0" && e.key <= "9") {
-      e.preventDefault();
-          input.value = e.key;
-          if (input.nextSibling) {
-            input.nextSibling.focus();
-          }
+        e.preventDefault();
+        input.value = e.key;
+        if (input.nextSibling) {
+          input.nextSibling.focus();
+        }
       }
     };
 
-    const handlePaste = function(e){
+    const handlePaste = function (e) {
       e.preventDefault();
-      var content = (e.clipboardData || window.clipboardData).getData('text')
-      var input = $(this).parent()[0].children[0], inputs = $(this).parent()[0].children;
+      var content = (e.clipboardData || window.clipboardData).getData("text");
+      var input = $(this).parent()[0].children[0],
+        inputs = $(this).parent()[0].children;
 
-      $(inputs).each(function(){
+      $(inputs).each(function () {
         this.value = "";
       });
 
       var i = 0;
-      while(i < content.length && input){
-        if(content[i] >= "0" && content[i] <= "9"){
+      while (i < content.length && input) {
+        if (content[i] >= "0" && content[i] <= "9") {
           input.value = content[i];
           input = input.nextSibling;
         }
@@ -98,11 +98,10 @@ $(document).ready(function () {
         i++;
       }
 
-      if(input){
+      if (input) {
         input.focus();
-      }
-      else{
-        $(inputs[inputs.length-1]).focus();
+      } else {
+        $(inputs[inputs.length - 1]).focus();
       }
     };
 
@@ -123,7 +122,7 @@ $(document).ready(function () {
           newInput.id = element.id + "-" + i;
           newInput.dataset.index = i;
           newInput.dataset.length = element.dataset.length;
-          newInput.style = "width: calc(100%/" + element.dataset.length + ");"
+          newInput.style = "width: calc(100%/" + element.dataset.length + ");";
 
           bindEvents(newInput);
           element.append(newInput);
@@ -139,17 +138,23 @@ $(document).ready(function () {
   FloatLabel.init();
   NumericInput.init();
 
-  $("#openMenuBtn").click(function(){
+  $("#openMenuBtn").click(function () {
     $(this).hide();
     $("#closeMenuBtn").show();
 
-    $("#menu").show("slide", { direction: "right" })
+    $("#menu").show("slide", { direction: "right" });
   });
 
-  $("#closeMenuBtn").click(function(){
+  $("#closeMenuBtn").click(function () {
     $(this).hide();
     $("#openMenuBtn").show();
 
-    $("#menu").hide("slide", { direction: "right" })
+    $("#menu").hide("slide", { direction: "right" });
+  });
+
+  $(".sectionTitle").click(function(){
+    console.log(this.querySelector("span"));
+    $(`#${this.id}Arrow`).toggleClass("pointRight pointDown");
+    $(`#${this.id}Content`).slideToggle();
   });
 });
