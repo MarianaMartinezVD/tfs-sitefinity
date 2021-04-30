@@ -192,6 +192,7 @@ hr {
   border: 1px solid #cc0000;
   color: white;
   transition: all 0.3s ease;
+  outline: none;
 }
 
 .btn-red_inverted,
@@ -208,6 +209,7 @@ hr {
   transition: all 3ms;
   border-radius: 20px;
   transition: all 0.3s ease;
+  outline: none;
 }
 
 .toyotaForm input,
