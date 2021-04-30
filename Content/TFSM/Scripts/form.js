@@ -160,10 +160,12 @@ $(document).ready(function () {
 
   $(".continue-btn").click(function () {
     $.when(
-      $(`#${this.dataset.collapse}Arrow`).toggleClass("pointRight pointDown"),
-      $(`#${this.dataset.collapse}Content`).slideToggle(),
-      $(`#${this.dataset.expand}Arrow`).toggleClass("pointRight pointDown"),
-      $(`#${this.dataset.expand}Content`).slideToggle()
+      $(`#${this.dataset.collapse}Arrow`).addClass("pointRight"),
+      $(`#${this.dataset.collapse}Arrow`).removeClass("pointDown"),
+      $(`#${this.dataset.collapse}Content`).slideUp(),
+      $(`#${this.dataset.expand}Arrow`).addClass("pointDown"),
+      $(`#${this.dataset.expand}Arrow`).removeClass("pointRight"),
+      $(`#${this.dataset.expand}Content`).slideDown()
     ).done(() => {
       $("html, body").animate(
         {
