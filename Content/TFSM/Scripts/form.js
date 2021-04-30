@@ -157,4 +157,20 @@ $(document).ready(function () {
     $(`#${this.id}Arrow`).toggleClass("pointRight pointDown");
     $(`#${this.id}Content`).slideToggle();
   });
+
+  $(".continue-btn").click(function () {
+    $.when(
+      $(`#${this.dataset.collapse}Arrow`).toggleClass("pointRight pointDown"),
+      $(`#${this.dataset.collapse}Content`).slideToggle(),
+      $(`#${this.dataset.expand}Arrow`).toggleClass("pointRight pointDown"),
+      $(`#${this.dataset.expand}Content`).slideToggle()
+    ).done(() => {
+      $("html, body").animate(
+        {
+          scrollTop: $(`#${this.dataset.expand}`).offset().top,
+        },
+        300
+      );
+    });
+  });
 });
