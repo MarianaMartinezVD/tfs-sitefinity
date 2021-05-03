@@ -1142,6 +1142,7 @@ glyphicon-chevron-right:before {
 
 .bloque_contenedor_video{
   height: inherit;
+  width: -webkit-fill-available;
 }
 
 @media only screen and (max-width: 768px) {
