@@ -1048,9 +1048,9 @@ glyphicon-chevron-right:before {
   z-index: 1;
 }
 
-/*.boton_video:hover {
+.boton_video:hover {
   display: none;
-}*/
+}
 
 .contenido_modal {
   background: rgba(0, 0, 0, 0.95);
@@ -1111,8 +1111,7 @@ glyphicon-chevron-right:before {
   }
 }
 
-.modal-dialog-full-width {
-  /* width: 95% !important; */
+/*.modal-dialog-full-width {
   height: 80% !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -1121,16 +1120,58 @@ glyphicon-chevron-right:before {
 
 .modal-content-full-width {
   height: auto !important;
-  /* min-height: 100% !important; */
   border-radius: 0 !important;
   background-color: #000000 !important;
   opacity: 0.99;
 }
 
 #exampleModalPreview {
-  /* margin-top: 200px; */
   padding: 50px !important;
   margin-bottom: 50px !important;
+}*/
+
+.ifframe {
+  width: inherit;
+  height: 450px;
+  display: none;
+}
+
+.imagen_video{
+  display: block;
+}
+
+.bloque_contenedor_video{
+  height: inherit;
+}
+
+@media only screen and (max-width: 768px) {
+  .ifframe {
+    height: 215px !important;
+  }
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1400px) {
+  .ifframe {
+    height: 315px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+  .ifframe {
+    height: 275px !important;
+  }
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1200px) {
+  .ifframe {
+    height: 250px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1100px) {
+  .ifframe {
+    height: 250px !important;
+  }
 }
 
 
