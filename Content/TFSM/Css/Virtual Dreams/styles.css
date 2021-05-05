@@ -630,6 +630,7 @@ glyphicon-chevron-right:before {
 /* PLANES */
 .banner {
   max-width: 100%;
+  position: relative;
 }
 
 .banner > img {
