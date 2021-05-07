@@ -967,6 +967,10 @@ glyphicon-chevron-right:before {
   height: 38px !important;
 }
 
+.select2-container{
+  width: 100% !important;
+}
+
 .select2-selection {
   height: 40px !important;
 }
