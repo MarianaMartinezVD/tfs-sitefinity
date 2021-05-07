@@ -85,6 +85,7 @@ $(document).ready(function () {
             }
           }
       );
+      console.log(results);
       results.forEach((dealer) => {
         var option = document.createElement("option");
         option.id = dealer.IdDealer;
