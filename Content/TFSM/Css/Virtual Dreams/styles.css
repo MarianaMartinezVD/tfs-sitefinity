@@ -90,8 +90,11 @@ body p {
 .header {
   background-color: white;
   z-index: 12;
-  position: relative;
+  /* position: relative; */
   height: 63px;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .brandLogo {
