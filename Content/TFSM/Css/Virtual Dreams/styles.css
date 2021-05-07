@@ -97,6 +97,10 @@ body p {
   top: 0;
 }
 
+.body-container{
+  margin-top: 63px;
+}
+
 .brandLogo {
   max-width: unset !important;
 }
