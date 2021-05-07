@@ -125,7 +125,7 @@ body p {
 }
 
 .links a {
-  margin: 0 20px;
+  margin: 0 5px;
   font-size: 14px;
   cursor: pointer;
   color: var(--color-black);
@@ -713,7 +713,8 @@ glyphicon-chevron-right:before {
 }
 
 .perks-container {
-  height: 65vh;
+  height: 80%;
+  margin-bottom: -16px;
 }
 
 .perks-container_big {
@@ -722,20 +723,20 @@ glyphicon-chevron-right:before {
 
 .perks {
   color: var(--color-gray-4);
-  height: 30%;
+  height: 21.8%;
   width: 85%;
   background-color: white;
   border-radius: 12px;
-  margin-bottom: 16px;
+  margin: 16px 0;
   display: flex;
   align-items: center;
-  padding: 3%;
+  padding: 0 3%;
   user-select: none;
 }
 
 .perks-container_big .perks {
   height: 22%;
-  padding: 4%;
+  padding: 0 4%;
 }
 
 .perks > div {
