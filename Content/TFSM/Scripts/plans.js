@@ -74,7 +74,8 @@ $(document).ready(function () {
     datatype: "json",
     success: function (data) {
       var select = $("#distributor");
-      data.results.forEach((dealer) => {
+      var results = data.results.sort((a,b) => a.Dealer - b.Dealer);
+      results.forEach((dealer) => {
         var option = document.createElement("option");
         option.id = dealer.IdDealer;
         option.value = dealer.IdDealer;
