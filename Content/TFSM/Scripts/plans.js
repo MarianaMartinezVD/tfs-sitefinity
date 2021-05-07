@@ -61,7 +61,6 @@ $(document).ready(function () {
 
   FloatLabel.init();
 
-
   function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
       return letter.toUpperCase();
@@ -74,7 +73,18 @@ $(document).ready(function () {
     datatype: "json",
     success: function (data) {
       var select = $("#distributor");
-      var results = data.results.sort((a,b) => a.Dealer - b.Dealer);
+      var results = data.results.sort(
+        (a, b) =>
+          function () {
+            if (a.Dealer > b.Dealer) {
+              return 1;
+            } else if (a.Dealer < b.Dealer) {
+              return -1;
+            } else {
+              return 0;
+            }
+          }
+      );
       results.forEach((dealer) => {
         var option = document.createElement("option");
         option.id = dealer.IdDealer;
