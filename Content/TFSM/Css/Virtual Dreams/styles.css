@@ -641,11 +641,13 @@ glyphicon-chevron-right:before {
   position: relative;
 }
 
-.banner-medium {
-  max-height: 66vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+@media (min-width: 768px) {
+  .banner-medium {
+    max-height: 66vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .banner > img {
@@ -967,7 +969,7 @@ glyphicon-chevron-right:before {
   height: 38px !important;
 }
 
-.select2-container{
+.select2-container {
   width: 100% !important;
 }
 
