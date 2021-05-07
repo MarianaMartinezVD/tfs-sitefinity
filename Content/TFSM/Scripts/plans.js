@@ -5,7 +5,7 @@ $(document).ready(function () {
       const target = e.target;
       target.parentNode.classList.add("active");
       target.parentNode.classList.add("focus");
-      
+
       var placeholder = target.getAttribute("data-placeholder");
       if (placeholder) {
         target.setAttribute("placeholder", placeholder);
@@ -18,8 +18,8 @@ $(document).ready(function () {
       if (!target.value) {
         target.parentNode.classList.remove("active");
       }
-        target.parentNode.classList.remove("focus");
-        target.removeAttribute("placeholder");
+      target.parentNode.classList.remove("focus");
+      target.removeAttribute("placeholder");
     };
 
     // register events
@@ -74,9 +74,32 @@ $(document).ready(function () {
       Phone: $("#phone").val(),
     };
 
+    function capitalize(str) {
+      return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+        return letter.toUpperCase();
+      });
+    }
+
+    $.ajax({
+      type: "get",
+      url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getdealers",
+      datatype: "json",
+      success: function (data) {
+        var select = $("#distributor");
+        data.results.forEach((dealer) => {
+          var option = document.createElement("option");
+          option.id = dealer.IdDealer;
+          option.value = dealer.IdDealer;
+          option.innerHTML = capitalize(dealer.Dealer);
+          select.append(option);
+        });
+      },
+    });
+
     $.ajax({
       type: "post",
-      url: "https://www.tfs-sitefinity.virtualdreams.io/ServicioTFSM/api/tfsm/submit-lead",
+      url:
+        "https://www.tfs-sitefinity.virtualdreams.io/ServicioTFSM/api/tfsm/submit-lead",
       processData: false,
       contentType: "application/json",
       datatype: "json",
