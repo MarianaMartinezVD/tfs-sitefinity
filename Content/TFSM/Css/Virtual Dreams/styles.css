@@ -292,6 +292,7 @@ body p {
 .newsletter input {
   background-color: black;
   max-width: 85%;
+  color: white;
 }
 
 .newsletter button {
@@ -942,6 +943,35 @@ glyphicon-chevron-right:before {
   }
 }
 
+/* ---------PLANES SELECT2-------- */
+.select2-selection__rendered {
+  font-size: 14px;
+  line-height: 40px !important;
+}
+
+.select2-selection__arrow {
+  height: 38px !important;
+}
+
+.select2-selection {
+  height: 40px !important;
+}
+
+.select2-selection:active,
+.select2-selection:focus {
+  border: 2px solid var(--color-red);
+}
+
+.float-container.select-container {
+  margin: 30px 0 22px 0;
+}
+
+.float-container.select-container.active label,
+.select-container > .float-label.active {
+  transform: translate(0, -20px) scale(0.8);
+}
+/* ----------------------------- */
+
 /* Quienes somos */
 
 .fuente_titulo_1 {
@@ -1035,12 +1065,12 @@ glyphicon-chevron-right:before {
   line-height: 24px;
 }
 
-.bloque_contenedor_5{
+.bloque_contenedor_5 {
   margin-bottom: 140px;
   width: 90%;
 }
 
-.bloque_contenedor_5 button{
+.bloque_contenedor_5 button {
   margin: 0 5px;
 }
 
@@ -1063,11 +1093,11 @@ glyphicon-chevron-right:before {
     margin: 40px 0;
   }
 
-  .bloque_contenedor_5{
+  .bloque_contenedor_5 {
     margin: 40px 0 80px 0;
   }
 
-  .ifframe{
+  .ifframe {
     height: 42.171428vw;
   }
 }
@@ -1097,11 +1127,11 @@ glyphicon-chevron-right:before {
     flex: 0 1 91.666667%;
   }
 
-  .bloque_contenedor_5 button{
+  .bloque_contenedor_5 button {
     margin: 12px 0;
   }
 
-  .ifframe{
+  .ifframe {
     height: 51.542857vw;
   }
 }
@@ -1162,4 +1192,16 @@ glyphicon-chevron-right:before {
 .bloque_contenedor_video {
   height: inherit;
   width: -webkit-fill-available;
+}
+
+/* VALIDACIÓN */
+
+input.error {
+  border-color: red;
+  color: red;
+}
+
+label.error {
+  color: red;
+  font-size: 0.8rem;
 }

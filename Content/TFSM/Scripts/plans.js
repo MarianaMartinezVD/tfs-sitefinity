@@ -60,4 +60,34 @@ $(document).ready(function () {
   })();
 
   FloatLabel.init();
+
+  $("#distributor").select2();
+
+  $("#submitPlan").click(function () {
+    var form = {
+      Plan: $("#planType").val(),
+      Firstname: $("#name").val(),
+      Lastname: $("#lastname").val(),
+      Email: $("#email").val(),
+      DealerId: $("#distributor").val(),
+      Dealer: $("#distributor option:selected").html(),
+      Phone: $("#phone").val(),
+    };
+
+    $.ajax({
+      type: "post",
+      url: "https://www.tfs-sitefinity.virtualdreams.io/ServicioTFSM/api/tfsm/submit-lead",
+      processData: false,
+      contentType: "application/json",
+      datatype: "json",
+      data: JSON.stringify(form),
+      success: function (data) {
+        alert("Lead creado exitosamente!");
+      },
+      failure: function (err) {
+        alert("Error al crear el Lead :(");
+        console.log(err);
+      },
+    });
+  });
 });
