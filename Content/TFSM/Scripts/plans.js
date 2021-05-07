@@ -61,6 +61,29 @@ $(document).ready(function () {
 
   FloatLabel.init();
 
+
+  function capitalize(str) {
+    return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+      return letter.toUpperCase();
+    });
+  }
+
+  $.ajax({
+    type: "get",
+    url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getdealers",
+    datatype: "json",
+    success: function (data) {
+      var select = $("#distributor");
+      data.results.forEach((dealer) => {
+        var option = document.createElement("option");
+        option.id = dealer.IdDealer;
+        option.value = dealer.IdDealer;
+        option.innerHTML = capitalize(dealer.Dealer);
+        select.append(option);
+      });
+    },
+  });
+
   $("#distributor").select2();
 
   $("#submitPlan").click(function () {
@@ -73,28 +96,6 @@ $(document).ready(function () {
       Dealer: $("#distributor option:selected").html(),
       Phone: $("#phone").val(),
     };
-
-    function capitalize(str) {
-      return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
-        return letter.toUpperCase();
-      });
-    }
-
-    $.ajax({
-      type: "get",
-      url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getdealers",
-      datatype: "json",
-      success: function (data) {
-        var select = $("#distributor");
-        data.results.forEach((dealer) => {
-          var option = document.createElement("option");
-          option.id = dealer.IdDealer;
-          option.value = dealer.IdDealer;
-          option.innerHTML = capitalize(dealer.Dealer);
-          select.append(option);
-        });
-      },
-    });
 
     $.ajax({
       type: "post",
