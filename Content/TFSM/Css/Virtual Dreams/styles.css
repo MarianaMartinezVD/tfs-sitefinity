@@ -576,6 +576,11 @@ body p {
   margin-bottom: 40px;
 }
 
+.shadow-hover:hover{
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+  transition: all 0.3s ease;
+}
+
 .titulo-card {
   font-style: normal;
   font-weight: 600;

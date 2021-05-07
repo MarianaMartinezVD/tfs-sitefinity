@@ -183,8 +183,4 @@ $(document).ready(function () {
         break;
     }
   });
-
-  $(".custom-card").hover(function(){
-    $(this).addClass("shadow-lg");
-  });
 });
