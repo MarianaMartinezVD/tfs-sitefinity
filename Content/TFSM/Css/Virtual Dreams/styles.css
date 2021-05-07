@@ -656,6 +656,13 @@ glyphicon-chevron-right:before {
     display: flex;
     align-items: center;
   }
+
+  .banner-small {
+    max-height: 33vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .banner > img {
