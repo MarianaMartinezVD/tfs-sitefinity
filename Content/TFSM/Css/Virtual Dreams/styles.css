@@ -97,7 +97,7 @@ body p {
   top: 0;
 }
 
-.body-container{
+.body-container {
   margin-top: 63px;
 }
 
@@ -639,6 +639,13 @@ glyphicon-chevron-right:before {
 .banner {
   max-width: 100%;
   position: relative;
+}
+
+.banner-medium {
+  max-height: 66vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .banner > img {
