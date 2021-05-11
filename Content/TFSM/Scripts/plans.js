@@ -130,22 +130,36 @@ $(document).ready(function () {
     minlength: jQuery.validator.format("Mínimo {0} caracteres."),
   });
 
-  $("#planForm").validate({
-    rules: {
-      name: {
-        required: true,
-      },
-      lastname: {
-        required: true,
-      },
-      email: {
-        required: true,
-        email: true,
-      },
-      phone: {
-        required: true,
-      },
-    },
+  // $("#planForm").validate({
+  //   rules: {
+  //     name: {
+  //       required: true,
+  //     },
+  //     lastname: {
+  //       required: true,
+  //     },
+  //     email: {
+  //       required: true,
+  //       email: true,
+  //     },
+  //     phone: {
+  //       required: true,
+  //     },
+  //   },
+  // });
+
+  $("#name").rules("add", {
+    required: true,
+  });
+  $("#lastname").rules("add", {
+    required: true,
+  });
+  $("#email").rules("add", {
+    required: true,
+    email: true,
+  });
+  $("#phone").rules("add", {
+    required: true,
   });
 
   // $("#planForm").submit(function (e) {
@@ -163,20 +177,16 @@ $(document).ready(function () {
   //   }
   // });
 
-  function validarFormulario(){
-    if(!$("#name").valid()){
+  function validarFormulario() {
+    if (!$("#name").valid()) {
       return false;
-    }
-    else if(!$("#lastname").valid()){
+    } else if (!$("#lastname").valid()) {
       return false;
-    }
-    else if(!$("#email").valid()){
+    } else if (!$("#email").valid()) {
       return false;
-    }
-    else if(!$("#phone").valid()){
+    } else if (!$("#phone").valid()) {
       return false;
-    }
-    else{
+    } else {
       return true;
     }
   }
@@ -230,8 +240,7 @@ $(document).ready(function () {
         termsCheckbox = "#plansTermsCheckbox";
         openModal("newsletterTermsModal");
       }
-    }
-    else{
+    } else {
       console.log("formulario inválido");
     }
   });
