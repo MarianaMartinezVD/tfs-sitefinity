@@ -142,13 +142,17 @@ $(document).ready(function () {
         datatype: "json",
         data: JSON.stringify(form),
         success: function (data) {
-          $("#planType").val(undefined);
-          $("#name").val(undefined);
-          $("#lastname").val(undefined);
-          $("#email").val(undefined);
+          $("#planType").val("");
+          $("#name").val("");
+          $("#lastname").val("");
+          $("#email").val("");
           $("#distributor").val("0");
           $("#distributor").trigger("change");
-          $("#phone").val(undefined);
+          $("#phone").val("");
+
+          $(".float-container input").each(function(){
+            this.blur();
+          });
 
           Toastnotify.create({
             text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
