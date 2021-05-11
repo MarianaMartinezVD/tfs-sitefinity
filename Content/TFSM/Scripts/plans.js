@@ -161,6 +161,7 @@ $(document).ready(function () {
       });
     } else {
       termsCheckbox = "#plansTermsCheckbox";
+      console.log(termsCheckbox);
       openModal("newsletterTermsModal");
     }
   });
