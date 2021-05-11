@@ -75,25 +75,19 @@ $(document).ready(function () {
     datatype: "json",
     success: function (data) {
       var select = $("#distributor");
-      var results = data.results.sort(
-        (a, b) =>
-          function () {
-            if (a.Dealer > b.Dealer) {
-              return 1;
-            } else if (a.Dealer < b.Dealer) {
-              return -1;
-            } else {
-              return 0;
-            }
-          }
-      );
-      console.log(results);
-      results.forEach((dealer) => {
-        var option = document.createElement("option");
-        option.id = dealer.IdDealer;
-        option.value = dealer.IdDealer;
-        option.innerHTML = capitalize(dealer.Dealer);
-        select.append(option);
+      data.results.forEach((state) => {
+        var group = document.createElement("optgroup");
+        group.label = state.Descripcion;
+
+        state.Distribuidores.forEach((dealer) => {
+          var option = document.createElement("option");
+          option.id = dealer.IdDealer;
+          option.value = dealer.IdDealer;
+          option.innerHTML = capitalize(dealer.Dealer);
+          group.append(option);
+        });
+
+        select.append(group);
       });
     },
   });
