@@ -1,3 +1,5 @@
+const api_url = "https://tfs-sitefinity.virtualdreams.io:444/api/tfsm/";
+
 $(document).ready(function () {
   const FloatLabel = (() => {
     // add active class
@@ -69,7 +71,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "get",
-    url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getdealers",
+    url: api_url + "getdealersbystate",
     datatype: "json",
     success: function (data) {
       var select = $("#distributor");
@@ -111,8 +113,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: "post",
-      url:
-        "https://www.tfs-sitefinity.virtualdreams.io/ServicioTFSM/api/tfsm/submit-lead",
+      url: api_url + "submit-lead",
       processData: false,
       contentType: "application/json",
       datatype: "json",
