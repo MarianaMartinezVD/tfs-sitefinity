@@ -152,6 +152,7 @@ $(document).ready(function () {
 
           $(".float-container input").each(function(){
             $(this).blur();
+            console.log(this);
           });
 
           Toastnotify.create({
