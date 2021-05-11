@@ -95,40 +95,45 @@ $(document).ready(function () {
   $("#distributor").select2();
 
   $("#submitPlan").click(function () {
-    var form = {
-      Plan: $("#planType").val(),
-      Firstname: $("#name").val(),
-      Lastname: $("#lastname").val(),
-      Email: $("#email").val(),
-      DealerId: $("#distributor").val(),
-      Dealer: $("#distributor option:selected").html(),
-      Phone: $("#phone").val(),
-    };
+    if ($("#plansTermsCheckbox").prop("checked")) {
+      var form = {
+        Plan: $("#planType").val(),
+        Firstname: $("#name").val(),
+        Lastname: $("#lastname").val(),
+        Email: $("#email").val(),
+        DealerId: $("#distributor").val(),
+        Dealer: $("#distributor option:selected").html(),
+        Phone: $("#phone").val(),
+      };
 
-    $.ajax({
-      type: "post",
-      url: api_url + "submit-lead",
-      processData: false,
-      contentType: "application/json",
-      datatype: "json",
-      data: JSON.stringify(form),
-      success: function (data) {
-        $("#planType").val("");
-        $("#name").val("");
-        $("#lastname").val("");
-        $("#email").val("");
-        $("#distributor").val("0");
-        $("#distributor").trigger("change");
-        $("#phone").val("");
+      $.ajax({
+        type: "post",
+        url: api_url + "submit-lead",
+        processData: false,
+        contentType: "application/json",
+        datatype: "json",
+        data: JSON.stringify(form),
+        success: function (data) {
+          $("#planType").val("");
+          $("#name").val("");
+          $("#lastname").val("");
+          $("#email").val("");
+          $("#distributor").val("0");
+          $("#distributor").trigger("change");
+          $("#phone").val("");
 
-        Toastnotify.create({
-          text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
-        });
-      },
-      failure: function (err) {
-        alert("Error al crear el Lead :(");
-        console.log(err);
-      },
-    });
+          Toastnotify.create({
+            text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
+          });
+        },
+        failure: function (err) {
+          alert("Error al crear el Lead :(");
+          console.log(err);
+        },
+      });
+    } else {
+      termsCheckbox = "#termsCheckbox";
+      openModal("newsletterTermsModal");
+    }
   });
 });
