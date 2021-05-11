@@ -984,6 +984,12 @@ glyphicon-chevron-right:before {
     margin: 10px 0;
     width: 100%;
   }
+
+  .description .text,
+  .description div {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @media (max-width: 387px) {
