@@ -142,18 +142,13 @@ $(document).ready(function () {
         datatype: "json",
         data: JSON.stringify(form),
         success: function (data) {
-          $("#planType").val("");
-          $("#name").val("");
-          $("#lastname").val("");
-          $("#email").val("");
           $("#distributor").val("0");
           $("#distributor").trigger("change");
-          $("#phone").val("");
-
+          $("#plansTermsCheckbox").prop("checked", false);
+          
           $(".float-container input").each(function () {
-            if (!this.value) {
-              this.parentNode.classList.remove("active");
-            }
+            $(this).val("");
+            this.parentNode.classList.remove("active");
             this.parentNode.classList.remove("focus");
             this.removeAttribute("placeholder");
           });
