@@ -1,5 +1,8 @@
 const api_url = "https://tfs-sitefinity.virtualdreams.io:444/api/tfsm/";
 
+var deviceWidth = () =>
+  window.innerWidth > 0 ? window.innerWidth : screen.width;
+
 $(document).ready(function () {
   const FloatLabel = (() => {
     // add active class
