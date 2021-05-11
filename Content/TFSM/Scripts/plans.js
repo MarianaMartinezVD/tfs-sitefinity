@@ -151,8 +151,11 @@ $(document).ready(function () {
           $("#phone").val("");
 
           $(".float-container input").each(function(){
-            $(this).blur();
-            console.log(this);
+            if (!this.value) {
+              this.parentNode.classList.remove("active");
+            }
+            this.parentNode.classList.remove("focus");
+            this.removeAttribute("placeholder");
           });
 
           Toastnotify.create({
