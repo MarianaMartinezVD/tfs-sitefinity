@@ -1,4 +1,3 @@
-import { termsCheckbox } from "./header.js";
 const api_url = "https://tfs-sitefinity.virtualdreams.io:444/api/tfsm/";
 
 var deviceWidth = () =>
