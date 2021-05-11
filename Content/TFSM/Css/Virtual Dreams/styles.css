@@ -693,6 +693,11 @@ glyphicon-chevron-right:before {
   margin-bottom: 20px;
 }
 
+.description text{
+  padding-left: 3rem;
+  padding-right: 5rem;
+}
+
 .text-medium {
   font-size: 18px;
   font-weight: 400;
