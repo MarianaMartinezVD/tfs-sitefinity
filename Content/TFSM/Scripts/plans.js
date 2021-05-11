@@ -1,3 +1,4 @@
+import { termsCheckbox } from "./header.js";
 const api_url = "https://tfs-sitefinity.virtualdreams.io:444/api/tfsm/";
 
 var deviceWidth = () =>
@@ -101,7 +102,7 @@ $(document).ready(function () {
     const modal = $(`#${modalId}`);
     document.body.style.overflow = "hidden";
     $("#modalOverlay").show("fade");
-    console.log(modal);
+
     if (modal.id === "newsletterTermsModal") {
       let body = modal.querySelector(".modal-body-custom");
       $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
@@ -150,7 +151,7 @@ $(document).ready(function () {
           $("#distributor").trigger("change");
           $("#phone").val("");
 
-          $(".float-container input").each(function(){
+          $(".float-container input").each(function () {
             if (!this.value) {
               this.parentNode.classList.remove("active");
             }

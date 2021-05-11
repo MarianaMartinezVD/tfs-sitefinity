@@ -186,3 +186,7 @@ $(document).ready(function () {
     }
   });
 });
+
+export {
+  termsCheckbox
+};
