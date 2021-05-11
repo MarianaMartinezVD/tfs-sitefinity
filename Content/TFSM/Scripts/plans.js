@@ -113,13 +113,17 @@ $(document).ready(function () {
       datatype: "json",
       data: JSON.stringify(form),
       success: function (data) {
-        alert("Lead creado exitosamente!");
         $("#planType").val("");
         $("#name").val("");
         $("#lastname").val("");
         $("#email").val("");
         $("#distributor").val("0");
+        $("#distributor").trigger("change");
         $("#phone").val("");
+
+        Toastnotify.create({
+          text: "Notification Message Here",
+        });
       },
       failure: function (err) {
         alert("Error al crear el Lead :(");
