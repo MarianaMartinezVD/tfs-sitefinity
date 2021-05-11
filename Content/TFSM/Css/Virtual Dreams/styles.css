@@ -986,7 +986,7 @@ glyphicon-chevron-right:before {
   }
 
   .description .text,
-  .description div {
+  .description > div {
     padding-left: 1rem;
     padding-right: 1rem;
   }
