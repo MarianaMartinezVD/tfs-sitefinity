@@ -142,13 +142,13 @@ $(document).ready(function () {
         datatype: "json",
         data: JSON.stringify(form),
         success: function (data) {
-          $("#planType").val("");
-          $("#name").val("");
-          $("#lastname").val("");
-          $("#email").val("");
+          $("#planType").val(undefined);
+          $("#name").val(undefined);
+          $("#lastname").val(undefined);
+          $("#email").val(undefined);
           $("#distributor").val("0");
           $("#distributor").trigger("change");
-          $("#phone").val("");
+          $("#phone").val(undefined);
 
           Toastnotify.create({
             text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
