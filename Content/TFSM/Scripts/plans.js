@@ -122,49 +122,86 @@ $(document).ready(function () {
     }
   }
 
-  $("#submitPlan").click(function () {
-    if ($("#plansTermsCheckbox").prop("checked")) {
-      var form = {
-        Plan: $("#planType").val(),
-        Firstname: $("#name").val(),
-        Lastname: $("#lastname").val(),
-        Email: $("#email").val(),
-        DealerId: $("#distributor").val(),
-        Dealer: $("#distributor option:selected").html(),
-        Phone: $("#phone").val(),
-      };
+  jQuery.extend(jQuery.validator.messages, {
+    required: "Este campo es obligatorio.",
+    email: "Ingrese un valor de email válido.",
+    number: "Ingrese un número válido.",
+    maxlength: jQuery.validator.format("Máximo {0} caracteres."),
+    minlength: jQuery.validator.format("Mínimo {0} caracteres."),
+  });
 
-      $.ajax({
-        type: "post",
-        url: api_url + "submit-lead",
-        processData: false,
-        contentType: "application/json",
-        datatype: "json",
-        data: JSON.stringify(form),
-        success: function (data) {
-          $("#distributor").val("0");
-          $("#distributor").trigger("change");
-          $("#plansTermsCheckbox").prop("checked", false);
-          
-          $(".float-container input").each(function () {
-            $(this).val("");
-            this.parentNode.classList.remove("active");
-            this.parentNode.classList.remove("focus");
-            this.removeAttribute("placeholder");
-          });
+  $("#planForm").validate({
+    rules: {
+      name: {
+        required: true,
+      },
+      lastname: {
+        required: true,
+      },
+      email: {
+        required: true,
+        email: true,
+      },
+      phone: {
+        required: true,
+      },
+    },
+  });
 
-          Toastnotify.create({
-            text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
-          });
-        },
-        failure: function (err) {
-          alert("Error al crear el Lead :(");
-          console.log(err);
-        },
-      });
-    } else {
-      termsCheckbox = "#plansTermsCheckbox";
-      openModal("newsletterTermsModal");
+  $("#planForm").submit(function (e) {
+    e.preventDefault();
+    if ($("#planForm").valid()) {
+      if ($("#plansTermsCheckbox").prop("checked")) {
+        submitLead();
+      } else {
+        termsCheckbox = "#plansTermsCheckbox";
+        openModal("newsletterTermsModal");
+      }
     }
+  });
+
+  function submitLead() {
+    var form = {
+      Plan: $("#planType").val(),
+      Firstname: $("#name").val(),
+      Lastname: $("#lastname").val(),
+      Email: $("#email").val(),
+      DealerId: $("#distributor").val(),
+      Dealer: $("#distributor option:selected").html(),
+      Phone: $("#phone").val(),
+    };
+
+    $.ajax({
+      type: "post",
+      url: api_url + "submit-lead",
+      processData: false,
+      contentType: "application/json",
+      datatype: "json",
+      data: JSON.stringify(form),
+      success: function (data) {
+        $("#distributor").val("0");
+        $("#distributor").trigger("change");
+        $("#plansTermsCheckbox").prop("checked", false);
+
+        $(".float-container input").each(function () {
+          $(this).val("");
+          this.parentNode.classList.remove("active");
+          this.parentNode.classList.remove("focus");
+          this.removeAttribute("placeholder");
+        });
+
+        Toastnotify.create({
+          text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
+        });
+      },
+      failure: function (err) {
+        alert("Error al crear el Lead :(");
+        console.log(err);
+      },
+    });
+  }
+
+  $("#submitPlan").click(function () {
+    $("#planForm").submit();
   });
 });
