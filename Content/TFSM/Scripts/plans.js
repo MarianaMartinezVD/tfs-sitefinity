@@ -148,20 +148,20 @@ $(document).ready(function () {
     },
   });
 
-  $("#planForm").submit(function (e) {
-    e.preventDefault();
-    if ($("#planForm").valid()) {
-      if ($("#plansTermsCheckbox").prop("checked")) {
-        submitLead();
-      } else {
-        termsCheckbox = "#plansTermsCheckbox";
-        openModal("newsletterTermsModal");
-      }
-    }
-    else{
-      console.log("formulario inválido");
-    }
-  });
+  // $("#planForm").submit(function (e) {
+  //   e.preventDefault();
+  //   if ($("#planForm").valid()) {
+  //     if ($("#plansTermsCheckbox").prop("checked")) {
+  //       submitLead();
+  //     } else {
+  //       termsCheckbox = "#plansTermsCheckbox";
+  //       openModal("newsletterTermsModal");
+  //     }
+  //   }
+  //   else{
+  //     console.log("formulario inválido");
+  //   }
+  // });
 
   function submitLead() {
     var form = {
@@ -205,6 +205,16 @@ $(document).ready(function () {
   }
 
   $("#submitPlan").click(function () {
-    $("#planForm").submit();
+    if ($(".form-box").valid()) {
+      if ($("#plansTermsCheckbox").prop("checked")) {
+        submitLead();
+      } else {
+        termsCheckbox = "#plansTermsCheckbox";
+        openModal("newsletterTermsModal");
+      }
+    }
+    else{
+      console.log("formulario inválido");
+    }
   });
 });
