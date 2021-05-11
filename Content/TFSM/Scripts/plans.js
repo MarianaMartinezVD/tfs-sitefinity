@@ -163,6 +163,24 @@ $(document).ready(function () {
   //   }
   // });
 
+  function validarFormulario(){
+    if(!$("#name").valid()){
+      return false;
+    }
+    else if(!$("#lastname").valid()){
+      return false;
+    }
+    else if(!$("#email").valid()){
+      return false;
+    }
+    else if(!$("#phone").valid()){
+      return false;
+    }
+    else{
+      return true;
+    }
+  }
+
   function submitLead() {
     var form = {
       Plan: $("#planType").val(),
@@ -205,7 +223,7 @@ $(document).ready(function () {
   }
 
   $("#submitPlan").click(function () {
-    if ($(".form-box").valid()) {
+    if (validarFormulario()) {
       if ($("#plansTermsCheckbox").prop("checked")) {
         submitLead();
       } else {
