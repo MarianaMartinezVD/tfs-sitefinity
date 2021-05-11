@@ -95,7 +95,7 @@ $(document).ready(function () {
     document.body.style.overflow = "auto";
   }
 
-  var termsCheckbox = "#termsCheckbox";
+  // var termsCheckbox = "#termsCheckbox";
 
   $("#newsletterTerms").click(() => {
       termsCheckbox = "#termsCheckbox";
@@ -186,7 +186,3 @@ $(document).ready(function () {
     }
   });
 });
-
-export {
-  termsCheckbox
-};
