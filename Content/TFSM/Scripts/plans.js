@@ -160,8 +160,7 @@ $(document).ready(function () {
         },
       });
     } else {
-      termsCheckbox = "#plansTermsCheckbox";
-      console.log(termsCheckbox);
+      termsCheckbox = "plansTermsCheckbox";
       openModal("newsletterTermsModal");
     }
   });
