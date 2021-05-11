@@ -178,13 +178,13 @@ $(document).ready(function () {
   // });
 
   function validarFormulario() {
-    if (!$("#name").valid()) {
+    if ($("#name").val() == "" && $("#name").val() == undefined) {
       return false;
-    } else if (!$("#lastname").valid()) {
+    } else if ($("#lastname").val() == "" && $("#lastname").val() == undefined) {
       return false;
-    } else if (!$("#email").valid()) {
+    } else if ($("#email").val() == "" && $("#email").val() == undefined) {
       return false;
-    } else if (!$("#phone").valid()) {
+    } else if ($("#phone").val() == "" && $("#phone").val() == undefined) {
       return false;
     } else {
       return true;
