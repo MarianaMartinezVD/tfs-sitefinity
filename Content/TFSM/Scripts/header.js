@@ -136,11 +136,13 @@ $(document).ready(function () {
   });
 
   $("#denyNewsletterTerms").click(function () {
+    console.log(termsCheckbox);
     $(termsCheckbox).prop("checked", false);
     closeModal("newsletterTermsModal");
   });
 
   $("#acceptNewsletterTerms").click(function () {
+    console.log(termsCheckbox);
     $(termsCheckbox).prop("checked", true);
     closeModal("newsletterTermsModal");
   });
