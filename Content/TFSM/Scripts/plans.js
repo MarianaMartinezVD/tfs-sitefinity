@@ -151,7 +151,7 @@ $(document).ready(function () {
           $("#phone").val("");
 
           $(".float-container input").each(function(){
-            this.blur();
+            $(this).blur();
           });
 
           Toastnotify.create({
