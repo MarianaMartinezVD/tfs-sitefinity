@@ -120,7 +120,7 @@ $(document).ready(function () {
   }
 
   $("#submitPlan").click(function () {
-    // if ($("#plansTermsCheckbox").prop("checked")) {
+    if ($("#plansTermsCheckbox").prop("checked")) {
       var form = {
         Plan: $("#planType").val(),
         Firstname: $("#name").val(),
@@ -156,9 +156,9 @@ $(document).ready(function () {
           console.log(err);
         },
       });
-    // } else {
-    //   termsCheckbox = "#termsCheckbox";
-    //   openModal("newsletterTermsModal");
-    // }
+    } else {
+      termsCheckbox = "#termsCheckbox";
+      openModal("newsletterTermsModal");
+    }
   });
 });
