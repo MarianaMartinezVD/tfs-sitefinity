@@ -158,6 +158,9 @@ $(document).ready(function () {
         openModal("newsletterTermsModal");
       }
     }
+    else{
+      console.log("formulario inválido");
+    }
   });
 
   function submitLead() {
