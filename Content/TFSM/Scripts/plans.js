@@ -122,7 +122,7 @@ $(document).ready(function () {
         $("#phone").val("");
 
         Toastnotify.create({
-          text: "Notification Message Here",
+          text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
         });
       },
       failure: function (err) {
