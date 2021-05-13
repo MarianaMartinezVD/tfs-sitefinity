@@ -736,6 +736,14 @@ glyphicon-chevron-right:before {
   background-color: #f5f5f5;
 }
 
+.form .title{
+  margin-bottom: 40px;
+}
+
+.form>div:first-child {
+  margin-top: 81px;
+}
+
 .perks-container {
   height: 80%;
   margin-bottom: -16px;
