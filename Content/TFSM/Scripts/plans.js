@@ -96,6 +96,7 @@ $(document).ready(function () {
   });
 
   $("#distributor").select2();
+  $("#vehicle").select2();
 
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
