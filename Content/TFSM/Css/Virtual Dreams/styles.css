@@ -72,7 +72,7 @@ body {
   font-size: 14px;
 }
 
-body [class^="col"] {
+.customRow>[class^="col"] {
   padding: 0;
 }
 
@@ -579,7 +579,7 @@ body p {
   transition: all 0.3s ease-in-out;
 }
 
-.shadow-hover:hover{
+.shadow-hover:hover {
   box-shadow: 0 1rem 1.5rem rgb(0 0 0 / 38%) !important;
   transition: all 0.3s ease-in-out;
 }
@@ -693,7 +693,7 @@ glyphicon-chevron-right:before {
   margin-bottom: 20px;
 }
 
-.description .text{
+.description .text {
   padding-left: 3rem;
   padding-right: 5rem;
 }
@@ -775,8 +775,12 @@ glyphicon-chevron-right:before {
   flex: 0 0 86%;
 }
 
+.video-box>img {
+  width: 100%;
+}
+
 .form-box {
-  width: 85%;
+  /* width: 85%; */
   background-color: white;
   border-radius: 16px;
   padding: 11% 13%;
@@ -818,7 +822,7 @@ glyphicon-chevron-right:before {
 
 .float-container {
   position: relative;
-  margin: 22px 0;
+  margin: 12px 0;
 }
 
 .float-label {
@@ -1002,32 +1006,33 @@ glyphicon-chevron-right:before {
 .select2-selection__rendered {
   font-size: 14px;
   line-height: 40px !important;
+  padding-left: 0 !important;
 }
 
 .select2-selection__arrow {
   height: 38px !important;
 }
 
-.select2-container {
+.select2-container{
   width: 100% !important;
 }
 
 .select2-selection {
-  height: 40px !important;
+  height: 36px !important;
+  border: none !important;
+  border-bottom: 1px solid #ccc !important;
 }
 
-.select2-selection:active,
-.select2-selection:focus {
-  border: 2px solid var(--color-red);
-}
-
-.float-container.select-container {
-  margin: 30px 0 22px 0;
+.select2-selection:active ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
 }
 
 .float-container.select-container.active label,
 .select-container > .float-label.active {
-  transform: translate(0, -20px) scale(0.8);
+  z-index: 1;
+  /* transform: translate(0, -20px) scale(0.8); */
 }
 /* ----------------------------- */
 
@@ -1265,10 +1270,10 @@ label.error {
   font-size: 0.8rem;
 }
 
-#toastnotify-container span{
+#toastnotify-container span {
   font-size: 1.5rem;
 }
 
-#toastnotify-container span:last-of-type{
+#toastnotify-container span:last-of-type {
   display: none;
 }
