@@ -11,6 +11,7 @@ function encrypt() {
                     document.getElementById("user").value = user_enc; 
                     document.getElementById("fail").value = fail_enc; 
                     document.getElementById("ok").value = ok_enc; 
+                    alert(pass_enc);
                 } 
                 function showPassword() {
                     var x = document.getElementById("pass");
