@@ -816,8 +816,9 @@ glyphicon-chevron-right:before {
   width: 100%;
 }
 
-.video-content img{
+.video-box img{
   cursor: pointer;
+  user-select: none;
 }
 
 .video-btn{
