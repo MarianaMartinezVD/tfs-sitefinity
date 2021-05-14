@@ -232,7 +232,7 @@ body p {
 
 @media (max-width: 500px) {
   .drawerMenu {
-    width: 100vw;
+    width: 100%;
     /* right: -5px; */
   }
 }
