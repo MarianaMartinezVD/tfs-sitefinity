@@ -72,9 +72,13 @@ body {
   font-size: 14px;
 }
 
-/* .customRow>[class^="col"] {
+.customRow>[class^="col-"] {
   padding: 0;
-} */
+}
+
+.row>[class^="col-"] {
+  padding: 0 15px;
+}
 
 body p {
   margin: 0;
