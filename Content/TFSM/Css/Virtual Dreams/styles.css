@@ -818,6 +818,10 @@ glyphicon-chevron-right:before {
   width: 100%;
 }
 
+iframe.video-content{
+  display: none;
+}
+
 .video-box img{
   cursor: pointer;
   user-select: none;
