@@ -131,24 +131,6 @@ $(document).ready(function () {
     minlength: jQuery.validator.format("Mínimo {0} caracteres."),
   });
 
-  // $("#planForm").validate({
-  //   rules: {
-  //     name: {
-  //       required: true,
-  //     },
-  //     lastname: {
-  //       required: true,
-  //     },
-  //     email: {
-  //       required: true,
-  //       email: true,
-  //     },
-  //     phone: {
-  //       required: true,
-  //     },
-  //   },
-  // });
-
   $("#name").rules("add", {
     required: true,
   });
@@ -162,21 +144,6 @@ $(document).ready(function () {
   $("#phone").rules("add", {
     required: true,
   });
-
-  // $("#planForm").submit(function (e) {
-  //   e.preventDefault();
-  //   if ($("#planForm").valid()) {
-  //     if ($("#plansTermsCheckbox").prop("checked")) {
-  //       submitLead();
-  //     } else {
-  //       termsCheckbox = "#plansTermsCheckbox";
-  //       openModal("newsletterTermsModal");
-  //     }
-  //   }
-  //   else{
-  //     console.log("formulario inválido");
-  //   }
-  // });
 
   function validarFormulario() {
     if ($("#name").val() == "" && $("#name").val() == undefined) {
@@ -244,5 +211,10 @@ $(document).ready(function () {
     } else {
       console.log("formulario inválido");
     }
+  });
+
+  $(".video-box").click(function(){
+    $(".video-box img").hide();
+    $("#plan-video").show();
   });
 });
