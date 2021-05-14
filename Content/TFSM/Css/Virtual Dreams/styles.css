@@ -820,6 +820,7 @@ glyphicon-chevron-right:before {
 
 iframe.video-content{
   display: none;
+  height: 100%;
 }
 
 .video-box img{
