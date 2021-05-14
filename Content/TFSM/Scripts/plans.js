@@ -216,5 +216,6 @@ $(document).ready(function () {
   $(".video-box").click(function(){
     $(".video-box img").hide();
     $("#plan-video").show();
+    $("#plan-video").attr("autoplay","true");
   });
 });
