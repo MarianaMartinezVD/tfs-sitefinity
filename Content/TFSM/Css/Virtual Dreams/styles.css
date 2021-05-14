@@ -810,6 +810,8 @@ glyphicon-chevron-right:before {
 
 .video-box{
   position: relative;
+  width: 100%;
+  height: 24.1vw;
 }
 
 .video-content {
@@ -976,6 +978,10 @@ glyphicon-chevron-right:before {
   .form-box {
     width: 100%;
   }
+
+  .video-box{
+    height: 48.6vw;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1019,6 +1025,10 @@ glyphicon-chevron-right:before {
 
   .form-box {
     padding: 11% 7%;
+  }
+
+  .video-box{
+    height: 51.5vw;
   }
 
   #newsletterTermsModal,
