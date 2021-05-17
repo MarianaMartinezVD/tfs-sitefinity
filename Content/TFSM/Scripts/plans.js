@@ -95,6 +95,23 @@ $(document).ready(function () {
     },
   });
 
+  $.ajax({
+    type: "get",
+    url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
+    datatype: "json",
+    success: function (data) {
+      var select = $("#vehicle");
+      data.results.forEach((car) => {
+        var option = document.createElement("option");
+        option.id = car.Id;
+        option.value = car.Id;
+        option.innerHTML = capitalize(car.Auto);
+
+        select.append(option);
+      });
+    },
+  });
+
   $("#distributor").select2();
   $("#vehicle").select2();
 
@@ -148,7 +165,10 @@ $(document).ready(function () {
   function validarFormulario() {
     if ($("#name").val() == "" && $("#name").val() == undefined) {
       return false;
-    } else if ($("#lastname").val() == "" && $("#lastname").val() == undefined) {
+    } else if (
+      $("#lastname").val() == "" &&
+      $("#lastname").val() == undefined
+    ) {
       return false;
     } else if ($("#email").val() == "" && $("#email").val() == undefined) {
       return false;
@@ -213,7 +233,7 @@ $(document).ready(function () {
     }
   });
 
-  $(".video-box").click(function(){
+  $(".video-box").click(function () {
     $(".video-box img").hide();
     $("#plan-video").show();
     $("#plan-video")[0].play();
