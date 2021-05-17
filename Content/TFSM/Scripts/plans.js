@@ -187,6 +187,7 @@ $(document).ready(function () {
       Email: $("#email").val(),
       DealerId: $("#distributor").val(),
       Dealer: $("#distributor option:selected").html(),
+      Vehicle: $("#vehicle option:selected").html(),
       Phone: $("#phone").val(),
     };
 
@@ -200,6 +201,8 @@ $(document).ready(function () {
       success: function (data) {
         $("#distributor").val("0");
         $("#distributor").trigger("change");
+        $("#vehicle").val("0");
+        $("#vehicle").trigger("change");
         $("#plansTermsCheckbox").prop("checked", false);
 
         $(".float-container input").each(function () {
