@@ -1366,6 +1366,10 @@ label.error {
   color: var(--color-black);
 }
 
+.w-90{
+  width: 90% !important;
+}
+
 /* MEDIUM */
 @media(max-width: 991px){
 
