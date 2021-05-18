@@ -1375,12 +1375,18 @@ label.error {
   .w-md-90{
     width: 90% !important;
   }
+  .w-md-75{
+    width: 75% !important;
+  }
 }
 
 /* SMALL */
 @media(max-width: 767px){
   .w-sm-90{
     width: 90% !important;
+  }
+  .w-sm-75{
+    width: 75% !important;
   }
 
   .section-title{
@@ -1393,5 +1399,8 @@ label.error {
 @media(max-width: 575px){
   .w-xs-90{
     width: 90% !important;
+  }
+  .w-xs-75{
+    width: 75% !important;
   }
 }
