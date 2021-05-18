@@ -1352,11 +1352,11 @@ label.error {
 }
 
 .background-white{
-  background-color: #FFFFFF;
+  background-color: #FFFFFF !important;
 }
 
 .background-gray{
-  background-color: #F5F5F5;
+  background-color: #F5F5F5 !important;
 }
 
 .section-title{
@@ -1372,11 +1372,17 @@ label.error {
 
 /* MEDIUM */
 @media(max-width: 991px){
-
+  .w-md-90{
+    width: 90% !important;
+  }
 }
 
 /* SMALL */
 @media(max-width: 767px){
+  .w-sm-90{
+    width: 90% !important;
+  }
+
   .section-title{
     font-size: 18px;
     line-height: 28px;
@@ -1385,5 +1391,7 @@ label.error {
 
 /* EXTRA SMALL */
 @media(max-width: 575px){
-
+  .w-xs-90{
+    width: 90% !important;
+  }
 }
