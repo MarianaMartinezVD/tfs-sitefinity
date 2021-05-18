@@ -1358,3 +1358,28 @@ label.error {
 .background-gray{
   background-color: #F5F5F5;
 }
+
+.section-title{
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 56px;
+  color: var(--color-black);
+}
+
+/* MEDIUM */
+@media(max-width: 991px){
+
+}
+
+/* SMALL */
+@media(max-width: 767px){
+  .section-title{
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* EXTRA SMALL */
+@media(max-width: 575px){
+
+}
