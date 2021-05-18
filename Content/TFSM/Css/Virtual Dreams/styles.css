@@ -1348,8 +1348,7 @@ label.error {
 /* -------DISEÑO CON WIDGETS------- */
 
 .content-section{
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 7% 6%;
 }
 
 .background-white{
