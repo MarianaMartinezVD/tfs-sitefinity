@@ -1370,6 +1370,30 @@ label.error {
   width: 90% !important;
 }
 
+/* LARGE */
+@media(max-width: 1199px){
+  .w-lg-90{
+    width: 90% !important;
+  }
+  .w-lg-75{
+    width: 75% !important;
+  }
+
+  .text-lg-medium{
+    font-size: 18px !important;
+  }
+  .text-lg-normal{
+    font-size: 16px !important;
+  }
+  .text-lg-small{
+    font-size: 14px !important;
+  }
+  .text-lg-extra_small{
+    font-size: 12px !important;
+  }
+
+}
+
 /* MEDIUM */
 @media(max-width: 991px){
   .w-md-90{
