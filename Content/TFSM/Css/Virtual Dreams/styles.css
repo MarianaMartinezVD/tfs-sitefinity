@@ -1344,3 +1344,18 @@ label.error {
 #toastnotify-container span:last-of-type {
   display: none;
 }
+
+/* -------DISEÑO CON WIDGETS------- */
+
+.content-section{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.background-white{
+  background-color: #FFFFFF;
+}
+
+.background-gray{
+  background-color: #F5F5F5;
+}
