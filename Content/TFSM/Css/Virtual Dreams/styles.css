@@ -1395,7 +1395,7 @@ label.error {
 }
 
 /* MEDIUM */
-@media (min-width: 768px) and (max-width: 991px){
+@media(max-width: 991px){
   .w-md-90{
     width: 90% !important;
   }
@@ -1419,7 +1419,7 @@ label.error {
 }
 
 /* SMALL */
-@media (min-width: 576px) and (max-width: 767px){
+@media(max-width: 767px){
   .w-sm-90{
     width: 90% !important;
   }
