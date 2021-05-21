@@ -116,17 +116,17 @@ $(document).ready(function () {
   $("#vehicle").select2();
 
   $("#distributor").on("select2:open", function(){
-    $("#distributor .focus-border").addClass("active");
+    $("#distributor").siblings("[class='focus-border']").addClass("active")
   });
   $("#vehicle").on("select2:open", function(){
-    $("#vehicle .focus-border").addClass("active");
+    $("#vehicle").siblings("[class='focus-border']").addClass("active")
   });
 
   $("#distributor").on("select2:close", function(){
-    $("#distributor .focus-border").removeClass("active");
+    $("#distributor").siblings("[class='focus-border']").removeClass("active")
   });
   $("#vehicle").on("select2:close", function(){
-    $("#vehicle .focus-border").removeClass("active");
+    $("#vehicle").siblings("[class='focus-border']").removeClass("active")
   });
 
   function openModal(modalId) {
