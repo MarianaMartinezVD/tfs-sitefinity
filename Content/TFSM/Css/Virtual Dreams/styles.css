@@ -869,7 +869,8 @@ video.video-content{
   background-color: var(--color-red);
   transition: 0.4s;
 }
-.effect-2:focus ~ .focus-border {
+.effect-2:focus ~ .focus-border,
+.effect-2 ~ .focus-border.active{
   width: 100%;
   transition: 0.4s;
   left: 0;
