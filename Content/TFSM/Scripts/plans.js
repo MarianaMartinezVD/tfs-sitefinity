@@ -123,10 +123,10 @@ $(document).ready(function () {
   });
 
   $("#distributor").on("select2:close", function(){
-    $("#distributor").siblings("[class='focus-border']").removeClass("active")
+    $("#distributor").siblings("[class='focus-border active']").removeClass("active")
   });
   $("#vehicle").on("select2:close", function(){
-    $("#vehicle").siblings("[class='focus-border']").removeClass("active")
+    $("#vehicle").siblings("[class='focus-border active']").removeClass("active")
   });
 
   function openModal(modalId) {
