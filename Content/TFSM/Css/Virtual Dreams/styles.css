@@ -76,6 +76,10 @@ body {
   /* padding: 0; */
 }
 
+.sf_cols{
+  width: auto;
+}
+
 .row>[class^="col-"] {
   padding: 0 15px;
 }
