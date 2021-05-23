@@ -139,7 +139,6 @@ body p {
   padding: 12px 24px;
   border: 1px solid transparent;
   border-radius: 25px;
-  transition: all 0.3s ease-in-out;
 }
 
 .links a:hover {
