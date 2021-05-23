@@ -291,9 +291,9 @@ body p {
   padding: 28px 5%;
 }
 
-.footer [class^="col"] {
+/* .footer [class^="col"] {
   padding: 0;
-}
+} */
 
 .newsletter {
   margin-bottom: 38px;
