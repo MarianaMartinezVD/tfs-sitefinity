@@ -147,7 +147,7 @@ body p {
 
 .links a:hover {
   border: 1px solid var(--color-black);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 820px) {
