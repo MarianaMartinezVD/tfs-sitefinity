@@ -223,7 +223,7 @@ body p {
 
 .drawerMenu {
   position: absolute;
-  top: 62px;
+  top: 63px;
   right: 0;
   width: 400px;
   height: calc(100vh - 62px);
