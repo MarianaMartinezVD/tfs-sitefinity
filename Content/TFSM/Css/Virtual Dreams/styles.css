@@ -76,6 +76,10 @@ body {
   /* padding: 0; */
 }
 
+.site-container{
+  max-width: 1920px;
+}
+
 .sf_cols{
   width: auto;
 }
