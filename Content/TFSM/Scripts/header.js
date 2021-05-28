@@ -98,14 +98,14 @@ $(document).ready(function () {
   // var termsCheckbox = "#termsCheckbox";
 
   $("#newsletterTerms").click(() => {
-      termsCheckbox = "#termsCheckbox";
-      openModal("newsletterTermsModal");
+    termsCheckbox = "#termsCheckbox";
+    openModal("newsletterTermsModal");
   });
 
   $("#plansTerms").click(() => {
     termsCheckbox = "#plansTermsCheckbox";
     openModal("newsletterTermsModal");
-});
+  });
 
   $("#termsCheckbox").click(function (e) {
     if ($("#termsCheckbox").prop("checked")) {
@@ -187,13 +187,17 @@ $(document).ready(function () {
   });
 
   $(".sf-form-container").each(function () {
-    var form = document.createElement('form');
-    
+    var form = document.createElement("form");
+
     form.innerHTML = this.innerHTML;
     Object.keys(this.dataset).forEach((x) => {
-        form[x] = this.dataset[x];
+      form[x] = this.dataset[x];
     });
     console.log(form);
     $(this).html(form);
-});
+  });
+
+  $("#submit-newsletter").click(function(){
+    $("#newsletter-form").validate();
+  });
 });
