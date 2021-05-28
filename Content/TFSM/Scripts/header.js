@@ -228,7 +228,7 @@ $(document).ready(function () {
         openModal("newsletterTermsModal");
       }
       else{
-        $("#newsletterEmail").val("");
+        $("#nl-email").val("");
         $("#termsCheckbox").prop("checked", false);
 
         Toastnotify.create({
