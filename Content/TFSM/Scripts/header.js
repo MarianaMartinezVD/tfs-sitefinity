@@ -204,7 +204,9 @@ $(document).ready(function () {
         openModal("newsletterTermsModal");
       }
       else{
-        alert("email registrado!");
+        Toastnotify.create({
+          text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
+        });
       }
     },
     rules: {
