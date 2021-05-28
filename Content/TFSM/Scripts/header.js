@@ -220,7 +220,7 @@ $(document).ready(function () {
     rules: {
       newsletterEmail: {
         required: true,
-        email: true,
+        isEmail: true,
       },
     },
   });
