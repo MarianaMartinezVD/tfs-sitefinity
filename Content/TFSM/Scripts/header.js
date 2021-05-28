@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  // jQuery.extend(jQuery.validator.messages, {
-  //   required: "Este campo es obligatorio",
-  //   email: "Ingrese un valor de email válido.",
-  //   number: "Ingrese un número válido",
-  //   maxlength: jQuery.validator.format("Máximo {0} caracteres"),
-  //   minlength: jQuery.validator.format("Mínimo {0} caracteres"),
-  // });
+  jQuery.extend(jQuery.validator.messages, {
+    required: "Este campo es obligatorio",
+    email: "Ingrese un valor de email válido.",
+    number: "Ingrese un número válido",
+    maxlength: jQuery.validator.format("Máximo {0} caracteres"),
+    minlength: jQuery.validator.format("Mínimo {0} caracteres"),
+  });
 
   // jQuery.validator.addMethod(
   //   "isEmail",
