@@ -244,6 +244,6 @@ $(document).ready(function () {
   });
 
   $("#submit-newsletter").click(function () {
-    // $("#newsletter-form").submit();
+    $("#newsletter-form").submit();
   });
 });
