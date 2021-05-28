@@ -1,3 +1,11 @@
+jQuery.extend(jQuery.validator.messages, {
+  required: "Este campo es obligatorio.",
+  email: "Ingrese un valor de email válido.",
+  number: "Ingrese un número válido.",
+  maxlength: jQuery.validator.format("Máximo {0} caracteres."),
+  minlength: jQuery.validator.format("Mínimo {0} caracteres."),
+});
+
 $(document).ready(function () {
   var deviceWidth = () =>
     window.innerWidth > 0 ? window.innerWidth : screen.width;
