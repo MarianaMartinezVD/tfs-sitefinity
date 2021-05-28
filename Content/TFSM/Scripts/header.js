@@ -210,6 +210,15 @@ $(document).ready(function () {
     console.log(form);
     $(this).html(form);
   });
+  
+    var nl_validator = $("#newsletter-form").validate({
+      rules: {
+        newsletterEmail: {
+          required: true,
+          isEmail: true,
+        },
+      },
+    });
 
   $("#newsletter-form").submit(function(e){
     e.preventDefault();
@@ -219,21 +228,14 @@ $(document).ready(function () {
         openModal("newsletterTermsModal");
       }
       else{
+        nl_validator.resetForm();
+
         Toastnotify.create({
           text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
           duration:5000
         });
       }
     }
-  });
-
-  var nl_validator = $("#newsletter-form").validate({
-    rules: {
-      newsletterEmail: {
-        required: true,
-        isEmail: true,
-      },
-    },
   });
 
   $("#submit-newsletter").click(function(){
