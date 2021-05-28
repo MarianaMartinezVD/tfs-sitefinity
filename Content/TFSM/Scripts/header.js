@@ -198,6 +198,15 @@ $(document).ready(function () {
   });
 
   var nl_validator = $("#newsletter-form").validate({
+    submitHandler: function(form) {
+      if (!$("#termsCheckbox").prop("checked")) {
+        termsCheckbox = "#termsCheckbox";
+        openModal("newsletterTermsModal");
+      }
+      else{
+        alert("email registrado!");
+      }
+    },
     rules: {
       newsletterEmail: {
         required: true,
@@ -207,7 +216,6 @@ $(document).ready(function () {
   });
 
   $("#submit-newsletter").click(function(){
-
-    $("#newsletter-form").valid();
+    $("#newsletter-form").submit();
   });
 });
