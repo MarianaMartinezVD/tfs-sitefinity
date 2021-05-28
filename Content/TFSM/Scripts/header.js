@@ -213,10 +213,7 @@ $(document).ready(function () {
 
   $("#newsletter-form").submit(function(e){
     e.preventDefault();
-  });
-
-  var nl_validator = $("#newsletter-form").validate({
-    submitHandler: function(form) {
+    if($(this).valid()){
       if (!$("#termsCheckbox").prop("checked")) {
         termsCheckbox = "#termsCheckbox";
         openModal("newsletterTermsModal");
@@ -227,7 +224,10 @@ $(document).ready(function () {
           duration:5000
         });
       }
-    },
+    }
+  });
+
+  var nl_validator = $("#newsletter-form").validate({
     rules: {
       newsletterEmail: {
         required: true,
