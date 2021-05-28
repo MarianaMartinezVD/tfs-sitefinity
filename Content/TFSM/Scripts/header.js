@@ -228,7 +228,8 @@ $(document).ready(function () {
         openModal("newsletterTermsModal");
       }
       else{
-        nl_validator.resetForm();
+        $("#newsletterEmail").val("");
+        $("#termsCheckbox").prop("checked", false);
 
         Toastnotify.create({
           text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
