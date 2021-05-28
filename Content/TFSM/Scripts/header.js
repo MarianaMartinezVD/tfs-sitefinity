@@ -224,7 +224,7 @@ $(document).ready(function () {
 
   var nl_validator = $("#newsletter-form").validate({
     rules: {
-      newsletterEmail: {
+      'nl-email': {
         required: true,
         isEmailVal: true,
       },
