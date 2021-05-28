@@ -197,7 +197,17 @@ $(document).ready(function () {
     $(this).html(form);
   });
 
+  var nl_validator = $("#newsletter-form").validate({
+    rules: {
+      newsletterEmail: {
+        required: true,
+        email: true,
+      },
+    },
+  });
+
   $("#submit-newsletter").click(function(){
-    $("#newsletter-form").validate();
+
+    $("#newsletter-form").valid();
   });
 });
