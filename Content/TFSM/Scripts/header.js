@@ -211,19 +211,24 @@ $(document).ready(function () {
     $(this).html(form);
   });
 
+  $("#newsletter-form").submit(function(e){
+    e.preventDefault();
+    if (!$("#termsCheckbox").prop("checked")) {
+      termsCheckbox = "#termsCheckbox";
+      openModal("newsletterTermsModal");
+    }
+    else{
+      Toastnotify.create({
+        text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
+        duration:5000
+      });
+    }
+  });
+
   var nl_validator = $("#newsletter-form").validate({
-    submitHandler: function(form) {
-      if (!$("#termsCheckbox").prop("checked")) {
-        termsCheckbox = "#termsCheckbox";
-        openModal("newsletterTermsModal");
-      }
-      else{
-        Toastnotify.create({
-          text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
-          duration:5000
-        });
-      }
-    },
+    // submitHandler: function(form) {
+      
+    // },
     rules: {
       newsletterEmail: {
         required: true,
