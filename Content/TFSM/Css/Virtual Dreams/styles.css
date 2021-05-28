@@ -1338,7 +1338,7 @@ input.error {
 
 label.error {
   color: red;
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
 #toastnotify-container span {
