@@ -215,7 +215,7 @@ $(document).ready(function () {
       rules: {
         newsletterEmail: {
           required: true,
-          isEmail: true,
+          email: true,
         },
       },
     });
