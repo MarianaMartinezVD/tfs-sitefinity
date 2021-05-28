@@ -206,6 +206,7 @@ $(document).ready(function () {
       else{
         Toastnotify.create({
           text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
+          duration:5000
         });
       }
     },
