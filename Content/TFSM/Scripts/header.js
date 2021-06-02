@@ -227,23 +227,23 @@ $(document).ready(function () {
   //   },
   // });
 
-  $("#newsletter-form").submit(function (e) {
-    e.preventDefault();
-    if ($(this).valid()) {
-      if (!$("#termsCheckbox").prop("checked")) {
-        termsCheckbox = "#termsCheckbox";
-        openModal("newsletterTermsModal");
-      } else {
-        $("#nl-email").val("");
-        $("#termsCheckbox").prop("checked", false);
+  // $("#newsletter-form").submit(function (e) {
+  //   e.preventDefault();
+  //   if ($(this).valid()) {
+  //     if (!$("#termsCheckbox").prop("checked")) {
+  //       termsCheckbox = "#termsCheckbox";
+  //       openModal("newsletterTermsModal");
+  //     } else {
+  //       $("#nl-email").val("");
+  //       $("#termsCheckbox").prop("checked", false);
 
-        Toastnotify.create({
-          text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
-          duration: 5000,
-        });
-      }
-    }
-  });
+  //       Toastnotify.create({
+  //         text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
+  //         duration: 5000,
+  //       });
+  //     }
+  //   }
+  // });
 
   $("#submit-newsletter").click(function () {
     $("#newsletter-form").submit();
