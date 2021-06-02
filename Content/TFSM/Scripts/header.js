@@ -217,14 +217,14 @@ $(document).ready(function () {
     $(this).html(form);
   });
 
-  var nl_validator = $("#newsletter-form").validate({
-    rules: {
-      "nl-email": {
-        required: true,
-        isEmail: true,
-      },
-    },
-  });
+  // var nl_validator = $("#newsletter-form").validate({
+  //   rules: {
+  //     "nl-email": {
+  //       required: true,
+  //       isEmail: true,
+  //     },
+  //   },
+  // });
 
   $("#newsletter-form").submit(function (e) {
     e.preventDefault();
