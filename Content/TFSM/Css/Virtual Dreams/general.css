@@ -175,6 +175,11 @@
   line-height: 24px;
 }
 
+.info-card-block{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 /* EXTRA LARGE */
 @media (min-width: 1200px) {
   .info-card {
