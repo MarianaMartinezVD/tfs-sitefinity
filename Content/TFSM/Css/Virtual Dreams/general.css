@@ -185,3 +185,24 @@
     line-height: 32px;
   }
 }
+ /* ------------------------------------------------------- */
+
+ /* ARROW BACK BUTTON STYLES */
+
+ .back-button {
+  padding: 16px 19px;
+  border-radius: 50%;
+  border: 1px solid #EB0A1E;
+  cursor: pointer;
+}
+
+.back-button:hover{
+  background-color: #EB0A1E;
+  transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover>img{
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(132deg) brightness(103%) contrast(103%);
+}
+
+ /* ------------------------------------------------------- */
