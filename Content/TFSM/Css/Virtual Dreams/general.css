@@ -175,6 +175,11 @@
 
 /* SMALL */
 @media (max-width: 767px) {
+  .info-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 7%;
+  }
   .info-card-title {
     font-size: 24px;
     line-height: 32px;
