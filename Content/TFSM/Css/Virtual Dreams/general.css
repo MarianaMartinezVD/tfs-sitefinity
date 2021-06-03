@@ -34,6 +34,10 @@
   width: 100% !important;
 }
 
+.font-weight-600{
+  font-weight: 600 !important;
+}
+
 /* LARGE */
 @media (min-width: 992px) {
   .w-lg-95 {
