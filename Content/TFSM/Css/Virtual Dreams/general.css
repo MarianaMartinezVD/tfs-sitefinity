@@ -175,6 +175,11 @@
   z-index: 1;
 }
 
+.info-card.top-down{
+  top: 0;
+  margin-top: 75px;
+}
+
 .info-card-title {
   color: #121212;
   font-weight: 600;
