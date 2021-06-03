@@ -38,6 +38,10 @@
   font-weight: 600 !important;
 }
 
+.geometric-backgroung{
+  background-image: url('/images/default-source/default-album/geometric_background.jpg');
+}
+
 /* LARGE */
 @media (min-width: 992px) {
   .w-lg-95 {
