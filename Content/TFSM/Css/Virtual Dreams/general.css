@@ -242,6 +242,7 @@
     max-width: 100%;
     width: 100%;
     padding: 7%;
+    box-shadow: none;
   }
   .info-card-title {
     font-size: 24px;
