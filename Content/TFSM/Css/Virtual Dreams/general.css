@@ -43,6 +43,9 @@
   .w-lg-95 {
     width: 95% !important;
   }
+  .w-lg-90 {
+    width: 90% !important;
+  }
   .w-lg-80 {
     width: 80% !important;
   }
@@ -69,6 +72,9 @@
   .w-md-95 {
     width: 95% !important;
   }
+  .w-md-90 {
+    width: 90% !important;
+  }
   .w-md-80 {
     width: 80% !important;
   }
@@ -94,6 +100,9 @@
 @media (max-width: 767px) {
   .w-sm-95 {
     width: 95% !important;
+  }
+  .w-sm-90 {
+    width: 90% !important;
   }
   .w-sm-80 {
     width: 80% !important;
@@ -125,6 +134,9 @@
 @media (max-width: 575px) {
   .w-xs-95 {
     width: 95% !important;
+  }
+  .w-xs-90 {
+    width: 90% !important;
   }
   .w-xs-80 {
     width: 80% !important;
