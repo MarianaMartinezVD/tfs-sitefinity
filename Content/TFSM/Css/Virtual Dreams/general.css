@@ -142,6 +142,14 @@
   margin-bottom: 25px;
 }
 
+.info-card-subtitle {
+  color: #121212;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
 .info-card-parrafo {
   color: #3e3e3c;
   font-size: 16px;
@@ -183,6 +191,13 @@
   .info-card-title {
     font-size: 24px;
     line-height: 32px;
+  }
+  .info-card-subtitle {
+    color: #121212;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 15px;
   }
 }
  /* ------------------------------------------------------- */
