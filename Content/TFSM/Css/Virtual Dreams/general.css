@@ -121,7 +121,7 @@
   position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: -120px;
+  margin-bottom: -40px;
 }
 
 .info-card {
@@ -130,7 +130,7 @@
   border-radius: 12px;
   padding: 65px;
   position: relative;
-  top: -180px;
+  top: -70px;
   z-index: 1;
 }
 
