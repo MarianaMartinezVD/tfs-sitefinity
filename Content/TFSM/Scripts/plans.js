@@ -283,4 +283,8 @@ $(document).ready(function () {
     },
   });
 
+  $("#submitPlans").click(function () {
+    plan_validator.valid();
+  });
+
 });
