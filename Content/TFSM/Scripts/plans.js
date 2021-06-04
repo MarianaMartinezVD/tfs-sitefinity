@@ -273,8 +273,9 @@ $(document).ready(function () {
     $("#distributor").on("select2:select", function () {
       $("#distributor").valid();
     });
-    $("#vehicle").on("select2:select", function () {
+    $("#vehicle").on("select2:select", function (e) {
       $("#vehicle").valid();
+      $("#vehicle").val(e.params.data.id);
     });
 
     $("#plan-form").submit(function (e) {
