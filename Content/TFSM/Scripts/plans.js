@@ -72,51 +72,51 @@ $(document).ready(function () {
     });
   }
 
-  function getStates() {
-    $.ajax({
-      type: "get",
-      url: api_url + "getdealersbystate",
-      datatype: "json",
-      success: function (data) {
-        var select = $("#distributor");
-        data.results.forEach((state) => {
-          var group = document.createElement("optgroup");
-          group.label = state.Descripcion;
+  // function getStates() {
+  //   $.ajax({
+  //     type: "get",
+  //     url: api_url + "getdealersbystate",
+  //     datatype: "json",
+  //     success: function (data) {
+  //       var select = $("#distributor");
+  //       data.results.forEach((state) => {
+  //         var group = document.createElement("optgroup");
+  //         group.label = state.Descripcion;
 
-          state.Distribuidores.forEach((dealer) => {
-            var option = document.createElement("option");
-            option.id = dealer.IdDealer;
-            option.value = dealer.IdDealer;
-            option.innerHTML = capitalize(dealer.Dealer);
-            group.append(option);
-          });
+  //         state.Distribuidores.forEach((dealer) => {
+  //           var option = document.createElement("option");
+  //           option.id = dealer.IdDealer;
+  //           option.value = dealer.IdDealer;
+  //           option.innerHTML = capitalize(dealer.Dealer);
+  //           group.append(option);
+  //         });
 
-          select.append(group);
-        });
-      },
-    });
-  }
+  //         select.append(group);
+  //       });
+  //     },
+  //   });
+  // }
 
-  function getCars() {
-    $.ajax({
-      type: "get",
-      url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
-      datatype: "json",
-      success: function (data) {
-        var select = $("#vehicle");
-        data.results.forEach((car) => {
-          var option = document.createElement("option");
-          option.id = car.Id;
-          option.value = car.Id;
-          option.innerHTML = capitalize(car.Auto);
+  // function getCars() {
+  //   $.ajax({
+  //     type: "get",
+  //     url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
+  //     datatype: "json",
+  //     success: function (data) {
+  //       var select = $("#vehicle");
+  //       data.results.forEach((car) => {
+  //         var option = document.createElement("option");
+  //         option.id = car.Id;
+  //         option.value = car.Id;
+  //         option.innerHTML = capitalize(car.Auto);
 
-          select.append(option);
-        });
-      },
-    });
-  }
+  //         select.append(option);
+  //       });
+  //     },
+  //   });
+  // }
 
-  $.when(getStates()).then(getCars);
+  // $.when(getStates()).then(getCars);
 
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
@@ -232,8 +232,73 @@ $(document).ready(function () {
     $("#plan-video")[0].play();
   });
 
-  $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
-  $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
+  var states = [],
+    cars = [];
+
+  function getStates() {
+    let _states = [];
+    $.ajax({
+      type: "get",
+      url: api_url + "getdealersbystate",
+      datatype: "json",
+      async: false,
+      success: function (data) {
+        data.results.forEach((s) => {
+          var state = {
+            text: s.Descripcion,
+            children: [],
+          };
+
+          s.Distribuidores.forEach((d) => {
+            state.children.push({
+              id: d.IdDealer,
+              text: capitalize(d.Dealer),
+            });
+          });
+
+          _states.push(state);
+        });
+      },
+    });
+
+    console.log(_states);
+    return _states;
+  }
+
+  function getCars() {
+    let _cars = [];
+    $.ajax({
+      type: "get",
+      url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
+      datatype: "json",
+      async: false,
+      success: function (data) {
+        data.results.forEach((x) => {
+          let car = {
+            id: x.Id,
+            text: capitalize(x.Auto),
+          };
+
+          _cars.push(car);
+        });
+      },
+    });
+    console.log(_cars);
+    return _cars;
+  }
+
+  $.when((states = getStates()), (cars = getCars())).then(
+    $("#distributor").select2({
+      dropdownParent: $("#distributor").parent(),
+      data: states,
+    }),
+    $("#vehicle").select2({
+      dropdownParent: $("#vehicle").parent(),
+      data: cars,
+    })
+  );
+  // $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
+  // $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
   // $("#distributor").on("select2:open", function () {
   //   $("#distributor").siblings("[class='focus-border']").addClass("active");
@@ -275,12 +340,12 @@ $(document).ready(function () {
           required: true,
           isEmail: true,
         },
-        vehicle: {
-          selectRequired: true,
-        },
-        distributor: {
-          selectRequired: true,
-        },
+        // vehicle: {
+        //   selectRequired: true,
+        // },
+        // distributor: {
+        //   selectRequired: true,
+        // },
       },
     });
 
