@@ -66,10 +66,22 @@ $(document).ready(function () {
 
   FloatLabel.init();
 
+  jQuery.validator.addMethod(
+    "selectRequired",
+    function (value, element) {
+      return isSelectEmpty(value);
+    },
+    "Este campo es obligatorio"
+  );
+
   function capitalize(str) {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
       return letter.toUpperCase();
     });
+  }
+
+  function isSelectEmpty(value){
+    return value === 0 || value === "0" || value === "" || value === null || value === undefined;
   }
 
   $.ajax({
