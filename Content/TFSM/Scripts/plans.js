@@ -162,37 +162,6 @@ $(document).ready(function () {
     "Value must not equal arg."
   );
 
-  // $("#name").rules("add", {
-  //   required: true,
-  // });
-  // $("#lastname").rules("add", {
-  //   required: true,
-  // });
-  // $("#email").rules("add", {
-  //   required: true,
-  //   email: true,
-  // });
-  // $("#phone").rules("add", {
-  //   required: true,
-  // });
-
-  // function validarFormulario() {
-  //   if ($("#name").val() == "" && $("#name").val() == undefined) {
-  //     return false;
-  //   } else if (
-  //     $("#lastname").val() == "" &&
-  //     $("#lastname").val() == undefined
-  //   ) {
-  //     return false;
-  //   } else if ($("#email").val() == "" && $("#email").val() == undefined) {
-  //     return false;
-  //   } else if ($("#phone").val() == "" && $("#phone").val() == undefined) {
-  //     return false;
-  //   } else {
-  //     return true;
-  //   }
-  // }
-
   function submitLead() {
     var form = {
       Plan: $("#planType").val(),
@@ -250,6 +219,12 @@ $(document).ready(function () {
     //   $(this).html(form);
     // });
   }
+  
+  $(".video-box").click(function () {
+    $(".video-box img").hide();
+    $("#plan-video").show();
+    $("#plan-video")[0].play();
+  });
 
   $.when(createForm()).then(() => {
     FloatLabel.init();
@@ -302,11 +277,6 @@ $(document).ready(function () {
       $("#vehicle").valid();
     });
 
-    $("#submitPlans").on("click", function () {
-      // $("#plan-form").valid();
-      $("#plan-form").submit();
-    });
-
     $("#plan-form").submit(function (e) {
       e.preventDefault();
       if ($("#plan-form").valid()) {
@@ -320,12 +290,6 @@ $(document).ready(function () {
       } else {
         console.log("formulario inválido");
       }
-    });
-
-    $(".video-box").click(function () {
-      $(".video-box img").hide();
-      $("#plan-video").show();
-      $("#plan-video")[0].play();
     });
   });
 });
