@@ -317,7 +317,7 @@ $(document).ready(function () {
     $("#distributor").on("select2:select", function () {
       $("#distributor").valid();
     });
-    $("#vehicle").on("select2:close", function () {
+    $("#vehicle").on("select2:select", function () {
       $("#vehicle").valid();
     });
 
