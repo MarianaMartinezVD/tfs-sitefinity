@@ -166,7 +166,7 @@ $(document).ready(function () {
   $.validator.addMethod(
     "valueNotEquals",
     function (value, element, arg) {
-      console.log("value not equals: " + String(arg) !== String(value));
+      console.log("value not equals: " + String(arg) + "  -  " + String(value));
       return String(arg) !== String(value);
     },
     "Value must not equal arg."
