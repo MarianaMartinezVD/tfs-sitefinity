@@ -284,7 +284,7 @@ $(document).ready(function () {
   });
 
   $("#submitPlans").click(function () {
-    plan_validator.valid();
+    $("#plan-form").valid();
   });
 
 });
