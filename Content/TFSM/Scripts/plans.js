@@ -72,6 +72,7 @@ $(document).ready(function () {
     });
   }
 
+  function getStates(){
   $.ajax({
     type: "get",
     url: api_url + "getdealersbystate",
@@ -94,23 +95,28 @@ $(document).ready(function () {
       });
     },
   });
+}
 
-  $.ajax({
-    type: "get",
-    url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
-    datatype: "json",
-    success: function (data) {
-      var select = $("#vehicle");
-      data.results.forEach((car) => {
-        var option = document.createElement("option");
-        option.id = car.Id;
-        option.value = car.Id;
-        option.innerHTML = capitalize(car.Auto);
+  function getCars() {
+    $.ajax({
+      type: "get",
+      url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
+      datatype: "json",
+      success: function (data) {
+        var select = $("#vehicle");
+        data.results.forEach((car) => {
+          var option = document.createElement("option");
+          option.id = car.Id;
+          option.value = car.Id;
+          option.innerHTML = capitalize(car.Auto);
 
-        select.append(option);
-      });
-    },
-  });
+          select.append(option);
+        });
+      },
+    });
+  }
+
+  $.when(getStates()).then(getCars);
 
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
@@ -219,15 +225,15 @@ $(document).ready(function () {
     //   $(this).html(form);
     // });
   }
-  
+
   $(".video-box").click(function () {
     $(".video-box img").hide();
     $("#plan-video").show();
     $("#plan-video")[0].play();
   });
 
-  $("#distributor").select2();
-  $("#vehicle").select2();
+  $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
+  $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
   $("#distributor").on("select2:open", function () {
     $("#distributor").siblings("[class='focus-border']").addClass("active");
