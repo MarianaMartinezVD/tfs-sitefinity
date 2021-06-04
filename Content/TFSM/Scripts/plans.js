@@ -275,16 +275,16 @@ $(document).ready(function () {
   var plan_validator;
 
   function createForm() {
-    $(".sf-form-container").each(function () {
-      var form = document.createElement("form");
+    // $(".sf-form-container").each(function () {
+    //   var form = document.createElement("form");
 
-      form.innerHTML = this.innerHTML;
-      Object.keys(this.dataset).forEach((x) => {
-        form[x] = this.dataset[x];
-      });
-      console.log(form);
-      $(this).html(form);
-    });
+    //   form.innerHTML = this.innerHTML;
+    //   Object.keys(this.dataset).forEach((x) => {
+    //     form[x] = this.dataset[x];
+    //   });
+    //   console.log(form);
+    //   $(this).html(form);
+    // });
 
     plan_validator = $("#plan-form").validate({
       rules: {
