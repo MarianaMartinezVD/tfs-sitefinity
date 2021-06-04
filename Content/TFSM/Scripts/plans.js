@@ -72,30 +72,30 @@ $(document).ready(function () {
     });
   }
 
-  function getStates(){
-  $.ajax({
-    type: "get",
-    url: api_url + "getdealersbystate",
-    datatype: "json",
-    success: function (data) {
-      var select = $("#distributor");
-      data.results.forEach((state) => {
-        var group = document.createElement("optgroup");
-        group.label = state.Descripcion;
+  function getStates() {
+    $.ajax({
+      type: "get",
+      url: api_url + "getdealersbystate",
+      datatype: "json",
+      success: function (data) {
+        var select = $("#distributor");
+        data.results.forEach((state) => {
+          var group = document.createElement("optgroup");
+          group.label = state.Descripcion;
 
-        state.Distribuidores.forEach((dealer) => {
-          var option = document.createElement("option");
-          option.id = dealer.IdDealer;
-          option.value = dealer.IdDealer;
-          option.innerHTML = capitalize(dealer.Dealer);
-          group.append(option);
+          state.Distribuidores.forEach((dealer) => {
+            var option = document.createElement("option");
+            option.id = dealer.IdDealer;
+            option.value = dealer.IdDealer;
+            option.innerHTML = capitalize(dealer.Dealer);
+            group.append(option);
+          });
+
+          select.append(group);
         });
-
-        select.append(group);
-      });
-    },
-  });
-}
+      },
+    });
+  }
 
   function getCars() {
     $.ajax({
@@ -116,7 +116,7 @@ $(document).ready(function () {
     });
   }
 
-  $.when(getStates()).then(getCars());
+  $.when(getStates()).then(getCars);
 
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
@@ -235,30 +235,30 @@ $(document).ready(function () {
   $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
   $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
-  $("#distributor").on("select2:open", function () {
-    $("#distributor").siblings("[class='focus-border']").addClass("active");
-  });
-  $("#vehicle").on("select2:open", function () {
-    $("#vehicle").siblings("[class='focus-border']").addClass("active");
-  });
+  // $("#distributor").on("select2:open", function () {
+  //   $("#distributor").siblings("[class='focus-border']").addClass("active");
+  // });
+  // $("#vehicle").on("select2:open", function () {
+  //   $("#vehicle").siblings("[class='focus-border']").addClass("active");
+  // });
 
-  $("#distributor").on("select2:close", function () {
-    $("#distributor")
-      .siblings("[class='focus-border active']")
-      .removeClass("active");
-  });
-  $("#vehicle").on("select2:close", function () {
-    $("#vehicle")
-      .siblings("[class='focus-border active']")
-      .removeClass("active");
-  });
+  // $("#distributor").on("select2:close", function () {
+  //   $("#distributor")
+  //     .siblings("[class='focus-border active']")
+  //     .removeClass("active");
+  // });
+  // $("#vehicle").on("select2:close", function () {
+  //   $("#vehicle")
+  //     .siblings("[class='focus-border active']")
+  //     .removeClass("active");
+  // });
 
-  $("#distributor").on("select2:select", function () {
-    $("#distributor").valid();
-  });
-  $("#vehicle").on("select2:select", function (e) {
-    $("#vehicle").valid();
-  });
+  // $("#distributor").on("select2:select", function () {
+  //   $("#distributor").valid();
+  // });
+  // $("#vehicle").on("select2:select", function (e) {
+  //   $("#vehicle").valid();
+  // });
 
   $.when(createForm()).then(() => {
     FloatLabel.init();
