@@ -306,7 +306,7 @@ $(document).ready(function () {
         },
         test: {
           valueNotEquals: "0",
-          valueNotEquals: null,
+          valueNotEquals: "null",
         },
       },
     });
