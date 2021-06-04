@@ -269,7 +269,13 @@ $(document).ready(function () {
 
   var plan_validator = $("#plan-form").validate({
     rules: {
-      "nl-email": {
+      name: {
+        required: true
+      },
+      lastname: {
+        required: true
+      },
+      "email": {
         required: true,
         isEmail: true,
 
