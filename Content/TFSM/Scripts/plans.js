@@ -80,8 +80,14 @@ $(document).ready(function () {
     });
   }
 
-  function isSelectEmpty(value){
-    return value === 0 || value === "0" || value === "" || value === null || value === undefined;
+  function isSelectEmpty(value) {
+    return (
+      value === 0 ||
+      value === "0" ||
+      value === "" ||
+      value === null ||
+      value === undefined
+    );
   }
 
   $.ajax({
@@ -123,9 +129,6 @@ $(document).ready(function () {
       });
     },
   });
-
-  $("#distributor").select2();
-  $("#vehicle").select2();
 
   $("#distributor").on("select2:open", function () {
     $("#distributor").siblings("[class='focus-border']").addClass("active");
@@ -299,10 +302,10 @@ $(document).ready(function () {
           isEmail: true,
         },
         vehicle: {
-          selectRequired: true
+          selectRequired: true,
         },
         distributor: {
-          selectRequired: true
+          selectRequired: true,
         },
       },
     });
@@ -310,8 +313,11 @@ $(document).ready(function () {
 
   $.when(createForm()).then(() => {
     FloatLabel.init();
+    $("#distributor").select2();
+    $("#vehicle").select2();
     $("#submitPlans").on("click", function () {
       $("#plan-form").valid();
+
       console.log("submit!");
     });
   });
