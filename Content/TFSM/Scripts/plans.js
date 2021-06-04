@@ -163,6 +163,14 @@ $(document).ready(function () {
     minlength: jQuery.validator.format("Mínimo {0} caracteres."),
   });
 
+  $.validator.addMethod(
+    "valueNotEquals",
+    function (value, element, arg) {
+      return arg !== value;
+    },
+    "Value must not equal arg."
+  );
+
   // $("#name").rules("add", {
   //   required: true,
   // });
@@ -262,7 +270,6 @@ $(document).ready(function () {
   function createForm() {
     // $(".sf-form-container").each(function () {
     //   var form = document.createElement("form");
-
     //   form.innerHTML = this.innerHTML;
     //   Object.keys(this.dataset).forEach((x) => {
     //     form[x] = this.dataset[x];
@@ -270,7 +277,6 @@ $(document).ready(function () {
     //   console.log(form);
     //   $(this).html(form);
     // });
-
   }
 
   $.when(createForm()).then(() => {
@@ -298,7 +304,7 @@ $(document).ready(function () {
           selectRequired: true,
         },
         test: {
-          selectRequired: true,
+          valueNotEquals: "0"
         },
       },
     });
