@@ -305,7 +305,8 @@ $(document).ready(function () {
           selectRequired: true,
         },
         test: {
-          valueNotEquals: "0"
+          valueNotEquals: "0",
+          valueNotEquals: null,
         },
       },
     });
