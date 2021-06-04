@@ -237,25 +237,6 @@ $(document).ready(function () {
     });
   }
 
-  $("#submitPlan").click(function () {
-    if (validarFormulario()) {
-      if ($("#plansTermsCheckbox").prop("checked")) {
-        submitLead();
-      } else {
-        termsCheckbox = "#plansTermsCheckbox";
-        openModal("newsletterTermsModal");
-      }
-    } else {
-      console.log("formulario inválido");
-    }
-  });
-
-  $(".video-box").click(function () {
-    $(".video-box img").hide();
-    $("#plan-video").show();
-    $("#plan-video")[0].play();
-  });
-
   var plan_validator;
 
   function createForm() {
@@ -272,8 +253,8 @@ $(document).ready(function () {
 
   $.when(createForm()).then(() => {
     FloatLabel.init();
-    $("#distributor").select2({dropdownParent: $("#distributor").parent()});
-    $("#vehicle").select2({dropdownParent: $("#vehicle").parent()});
+    $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
+    $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
     plan_validator = $("#plan-form").validate({
       rules: {
@@ -322,9 +303,29 @@ $(document).ready(function () {
     });
 
     $("#submitPlans").on("click", function () {
-      $("#plan-form").valid();
+      // $("#plan-form").valid();
+      $("#plan-form").submit();
+    });
 
-      console.log("submit!");
+    $("#plan-form").submit(function (e) {
+      e.preventDefault();
+      if ($("#plan-form").valid()) {
+        if ($("#plansTermsCheckbox").prop("checked")) {
+          // submitLead();
+          alert("submit lead");
+        } else {
+          termsCheckbox = "#plansTermsCheckbox";
+          openModal("newsletterTermsModal");
+        }
+      } else {
+        console.log("formulario inválido");
+      }
+    });
+
+    $(".video-box").click(function () {
+      $(".video-box img").hide();
+      $("#plan-video").show();
+      $("#plan-video")[0].play();
     });
   });
 });
