@@ -271,6 +271,13 @@ $(document).ready(function () {
     //   $(this).html(form);
     // });
 
+  }
+
+  $.when(createForm()).then(() => {
+    FloatLabel.init();
+    $("#distributor").select2();
+    $("#vehicle").select2();
+
     plan_validator = $("#plan-form").validate({
       rules: {
         name: {
@@ -292,12 +299,7 @@ $(document).ready(function () {
         },
       },
     });
-  }
 
-  $.when(createForm()).then(() => {
-    FloatLabel.init();
-    $("#distributor").select2();
-    $("#vehicle").select2();
     $("#submitPlans").on("click", function () {
       $("#plan-form").valid();
 
