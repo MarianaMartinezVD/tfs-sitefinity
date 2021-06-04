@@ -115,18 +115,22 @@ $(document).ready(function () {
   $("#distributor").select2();
   $("#vehicle").select2();
 
-  $("#distributor").on("select2:open", function(){
-    $("#distributor").siblings("[class='focus-border']").addClass("active")
+  $("#distributor").on("select2:open", function () {
+    $("#distributor").siblings("[class='focus-border']").addClass("active");
   });
-  $("#vehicle").on("select2:open", function(){
-    $("#vehicle").siblings("[class='focus-border']").addClass("active")
+  $("#vehicle").on("select2:open", function () {
+    $("#vehicle").siblings("[class='focus-border']").addClass("active");
   });
 
-  $("#distributor").on("select2:close", function(){
-    $("#distributor").siblings("[class='focus-border active']").removeClass("active")
+  $("#distributor").on("select2:close", function () {
+    $("#distributor")
+      .siblings("[class='focus-border active']")
+      .removeClass("active");
   });
-  $("#vehicle").on("select2:close", function(){
-    $("#vehicle").siblings("[class='focus-border active']").removeClass("active")
+  $("#vehicle").on("select2:close", function () {
+    $("#vehicle")
+      .siblings("[class='focus-border active']")
+      .removeClass("active");
   });
 
   function openModal(modalId) {
@@ -256,10 +260,10 @@ $(document).ready(function () {
     $("#plan-video")[0].play();
   });
 
-  function createForm(){
+  function createForm() {
     $(".sf-form-container").each(function () {
       var form = document.createElement("form");
-  
+
       form.innerHTML = this.innerHTML;
       Object.keys(this.dataset).forEach((x) => {
         form[x] = this.dataset[x];
@@ -267,32 +271,27 @@ $(document).ready(function () {
       console.log(form);
       $(this).html(form);
     });
+
+    var plan_validator = $("#plan-form").validate({
+      rules: {
+        name: {
+          required: true,
+        },
+        lastname: {
+          required: true,
+        },
+        email: {
+          required: true,
+          isEmail: true,
+        },
+      },
+    });
   }
 
-  $.when(createForm())
-  .then(() => {
+  $.when(createForm()).then(() => {
     $("#submitPlans").on("click", function () {
       $("#plan-form").valid();
       console.log("submit!");
     });
   });
-
-  var plan_validator = $("#plan-form").validate({
-    rules: {
-      name: {
-        required: true
-      },
-      lastname: {
-        required: true
-      },
-      "email": {
-        required: true,
-        isEmail: true,
-
-      },
-    },
-  });
-
-  
-
 });
