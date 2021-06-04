@@ -163,6 +163,15 @@ $(document).ready(function () {
     minlength: jQuery.validator.format("Mínimo {0} caracteres."),
   });
 
+  jQuery.validator.addMethod(
+    "selectRequired",
+    function (value, element) {
+      console.log("select");
+      return [0, "0", "", "null", "undefined"].indexOf(String(value)) != -1;
+    },
+    "Este campo es obligatorio"
+  );
+
   $.validator.addMethod(
     "valueNotEquals",
     function (value, element, arg) {
