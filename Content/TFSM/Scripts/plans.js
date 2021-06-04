@@ -72,46 +72,6 @@ $(document).ready(function () {
     });
   }
 
-  $.ajax({
-    type: "get",
-    url: api_url + "getdealersbystate",
-    datatype: "json",
-    success: function (data) {
-      var select = $("#distributor");
-      data.results.forEach((state) => {
-        var group = document.createElement("optgroup");
-        group.label = state.Descripcion;
-
-        state.Distribuidores.forEach((dealer) => {
-          var option = document.createElement("option");
-          option.id = dealer.IdDealer;
-          option.value = dealer.IdDealer;
-          option.innerHTML = capitalize(dealer.Dealer);
-          group.append(option);
-        });
-
-        select.append(group);
-      });
-    },
-  });
-
-  $.ajax({
-    type: "get",
-    url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
-    datatype: "json",
-    success: function (data) {
-      var select = $("#vehicle");
-      data.results.forEach((car) => {
-        var option = document.createElement("option");
-        option.id = car.Id;
-        option.value = car.Id;
-        option.innerHTML = capitalize(car.Auto);
-
-        select.append(option);
-      });
-    },
-  });
-
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
     document.body.style.overflow = "hidden";
@@ -252,6 +212,47 @@ $(document).ready(function () {
   });
   $("#vehicle").on("select2:select", function (e) {
     $("#vehicle").valid();
+  });
+
+  
+  $.ajax({
+    type: "get",
+    url: api_url + "getdealersbystate",
+    datatype: "json",
+    success: function (data) {
+      var select = $("#distributor");
+      data.results.forEach((state) => {
+        var group = document.createElement("optgroup");
+        group.label = state.Descripcion;
+
+        state.Distribuidores.forEach((dealer) => {
+          var option = document.createElement("option");
+          option.id = dealer.IdDealer;
+          option.value = dealer.IdDealer;
+          option.innerHTML = capitalize(dealer.Dealer);
+          group.append(option);
+        });
+
+        select.append(group);
+      });
+    },
+  });
+
+  $.ajax({
+    type: "get",
+    url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
+    datatype: "json",
+    success: function (data) {
+      var select = $("#vehicle");
+      data.results.forEach((car) => {
+        var option = document.createElement("option");
+        option.id = car.Id;
+        option.value = car.Id;
+        option.innerHTML = capitalize(car.Auto);
+
+        select.append(option);
+      });
+    },
   });
 
   $.when(createForm()).then(() => {
