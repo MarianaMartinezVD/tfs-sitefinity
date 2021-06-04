@@ -69,6 +69,7 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "selectRequired",
     function (value, element) {
+      console.log("select");
       return isSelectEmpty(value);
     },
     "Este campo es obligatorio"
