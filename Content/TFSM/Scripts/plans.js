@@ -275,6 +275,20 @@ $(document).ready(function () {
   });
 
   var plan_validator;
+
+  function createForm() {
+    // $(".sf-form-container").each(function () {
+    //   var form = document.createElement("form");
+    //   form.innerHTML = this.innerHTML;
+    //   Object.keys(this.dataset).forEach((x) => {
+    //     form[x] = this.dataset[x];
+    //   });
+    //   console.log(form);
+    //   $(this).html(form);
+    // });
+  }
+
+  $.when(createForm()).then(() => {
     FloatLabel.init();
     $("#distributor").select2();
     $("#vehicle").select2();
@@ -305,4 +319,5 @@ $(document).ready(function () {
 
       console.log("submit!");
     });
+  });
 });
