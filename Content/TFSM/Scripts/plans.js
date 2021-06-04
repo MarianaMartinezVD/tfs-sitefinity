@@ -289,7 +289,7 @@ $(document).ready(function () {
   }
 
   $.when(createForm()).then(() => {
-    $("#submitPlans").on("click", function () {
+    $("#submitPlans")[0].on("click", function () {
       $("#plan-form").valid();
       console.log("submit!");
     });
