@@ -166,7 +166,6 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "selectRequired",
     function (value, element) {
-      console.log("select: " + [0, "0", "", "null", "undefined"].indexOf(String(value)));
       return [0, "0", "", "null", "undefined"].indexOf(String(value)) === -1;
     },
     "Este campo es obligatorio"
@@ -301,7 +300,6 @@ $(document).ready(function () {
         },
         lastname: {
           required: true,
-          selectRequired: true,
         },
         email: {
           required: true,
@@ -312,10 +310,6 @@ $(document).ready(function () {
         },
         distributor: {
           selectRequired: true,
-        },
-        test: {
-          valueNotEquals: "0",
-          valueNotEquals: "null",
         },
       },
     });
