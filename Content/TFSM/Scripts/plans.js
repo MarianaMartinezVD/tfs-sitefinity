@@ -256,15 +256,25 @@ $(document).ready(function () {
     $("#plan-video")[0].play();
   });
 
-  $(".sf-form-container").each(function () {
-    var form = document.createElement("form");
-
-    form.innerHTML = this.innerHTML;
-    Object.keys(this.dataset).forEach((x) => {
-      form[x] = this.dataset[x];
+  function createForm(){
+    $(".sf-form-container").each(function () {
+      var form = document.createElement("form");
+  
+      form.innerHTML = this.innerHTML;
+      Object.keys(this.dataset).forEach((x) => {
+        form[x] = this.dataset[x];
+      });
+      console.log(form);
+      $(this).html(form);
     });
-    console.log(form);
-    $(this).html(form);
+  }
+
+  $.when(createForm())
+  .then(() => {
+    $("#submitPlans").on("click", function () {
+      $("#plan-form").valid();
+      console.log("submit!");
+    });
   });
 
   var plan_validator = $("#plan-form").validate({
@@ -283,9 +293,6 @@ $(document).ready(function () {
     },
   });
 
-  $("#submitPlans")[0].on("click", function () {
-    $("#plan-form").valid();
-    console.log("submit!");
-  });
+  
 
 });
