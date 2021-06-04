@@ -116,7 +116,7 @@ $(document).ready(function () {
     });
   }
 
-  $.when(getStates()).then(getCars);
+  $.when(getStates()).then(getCars());
 
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
