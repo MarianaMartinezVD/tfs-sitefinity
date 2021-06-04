@@ -267,4 +267,14 @@ $(document).ready(function () {
     $(this).html(form);
   });
 
+  var plan_validator = $("#plan-form").validate({
+    rules: {
+      "nl-email": {
+        required: true,
+        isEmail: true,
+
+      },
+    },
+  });
+
 });
