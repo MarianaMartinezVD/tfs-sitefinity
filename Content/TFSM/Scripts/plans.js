@@ -70,7 +70,7 @@ $(document).ready(function () {
     "selectRequired",
     function (value, element) {
       console.log("select");
-      return isSelectEmpty(value);
+      return [0, "0", "", null, undefined].indexOf(value) != -1;
     },
     "Este campo es obligatorio"
   );
@@ -79,16 +79,6 @@ $(document).ready(function () {
     return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
       return letter.toUpperCase();
     });
-  }
-
-  function isSelectEmpty(value) {
-    return (
-      value === 0 ||
-      value === "0" ||
-      value === "" ||
-      value === null ||
-      value === undefined
-    );
   }
 
   $.ajax({
