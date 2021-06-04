@@ -255,4 +255,16 @@ $(document).ready(function () {
     $("#plan-video").show();
     $("#plan-video")[0].play();
   });
+
+  $(".sf-form-container").each(function () {
+    var form = document.createElement("form");
+
+    form.innerHTML = this.innerHTML;
+    Object.keys(this.dataset).forEach((x) => {
+      form[x] = this.dataset[x];
+    });
+    console.log(form);
+    $(this).html(form);
+  });
+
 });
