@@ -300,30 +300,30 @@ $(document).ready(function () {
   // $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
   // $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
-  // $("#distributor").on("select2:open", function () {
-  //   $("#distributor").siblings("[class='focus-border']").addClass("active");
-  // });
-  // $("#vehicle").on("select2:open", function () {
-  //   $("#vehicle").siblings("[class='focus-border']").addClass("active");
-  // });
+  $("#distributor").on("select2:open", function () {
+    $("#distributor").siblings("[class='focus-border']").addClass("active");
+  });
+  $("#vehicle").on("select2:open", function () {
+    $("#vehicle").siblings("[class='focus-border']").addClass("active");
+  });
 
-  // $("#distributor").on("select2:close", function () {
-  //   $("#distributor")
-  //     .siblings("[class='focus-border active']")
-  //     .removeClass("active");
-  // });
-  // $("#vehicle").on("select2:close", function () {
-  //   $("#vehicle")
-  //     .siblings("[class='focus-border active']")
-  //     .removeClass("active");
-  // });
+  $("#distributor").on("select2:close", function () {
+    $("#distributor")
+      .siblings("[class='focus-border active']")
+      .removeClass("active");
+  });
+  $("#vehicle").on("select2:close", function () {
+    $("#vehicle")
+      .siblings("[class='focus-border active']")
+      .removeClass("active");
+  });
 
-  // $("#distributor").on("select2:select", function () {
-  //   $("#distributor").valid();
-  // });
-  // $("#vehicle").on("select2:select", function (e) {
-  //   $("#vehicle").valid();
-  // });
+  $("#distributor").on("select2:select", function () {
+    $("#distributor").valid();
+  });
+  $("#vehicle").on("select2:select", function (e) {
+    $("#vehicle").valid();
+  });
 
   $.when(createForm()).then(() => {
     FloatLabel.init();
@@ -340,12 +340,12 @@ $(document).ready(function () {
           required: true,
           isEmail: true,
         },
-        // vehicle: {
-        //   selectRequired: true,
-        // },
-        // distributor: {
-        //   selectRequired: true,
-        // },
+        vehicle: {
+          selectRequired: true,
+        },
+        distributor: {
+          selectRequired: true,
+        },
       },
     });
 
