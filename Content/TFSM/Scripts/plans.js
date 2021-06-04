@@ -298,6 +298,12 @@ $(document).ready(function () {
           required: true,
           isEmail: true,
         },
+        vehicle: {
+          selectRequired: true
+        },
+        distributor: {
+          selectRequired: true
+        },
       },
     });
   }
