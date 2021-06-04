@@ -285,6 +285,7 @@ $(document).ready(function () {
 
   $("#submitPlans").click(function () {
     $("#plan-form").valid();
+    console.log("submit!");
   });
 
 });
