@@ -130,6 +130,13 @@ $(document).ready(function () {
       .removeClass("active");
   });
 
+  $("#distributor").on("select2:select", function () {
+    $("#distributor").valid();
+  });
+  $("#vehicle").on("select2:close", function () {
+    $("#vehicle").valid();
+  });
+
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
     document.body.style.overflow = "hidden";
