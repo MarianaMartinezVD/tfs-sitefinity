@@ -289,6 +289,7 @@ $(document).ready(function () {
   }
 
   $.when(createForm()).then(() => {
+    FloatLabel.init();
     $("#submitPlans").on("click", function () {
       $("#plan-form").valid();
       console.log("submit!");
