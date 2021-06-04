@@ -19,15 +19,6 @@ $(document).ready(function () {
     "Ingrese un valor de email válido"
   );
 
-  jQuery.validator.addMethod(
-    "selectRequired",
-    function (value, element) {
-      console.log("select");
-      return [0, "0", "", null, undefined].indexOf(value) != -1;
-    },
-    "Este campo es obligatorio"
-  );
-
   var deviceWidth = () =>
     window.innerWidth > 0 ? window.innerWidth : screen.width;
 
