@@ -112,31 +112,6 @@ $(document).ready(function () {
     },
   });
 
-  $("#distributor").on("select2:open", function () {
-    $("#distributor").siblings("[class='focus-border']").addClass("active");
-  });
-  $("#vehicle").on("select2:open", function () {
-    $("#vehicle").siblings("[class='focus-border']").addClass("active");
-  });
-
-  $("#distributor").on("select2:close", function () {
-    $("#distributor")
-      .siblings("[class='focus-border active']")
-      .removeClass("active");
-  });
-  $("#vehicle").on("select2:close", function () {
-    $("#vehicle")
-      .siblings("[class='focus-border active']")
-      .removeClass("active");
-  });
-
-  $("#distributor").on("select2:select", function () {
-    $("#distributor").valid();
-  });
-  $("#vehicle").on("select2:close", function () {
-    $("#vehicle").valid();
-  });
-
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
     document.body.style.overflow = "hidden";
@@ -319,6 +294,31 @@ $(document).ready(function () {
           selectRequired: true,
         },
       },
+    });
+
+    $("#distributor").on("select2:open", function () {
+      $("#distributor").siblings("[class='focus-border']").addClass("active");
+    });
+    $("#vehicle").on("select2:open", function () {
+      $("#vehicle").siblings("[class='focus-border']").addClass("active");
+    });
+
+    $("#distributor").on("select2:close", function () {
+      $("#distributor")
+        .siblings("[class='focus-border active']")
+        .removeClass("active");
+    });
+    $("#vehicle").on("select2:close", function () {
+      $("#vehicle")
+        .siblings("[class='focus-border active']")
+        .removeClass("active");
+    });
+
+    $("#distributor").on("select2:select", function () {
+      $("#distributor").valid();
+    });
+    $("#vehicle").on("select2:close", function () {
+      $("#vehicle").valid();
     });
 
     $("#submitPlans").on("click", function () {
