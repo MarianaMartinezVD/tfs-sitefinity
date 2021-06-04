@@ -162,36 +162,36 @@ $(document).ready(function () {
     minlength: jQuery.validator.format("Mínimo {0} caracteres."),
   });
 
-  $("#name").rules("add", {
-    required: true,
-  });
-  $("#lastname").rules("add", {
-    required: true,
-  });
-  $("#email").rules("add", {
-    required: true,
-    email: true,
-  });
-  $("#phone").rules("add", {
-    required: true,
-  });
+  // $("#name").rules("add", {
+  //   required: true,
+  // });
+  // $("#lastname").rules("add", {
+  //   required: true,
+  // });
+  // $("#email").rules("add", {
+  //   required: true,
+  //   email: true,
+  // });
+  // $("#phone").rules("add", {
+  //   required: true,
+  // });
 
-  function validarFormulario() {
-    if ($("#name").val() == "" && $("#name").val() == undefined) {
-      return false;
-    } else if (
-      $("#lastname").val() == "" &&
-      $("#lastname").val() == undefined
-    ) {
-      return false;
-    } else if ($("#email").val() == "" && $("#email").val() == undefined) {
-      return false;
-    } else if ($("#phone").val() == "" && $("#phone").val() == undefined) {
-      return false;
-    } else {
-      return true;
-    }
-  }
+  // function validarFormulario() {
+  //   if ($("#name").val() == "" && $("#name").val() == undefined) {
+  //     return false;
+  //   } else if (
+  //     $("#lastname").val() == "" &&
+  //     $("#lastname").val() == undefined
+  //   ) {
+  //     return false;
+  //   } else if ($("#email").val() == "" && $("#email").val() == undefined) {
+  //     return false;
+  //   } else if ($("#phone").val() == "" && $("#phone").val() == undefined) {
+  //     return false;
+  //   } else {
+  //     return true;
+  //   }
+  // }
 
   function submitLead() {
     var form = {
