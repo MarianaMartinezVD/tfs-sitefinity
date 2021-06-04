@@ -214,16 +214,9 @@ $(document).ready(function () {
 
   var plan_validator;
 
-  function createForm() {
-    // $(".sf-form-container").each(function () {
-    //   var form = document.createElement("form");
-    //   form.innerHTML = this.innerHTML;
-    //   Object.keys(this.dataset).forEach((x) => {
-    //     form[x] = this.dataset[x];
-    //   });
-    //   console.log(form);
-    //   $(this).html(form);
-    // });
+  function initSelects() {
+    getDealers();
+    getCars();
   }
 
   $(".video-box").click(function () {
@@ -232,16 +225,13 @@ $(document).ready(function () {
     $("#plan-video")[0].play();
   });
 
-  var states = [],
-    cars = [];
-
-  function getStates() {
-    let _states = [];
+  function getDealers() {
+    let _dealers = [];
     $.ajax({
       type: "get",
       url: api_url + "getdealersbystate",
       datatype: "json",
-      async: false,
+      // async: false,
       success: function (data) {
         data.results.forEach((s) => {
           var state = {
@@ -258,11 +248,13 @@ $(document).ready(function () {
 
           _states.push(state);
         });
+
+        $("#distributor").select2({
+          dropdownParent: $("#distributor").parent(),
+          data: _states,
+        });
       },
     });
-
-    console.log(_states);
-    return _states;
   }
 
   function getCars() {
@@ -281,52 +273,55 @@ $(document).ready(function () {
 
           _cars.push(car);
         });
+
+        $("#vehicle").select2({
+          dropdownParent: $("#vehicle").parent(),
+          data: _cars,
+        });
       },
     });
-    console.log(_cars);
-    return _cars;
   }
 
-  $.when((states = getStates()), (cars = getCars())).then(
-    $("#distributor").select2({
-      dropdownParent: $("#distributor").parent(),
-      data: states,
-    }),
-    $("#vehicle").select2({
-      dropdownParent: $("#vehicle").parent(),
-      data: cars,
-    })
-  );
+  // $.when((states = getStates()), (cars = getCars())).then(
+  //   $("#distributor").select2({
+  //     dropdownParent: $("#distributor").parent(),
+  //     data: states,
+  //   }),
+  //   $("#vehicle").select2({
+  //     dropdownParent: $("#vehicle").parent(),
+  //     data: cars,
+  //   })
+  // );
   // $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
   // $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
-  $("#distributor").on("select2:open", function () {
-    $("#distributor").siblings("[class='focus-border']").addClass("active");
-  });
-  $("#vehicle").on("select2:open", function () {
-    $("#vehicle").siblings("[class='focus-border']").addClass("active");
-  });
-
-  $("#distributor").on("select2:close", function () {
-    $("#distributor")
-      .siblings("[class='focus-border active']")
-      .removeClass("active");
-  });
-  $("#vehicle").on("select2:close", function () {
-    $("#vehicle")
-      .siblings("[class='focus-border active']")
-      .removeClass("active");
-  });
-
-  $("#distributor").on("select2:select", function () {
-    $("#distributor").valid();
-  });
-  $("#vehicle").on("select2:select", function (e) {
-    $("#vehicle").valid();
-  });
-
-  $.when(createForm()).then(() => {
+  $.when(initSelects()).then(() => {
     FloatLabel.init();
+
+    $("#distributor").on("select2:open", function () {
+      $("#distributor").siblings("[class='focus-border']").addClass("active");
+    });
+    $("#vehicle").on("select2:open", function () {
+      $("#vehicle").siblings("[class='focus-border']").addClass("active");
+    });
+
+    $("#distributor").on("select2:close", function () {
+      $("#distributor")
+        .siblings("[class='focus-border active']")
+        .removeClass("active");
+    });
+    $("#vehicle").on("select2:close", function () {
+      $("#vehicle")
+        .siblings("[class='focus-border active']")
+        .removeClass("active");
+    });
+
+    $("#distributor").on("select2:select", function () {
+      $("#distributor").valid();
+    });
+    $("#vehicle").on("select2:select", function (e) {
+      $("#vehicle").valid();
+    });
 
     plan_validator = $("#plan-form").validate({
       rules: {
