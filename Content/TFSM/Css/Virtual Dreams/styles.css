@@ -1100,7 +1100,7 @@ video.video-content {
   border-bottom: 1px solid #ccc !important;
 }
 
-select[class="error"] ~ .select2-container{
+select[class*="error"] ~ .select2-container{
   border-bottom: 1px solid red !important;
 
 }
