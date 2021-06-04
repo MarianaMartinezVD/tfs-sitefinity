@@ -166,7 +166,7 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "selectRequired",
     function (value, element) {
-      console.log("select");
+      console.log("select: " + [0, "0", "", "null", "undefined"].indexOf(String(value)));
       return [0, "0", "", "null", "undefined"].indexOf(String(value)) != -1;
     },
     "Este campo es obligatorio"
