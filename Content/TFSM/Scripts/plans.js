@@ -167,7 +167,7 @@ $(document).ready(function () {
     "valueNotEquals",
     function (value, element, arg) {
       console.log("value not equals: " + String(arg) !== String(value));
-      return arg !== value;
+      return String(arg) !== String(value);
     },
     "Value must not equal arg."
   );
