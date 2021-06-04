@@ -283,7 +283,7 @@ $(document).ready(function () {
     },
   });
 
-  $("#submitPlans").click(function () {
+  $("#submitPlans").on("click", function () {
     $("#plan-form").valid();
     console.log("submit!");
   });
