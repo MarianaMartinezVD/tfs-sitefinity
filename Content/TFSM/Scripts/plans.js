@@ -287,6 +287,7 @@ $(document).ready(function () {
         },
         lastname: {
           required: true,
+          selectRequired: true,
         },
         email: {
           required: true,
