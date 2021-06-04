@@ -226,10 +226,10 @@ $(document).ready(function () {
     $("#plan-video")[0].play();
   });
 
+  $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
+  $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
   $.when(createForm()).then(() => {
     FloatLabel.init();
-    $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
-    $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
     plan_validator = $("#plan-form").validate({
       rules: {
@@ -275,7 +275,6 @@ $(document).ready(function () {
     });
     $("#vehicle").on("select2:select", function (e) {
       $("#vehicle").valid();
-      $("#vehicle").val(e.params.data.id);
     });
 
     $("#plan-form").submit(function (e) {
