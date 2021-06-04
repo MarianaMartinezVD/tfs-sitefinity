@@ -246,12 +246,12 @@ $(document).ready(function () {
             });
           });
 
-          _states.push(state);
+          _dealers.push(state);
         });
 
         $("#distributor").select2({
           dropdownParent: $("#distributor").parent(),
-          data: _states,
+          data: _dealers,
         });
       },
     });
