@@ -272,8 +272,8 @@ $(document).ready(function () {
 
   $.when(createForm()).then(() => {
     FloatLabel.init();
-    $("#distributor").select2();
-    $("#vehicle").select2();
+    $("#distributor").select2({dropdownParent: $("#distributor").parent()});
+    $("#vehicle").select2({dropdownParent: $("#vehicle").parent()});
 
     plan_validator = $("#plan-form").validate({
       rules: {
