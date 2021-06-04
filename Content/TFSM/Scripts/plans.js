@@ -260,6 +260,8 @@ $(document).ready(function () {
     $("#plan-video")[0].play();
   });
 
+  var plan_validator;
+
   function createForm() {
     $(".sf-form-container").each(function () {
       var form = document.createElement("form");
@@ -272,7 +274,7 @@ $(document).ready(function () {
       $(this).html(form);
     });
 
-    var plan_validator = $("#plan-form").validate({
+    plan_validator = $("#plan-form").validate({
       rules: {
         name: {
           required: true,
@@ -291,7 +293,7 @@ $(document).ready(function () {
   $.when(createForm()).then(() => {
     FloatLabel.init();
     $("#submitPlans").on("click", function () {
-      $("#plan-form").valid();
+      plan_validator.valid();
       console.log("submit!");
     });
   });
