@@ -72,52 +72,6 @@ $(document).ready(function () {
     });
   }
 
-  // function getStates() {
-  //   $.ajax({
-  //     type: "get",
-  //     url: api_url + "getdealersbystate",
-  //     datatype: "json",
-  //     success: function (data) {
-  //       var select = $("#distributor");
-  //       data.results.forEach((state) => {
-  //         var group = document.createElement("optgroup");
-  //         group.label = state.Descripcion;
-
-  //         state.Distribuidores.forEach((dealer) => {
-  //           var option = document.createElement("option");
-  //           option.id = dealer.IdDealer;
-  //           option.value = dealer.IdDealer;
-  //           option.innerHTML = capitalize(dealer.Dealer);
-  //           group.append(option);
-  //         });
-
-  //         select.append(group);
-  //       });
-  //     },
-  //   });
-  // }
-
-  // function getCars() {
-  //   $.ajax({
-  //     type: "get",
-  //     url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
-  //     datatype: "json",
-  //     success: function (data) {
-  //       var select = $("#vehicle");
-  //       data.results.forEach((car) => {
-  //         var option = document.createElement("option");
-  //         option.id = car.Id;
-  //         option.value = car.Id;
-  //         option.innerHTML = capitalize(car.Auto);
-
-  //         select.append(option);
-  //       });
-  //     },
-  //   });
-  // }
-
-  // $.when(getStates()).then(getCars);
-
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
     document.body.style.overflow = "hidden";
@@ -281,19 +235,6 @@ $(document).ready(function () {
       },
     });
   }
-
-  // $.when((states = getStates()), (cars = getCars())).then(
-  //   $("#distributor").select2({
-  //     dropdownParent: $("#distributor").parent(),
-  //     data: states,
-  //   }),
-  //   $("#vehicle").select2({
-  //     dropdownParent: $("#vehicle").parent(),
-  //     data: cars,
-  //   })
-  // );
-  // $("#distributor").select2({ dropdownParent: $("#distributor").parent() });
-  // $("#vehicle").select2({ dropdownParent: $("#vehicle").parent() });
 
   $.when(initSelects()).then(() => {
     FloatLabel.init();
