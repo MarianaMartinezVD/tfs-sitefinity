@@ -297,6 +297,9 @@ $(document).ready(function () {
         distributor: {
           selectRequired: true,
         },
+        test: {
+          selectRequired: true,
+        },
       },
     });
 
