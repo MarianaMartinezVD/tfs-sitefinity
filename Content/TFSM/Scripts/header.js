@@ -68,6 +68,17 @@ $(document).ready(function () {
     $("#listLegales").slideToggle();
   });
 
+  $(".sf-form-container").each(function () {
+    var form = document.createElement("form");
+
+    form.innerHTML = this.innerHTML;
+    Object.keys(this.dataset).forEach((x) => {
+      form[x] = this.dataset[x];
+    });
+    console.log(form);
+    $(this).html(form);
+  });
+
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
     document.body.style.overflow = "hidden";
@@ -204,17 +215,6 @@ $(document).ready(function () {
         );
         break;
     }
-  });
-
-  $(".sf-form-container").each(function () {
-    var form = document.createElement("form");
-
-    form.innerHTML = this.innerHTML;
-    Object.keys(this.dataset).forEach((x) => {
-      form[x] = this.dataset[x];
-    });
-    console.log(form);
-    $(this).html(form);
   });
 
   var nl_validator = $("#newsletter-form").validate({
