@@ -27,6 +27,15 @@ $(document).ready(function () {
     "Este campo es obligatorio"
   );
 
+  jQuery.validator.addMethod(
+    "isPostalCode",
+    function (value, element) {
+      let regex = new RegExp(/^\d{4,5}$/);
+      return regex.test(value);
+    },
+    "Ingrese un código postal válido"
+  );
+
   var deviceWidth = () =>
     window.innerWidth > 0 ? window.innerWidth : screen.width;
 
