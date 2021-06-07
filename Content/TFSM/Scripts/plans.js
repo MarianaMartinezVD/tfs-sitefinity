@@ -157,6 +157,7 @@ $(document).ready(function () {
 
         Toastnotify.create({
           text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
+          duration: 5000
         });
       },
       failure: function (err) {
