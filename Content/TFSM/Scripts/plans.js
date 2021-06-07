@@ -186,7 +186,6 @@ $(document).ready(function () {
       type: "get",
       url: api_url + "getdealersbystate",
       datatype: "json",
-      // async: false,
       success: function (data) {
         data.results.forEach((s) => {
           var state = {
@@ -218,7 +217,6 @@ $(document).ready(function () {
       type: "get",
       url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
       datatype: "json",
-      async: false,
       success: function (data) {
         data.results.forEach((x) => {
           let car = {
