@@ -289,8 +289,8 @@ $(document).ready(function () {
       e.preventDefault();
       if ($("#plan-form").valid()) {
         if ($("#plansTermsCheckbox").prop("checked")) {
-          // submitLead();
-          alert("submit lead");
+          submitLead();
+          // alert("submit lead");
         } else {
           termsCheckbox = "#plansTermsCheckbox";
           openModal("newsletterTermsModal");
