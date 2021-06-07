@@ -205,7 +205,8 @@ body p {
   cursor: pointer;
   outline: none;
   justify-content: center;
-}
+  font-weight: 600;
+}    
 
 .btn-red_inverted,
 .btn-red_inverted:active,
@@ -224,6 +225,7 @@ body p {
   cursor: pointer;
   outline: none;
   justify-content: center;
+  font-weight: 600;
 }
 
 .drawerMenu {
