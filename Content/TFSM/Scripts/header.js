@@ -177,8 +177,8 @@ $(document).ready(function () {
     $(".modal-custom")
       .each(function () {
         let parent = $(this).parent();
-        if (parent.css("display") !== "none") {
-          closeModal(parent.id);
+        if ($(parent).css("display") !== "none") {
+          closeModal($(parent).id);
         }
       });
   });
