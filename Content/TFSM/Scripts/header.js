@@ -176,8 +176,9 @@ $(document).ready(function () {
   $("#modalOverlay").click(function () {
     $(".modal-custom")
       .each(function () {
-        if ($(this).parent().css("display") !== "none") {
-          closeModal(this.parent().id);
+        let parent = $(this).parent();
+        if (parent.css("display") !== "none") {
+          closeModal(parent.id);
         }
       });
   });
