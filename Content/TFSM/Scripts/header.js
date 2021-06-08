@@ -266,3 +266,7 @@ $(document).ready(function () {
     $("#newsletter-form").submit();
   });
 });
+
+function showLoader(){
+  $("#loader-overlay").show();
+}
