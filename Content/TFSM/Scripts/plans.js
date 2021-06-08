@@ -140,6 +140,8 @@ $(document).ready(function () {
       processData: false,
       contentType: "application/json",
       datatype: "json",
+      beforeSend: showLoader,
+      complete: hideLoader,
       data: JSON.stringify(form),
       success: function (data) {
         $("#distributor").val("0");
