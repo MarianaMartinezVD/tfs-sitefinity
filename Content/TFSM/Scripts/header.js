@@ -174,10 +174,9 @@ $(document).ready(function () {
   $("#closeNewsletterTerms").click(() => closeModal("newsletterTermsModal"));
 
   $("#modalOverlay").click(function () {
-    $(this)
-      .siblings()
+    $(".modal-custom")
       .each(function () {
-        if ($(this).css("display") !== "none") {
+        if ($(this).parent().css("display") !== "none") {
           closeModal(this.id);
         }
       });
