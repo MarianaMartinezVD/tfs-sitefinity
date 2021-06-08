@@ -274,5 +274,5 @@ function showLoader(){
 
 function hideLoader(){
   $("#loader-overlay").hide();
-  $(document.body).css("overflow", "initial");
+  $('body').css("overflow", "initial");
 }
