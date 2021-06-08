@@ -92,7 +92,7 @@ $(document).ready(function () {
     Object.keys(this.dataset).forEach((x) => {
       form[x] = this.dataset[x];
     });
-    console.log(form);
+
     $(this).html(form);
   });
 
@@ -239,7 +239,6 @@ $(document).ready(function () {
       "nl-email": {
         required: true,
         isEmail: true,
-
       },
     },
   });
