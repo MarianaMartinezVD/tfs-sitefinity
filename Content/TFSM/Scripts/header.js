@@ -177,7 +177,7 @@ $(document).ready(function () {
     $(".modal-custom")
       .each(function () {
         let parent = $(this).parent().id;
-        console.log(parent);
+        console.log(this);
         if ($(`#${parent}`).css("display") !== "none") {
           closeModal($(`#${parent}`).id);
         }
