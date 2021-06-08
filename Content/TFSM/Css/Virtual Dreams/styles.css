@@ -1395,6 +1395,19 @@ label.error {
   width: 90% !important;
 }
 
+#loader-overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* LARGE */
 @media (min-width: 992px) {
   .w-lg-95 {

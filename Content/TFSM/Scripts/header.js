@@ -269,4 +269,10 @@ $(document).ready(function () {
 
 function showLoader(){
   $("#loader-overlay").show();
+  $(document.body).css("overflow", "hidden !important");
+}
+
+function hideLoader(){
+  $("#loader-overlay").hide();
+  $(document.body).css("overflow", "initial");
 }
