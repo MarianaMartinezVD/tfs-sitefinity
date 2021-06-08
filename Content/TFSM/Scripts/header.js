@@ -176,10 +176,10 @@ $(document).ready(function () {
   $("#modalOverlay").click(function () {
     $(".modal-custom")
       .each(function () {
-        let parent = $(this).parent().id;
+        let parent = $(this).parent()[0];
         console.log(this.parent);
-        if ($(`#${parent}`).css("display") !== "none") {
-          closeModal($(`#${parent}`).id);
+        if (parent.css("display") !== "none") {
+          closeModal(parent.id);
         }
       });
   });
