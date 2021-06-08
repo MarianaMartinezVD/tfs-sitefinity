@@ -1,19 +1,37 @@
-<div class="navbar">
-    <nav class="links">
-        <a class="btn">My TFSM</a>
-        <a class="btn">Cotizar Plan</a>
-        <a class="btn linkFinanciamiento">FINANCIAMIENTO EN L&Iacute;NEA</a>
-    </nav>
-    <div class="btn menuButton toggleMenu" id="openMenuBtn">
-        <img src="/images/default-source/tfsm/icons/outline_menu_black_24dp.png?sfvrsn=5598bf90_0"
-            alt="outline_menu_black_24dp" title="outline_menu_black_24dp" data-displaymode="Original"
-            sfref="[images|OpenAccessDataProvider]9bcb567c-1c7f-4acf-8b44-fc820e180b37" />
-        <br />
+<div class="d-flex align-items-center p-4 header shadow-sm site-container">
+    <div class="col-6 col-md-2"><a href="https://tfs-sitefinity.virtualdreams.io"><img data-method="ResizeFitToAreaArguments" data-customsizemethodproperties="{'MaxWidth':158,'MaxHeight':63,'Width':null,'Height':null,'ScaleUp':false,'Quality':'High','Method':'ResizeFitToAreaArguments'}" src="/images/default-source/tfsm/logo/imagen-1.png?sfvrsn=f7aa113e_12&amp;MaxWidth=158&amp;MaxHeight=63&amp;ScaleUp=false&amp;Quality=High&amp;Method=ResizeFitToAreaArguments&amp;Signature=9F9CC0F3946CD3C633CD388B34F29BF8C8EEEEA7" alt="" title="imagen-1" data-displaymode="Custom" sfref="[images|OpenAccessDataProvider]3222fff0-1c7d-4e6f-b48b-dc826339bdde" /></a><br
+        /></div>
+    <div class="col-6 col-md-10 customNavbar">
+        <nav class="links d-none d-md-block"><a href="/tfsm/my-tfsm">My TFSM</a>
+            <a href="#">Cotizar Plan</a>
+            <a href="#" class="linkFinanciamiento">FINANCIAMIENTO EN L&Iacute;NEA</a>
+        </nav>
+        <div class="btn menuButton toggleMenu" id="openMenuBtn"><span class="material-icons">menu</span></div>
+        <div class="btn menuButton toggleMenu" style="display:none;" id="closeMenuBtn"><span class="material-icons">close</span></div>
     </div>
-    <div class="btn menuButton toggleMenu" id="closeMenuBtn" style="display:none;">
-        <img src="/images/default-source/tfsm/icons/outline_close_black_24dp.png?sfvrsn=e135d56a_3" alt=""
-            title="outline_close_black_24dp" data-displaymode="Original"
-            sfref="[images|OpenAccessDataProvider]2dd9c702-4335-45e6-9812-ee846286546a" />
-        <br />
+    <div class="overlay toggleMenu" style="display:none;" id="menuOverlay"></div>
+    <div class="drawerMenu" style="display:none;" id="drawerMenu"><a class="toggleMenu" href="/tfsm/my-tfsm">My TFSM</a>
+        <div id="deployPlans" class="deployItems"><span>Nuestros Planes</span>
+            <span class="material-icons pointRight" id="deployPlansArrow">chevron_right</span>
+        </div><span id="deployPlansItems" class="deployable" style="display:none;"><div><a class="menuLink" href="https://tfs-sitefinity.virtualdreams.io/nuestros-planes/plan-tradicional">Plan Tradicional</a>
+ <a class="menuLink" href="/nuestros-planes/plan-balloon">Plan Balloon</a>
+ <a class="menuLink" href="/nuestros-planes/plan-anualidades">Plan Anualidades</a>
+<a class="menuLink" href="/nuestros-planes/tasas-y-comisiones">Tasas y comisiones</a>
+ </div></span>
+        <div><a>Cotizar Plan</a></div>
+        <div id="deployArrendamientos" class="deployItems"><span>Arrendamientos</span>
+            <span class="material-icons pointRight" id="deployArrendamientosArrow">chevron_right</span>
+        </div><span id="deployArrendamientosItems" class="deployable" style="display:none;"><div><a class="menuLink" href="/nuestros-planes/arrendamiento-financiero">Arrendamiento Financiero</a>
+ <a class="menuLink" href="/nuestros-planes/arrendamiento-puro">Arrendamiento Puro</a>
+ </div></span>
+        <a class="toggleMenu" href="https://creditotoyota.com.mx/promocion-del-mes" target="_blank">Promociones</a>
+        <div id="deployAbout" class="deployItems"><span>&iquest;Qui&eacute;nes somos?</span>
+            <span class="material-icons pointRight" id="deployAboutArrow">chevron_right</span>
+        </div><span id="deployAboutItems" class="deployable" style="display:none;"><div><a class="menuLink" href="/tfsm/quienes-somos">Nosotros</a>
+ <a class="menuLink">Ventajas TFSM</a>
+ <a class="menuLink">Cont&aacute;ctanos</a>
+ <a class="menuLink">Vacantes</a>
+ </div></span>
+        <a href="/distribuidores">Distribuidores</a>
     </div>
 </div>
