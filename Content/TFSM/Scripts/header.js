@@ -177,7 +177,7 @@ $(document).ready(function () {
     $(".modal-custom")
       .each(function () {
         if ($(this).parent().css("display") !== "none") {
-          closeModal(this.id);
+          closeModal(this.parent().id);
         }
       });
   });
