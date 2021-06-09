@@ -13,20 +13,18 @@ $(document).ready(async () => {
     method: "POST",
     headers: JSON.stringify(_myHeader),
     body: JSON.stringify(_data),
+    success: (data) => {
+        console.log("success!!");
+        console.log(data);
+        
+    },
     //credentials: 'include',
     //mode: 'no-cors'
     error: (err) => console.log(err),
+    url: "https://webhook.site/b8c8e926-3c4c-4f44-bb7b-044cc8b349f0"
   };
   try {
-    fetch(
-      "https://webhook.site/b8c8e926-3c4c-4f44-bb7b-044cc8b349f0",
-      settings
-    )
-    .then((data) => data.json())
-    .then((res) => console.log(res))
-    .catch(function (error) {
-      console.log(error);
-    });
+    $.ajax(settings);
     // const data = await fetchResponse.json();
     // console.log("Entró al try " + data);
     // return data;
