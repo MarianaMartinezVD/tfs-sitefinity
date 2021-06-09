@@ -25,10 +25,10 @@ $(document).ready(async () => {
       console.log(error);
     });
     const data = await fetchResponse.json();
-    return data;
     console.log("Entró al try " + data);
+    return data;
   } catch (e) {
+      console.log("Entró al catch: " + e);
     return e;
-    console.log("Entró al catch: " + e);
   }
 });
