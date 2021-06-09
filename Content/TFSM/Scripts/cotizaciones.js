@@ -18,7 +18,7 @@ $(document).ready(async () => {
     error: (err) => console.log(err),
   };
   try {
-    const fetchResponse = await fetch(
+    fetch(
       "https://webhook.site/b8c8e926-3c4c-4f44-bb7b-044cc8b349f0",
       settings
     )
