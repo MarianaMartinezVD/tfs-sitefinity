@@ -5,7 +5,7 @@ $(document).ready(async () => {
   let _myHeader = {
     "Access-Control-Allow-Origin": "*",
     "Content-Type": "application/json",
-    Authorization:
+    'Authorization':
       "Bearer 00D630000004s6r!AQYAQBMARlSs7xkfrpQQV4Yldk9d8Q_C4WmkqzPoFCsJ9QTrZreSpWr7AYSOkkHRhoy5CKPITfm_9ipd.3C9Xym2e86ZCvSg",
     "Access-Control-Allow-Credentials": true,
   };
