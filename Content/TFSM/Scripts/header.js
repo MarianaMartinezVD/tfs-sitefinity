@@ -269,12 +269,12 @@ $(document).ready(function () {
 
 function showLoader(){
   $("#loader-overlay").show();
-  $('body').css("overflow", "hidden !important");
+  $('body,html').css("overflow", "hidden !important");
 }
 
 function hideLoader(){
   $("#loader-overlay").hide();
-  $('body').css("overflow", "initial");
+  $('body,html').css("overflow", "initial !important");
 }
 
 function closeModal(modalId) {
