@@ -269,7 +269,7 @@ $(document).ready(function () {
 
 function showLoader(){
   $("#loader-overlay").show();
-  $(document.body).css("overflow", "hidden !important");
+  $('body').css("overflow", "hidden !important");
 }
 
 function hideLoader(){
