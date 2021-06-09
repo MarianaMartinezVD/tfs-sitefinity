@@ -21,7 +21,7 @@ $(document).ready(async () => {
     //credentials: 'include',
     //mode: 'no-cors'
     error: (err) => console.log(err),
-    url: "https://webhook.site/b8c8e926-3c4c-4f44-bb7b-044cc8b349f0",
+    // url: "https://webhook.site/b8c8e926-3c4c-4f44-bb7b-044cc8b349f0",
     url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/sitefinity"
   };
   try {
