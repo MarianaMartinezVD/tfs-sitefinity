@@ -12,7 +12,7 @@ $(document).ready(async () => {
   const settings = {
     method: "POST",
     headers: _myHeader,
-    body: JSON.stringify(_data),
+    body: _data,
     success: (data) => {
         console.log("success!!");
         console.log(data);
