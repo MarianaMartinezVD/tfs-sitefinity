@@ -11,7 +11,7 @@ $(document).ready(async () => {
   };
   const settings = {
     method: "POST",
-    headers: JSON.stringify(_myHeader),
+    headers: _myHeader,
     body: JSON.stringify(_data),
     success: (data) => {
         console.log("success!!");
