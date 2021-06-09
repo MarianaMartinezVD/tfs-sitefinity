@@ -21,10 +21,13 @@ $(document).ready(async () => {
     const fetchResponse = await fetch(
       "https://webhook.site/b8c8e926-3c4c-4f44-bb7b-044cc8b349f0",
       settings
-    ).catch(function (error) {
+    )
+    .then((data) => data.json())
+    .then((res) => console.log(res))
+    .catch(function (error) {
       console.log(error);
     });
-    const data = await fetchResponse.json();
+    // const data = await fetchResponse.json();
     console.log("Entró al try " + data);
     return data;
   } catch (e) {
