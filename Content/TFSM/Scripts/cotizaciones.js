@@ -28,8 +28,8 @@ $(document).ready(async () => {
       console.log(error);
     });
     // const data = await fetchResponse.json();
-    console.log("Entró al try " + data);
-    return data;
+    // console.log("Entró al try " + data);
+    // return data;
   } catch (e) {
       console.log("Entró al catch: " + e);
     return e;
