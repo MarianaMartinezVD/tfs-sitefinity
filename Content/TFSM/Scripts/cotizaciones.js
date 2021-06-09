@@ -12,7 +12,7 @@ $(document).ready(async () => {
   const settings = {
     method: "POST",
     headers: _myHeader,
-    body: _data,
+    data: _data,
     success: (data) => {
         console.log("success!!");
         console.log(data);
