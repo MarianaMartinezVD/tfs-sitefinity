@@ -50,12 +50,12 @@ $(document).ready(function () {
       $("#drawerMenu").toggle("slide", { direction: "right" })
     ).then(() => {
       if (overlay === "block") {
-        document.body.style.overflow = "initial";
         $(".deployItems").each(function () {
           $(`#${this.id}Arrow`).removeClass("pointDown");
           $(`#${this.id}Arrow`).addClass("pointRight");
           $(`#${this.id}Items`).slideUp();
         });
+        document.body.style.overflow = "initial";
       }
     });
   });
