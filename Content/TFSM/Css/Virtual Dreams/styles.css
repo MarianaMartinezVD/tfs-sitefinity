@@ -169,11 +169,21 @@ body p {
   padding: 7px;
 }
 
+.userButton {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 120px;
+  padding: 7px 12px;
+}
+
+.userButton:hover,
 .menuButton:hover {
   background-color: #e2e6ea;
   border-color: #dae0e5;
 }
 
+.userButton:active,
 .menuButton:active {
   background-color: #dae0e5;
   border-color: #d3d9df;

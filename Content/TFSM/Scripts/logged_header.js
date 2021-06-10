@@ -12,8 +12,9 @@ $(document).ready(function(){
 function getQueryParams(query, params){
     let res;
     if(typeof(params) === 'string'){
-        let index = query.search(/[\?\&]${params}/);
-        if(index){
+        let index = query.search(`(\\?|\\&)*${params}`);
+        console.log('index: ' + index);
+        if(index !== -1){
             res = query.substr(index, query.indexOf('&'));
             return res;
         }
