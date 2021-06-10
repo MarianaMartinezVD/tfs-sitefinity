@@ -50,7 +50,7 @@ $(document).ready(function () {
       $("#drawerMenu").toggle("slide", { direction: "right" })
     ).then(() => {
       if (overlay === "block") {
-        document.body.style.overflow = "auto";
+        document.body.style.overflow = "initial";
         $(".deployItems").each(function () {
           $(`#${this.id}Arrow`).removeClass("pointDown");
           $(`#${this.id}Arrow`).addClass("pointRight");
