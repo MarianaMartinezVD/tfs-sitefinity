@@ -298,3 +298,24 @@ function closeModal(modalId) {
   }
   document.body.style.overflow = "auto";
 }
+
+$(".toggleMenu").click(() => {
+  let overlay = $("#menuOverlay").css("display");
+  document.body.style.overflow = "hidden";
+
+  $.when(
+    $("#openMenuBtn").toggle(),
+    $("#closeMenuBtn").toggle(),
+    $("#menuOverlay").fadeToggle(100),
+    $("#drawerMenu").toggle("slide", { direction: "right" })
+  ).then(() => {
+    if (overlay !== "none") {
+      document.body.style.overflow = "auto";
+      $(".deployItems").each(function () {
+        $(`#${this.id}Arrow`).removeClass("pointDown");
+        $(`#${this.id}Arrow`).addClass("pointRight");
+        $(`#${this.id}Items`).slideUp();
+      });
+    }
+  });
+});
