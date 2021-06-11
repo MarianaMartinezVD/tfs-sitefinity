@@ -36,9 +36,6 @@ $(document).ready(function () {
     "Ingrese un código postal válido"
   );
 
-  var deviceWidth = () =>
-    window.innerWidth > 0 ? window.innerWidth : screen.width;
-
   $(".toggleMenu").click(() => {
     let overlay = $("#menuOverlay").css("display");
     document.body.style.overflow = "hidden";
@@ -298,3 +295,6 @@ function closeModal(modalId) {
   }
   document.body.style.overflow = "auto";
 }
+
+var deviceWidth = () =>
+    window.innerWidth > 0 ? window.innerWidth : screen.width;
