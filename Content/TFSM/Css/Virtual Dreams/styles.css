@@ -241,6 +241,31 @@ body p {
   font-weight: 600;
 }
 
+.btn-transparent,
+.btn-transparent:focus{
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  height: 40px;
+  border-radius: 20px;
+  color: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.btn-transparent:hover{
+  background-color: #eee;
+  transition: all 0.3s ease;
+}
+
+.btn-transparent:active{
+  background-color: #ccc;
+  transition: all 0.1s ease;
+}
+
 .drawerMenu {
   position: absolute;
   top: 63px;
