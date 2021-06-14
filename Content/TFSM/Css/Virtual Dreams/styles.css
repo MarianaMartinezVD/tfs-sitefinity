@@ -980,7 +980,8 @@ video.video-content {
 
 .btn-black,
 .btn-black:active,
-.btn-black:focus {
+.btn-black:focus 
+.btn-black_inverted:hover{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -997,7 +998,10 @@ video.video-content {
   outline: none;
 }
 
-.btn-black:hover {
+.btn-black:hover,
+.btn-black_inverted,
+.btn-black_inverted:active,
+.btn-black_inverted:focus {
   background-color: white;
   color: var(--color-black);
   transition: all 0.3s ease;
