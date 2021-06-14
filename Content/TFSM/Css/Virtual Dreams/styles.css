@@ -1008,6 +1008,7 @@ video.video-content {
   padding: 12px 24px;
   height: 40px;
   border-radius: 20px;
+  border: 1px solid var(--color-black);
   background-color: white;
   color: var(--color-black);
   transition: all 0.3s ease;
