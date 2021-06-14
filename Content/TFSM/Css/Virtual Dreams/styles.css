@@ -987,7 +987,7 @@ video.video-content {
   justify-content: center;
   padding: 12px 24px;
   height: 40px;
-  background: var(--color-black);
+  background-color: var(--color-black);
   border-radius: 20px;
   border: 1px solid var(--color-black);
   color: white;
