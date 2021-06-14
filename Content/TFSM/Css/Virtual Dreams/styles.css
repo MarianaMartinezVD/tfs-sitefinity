@@ -248,12 +248,14 @@ body p {
   padding: 12px 24px;
   height: 40px;
   border-radius: 20px;
-  color: white;
+  /* color: white; */
   transition: all 0.3s ease;
   cursor: pointer;
   outline: none;
   justify-content: center;
   font-weight: 600;
+  background-color: transparent;
+  border: none;
 }
 
 .btn-transparent:hover{
