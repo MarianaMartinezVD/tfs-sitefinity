@@ -980,7 +980,7 @@ video.video-content {
 
 .btn-black,
 .btn-black:active,
-.btn-black:focus 
+.btn-black:focus, 
 .btn-black_inverted:hover{
   display: flex;
   align-items: center;
