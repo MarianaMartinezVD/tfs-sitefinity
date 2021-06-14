@@ -16,6 +16,7 @@ function getQueryParams(query, params){
         console.log('index: ' + index);
         if(index !== -1){
             res = query.substr(index, query.indexOf('&'));
+            res = res.substr(res.indexOf('=') + 1);
             return res;
         }
         else{

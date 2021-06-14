@@ -18,17 +18,11 @@ $(document).ready(async () => {
         console.log(data);
         
     },
-    //credentials: 'include',
-    //mode: 'no-cors'
     error: (err) => console.log(err),
-    // url: "https://webhook.site/b8c8e926-3c4c-4f44-bb7b-044cc8b349f0",
     url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/sitefinity"
   };
   try {
     $.ajax(settings);
-    // const data = await fetchResponse.json();
-    // console.log("Entró al try " + data);
-    // return data;
   } catch (e) {
       console.log("Entró al catch: " + e);
     return e;

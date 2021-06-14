@@ -93,30 +93,30 @@ $(document).ready(function () {
     $(this).html(form);
   });
 
-  function openModal(modalId) {
-    const modal = $(`#${modalId}`);
-    document.body.style.overflow = "hidden";
-    $("#modalOverlay").show("fade");
-    console.log(modal);
-    if (modal.id === "newsletterTermsModal") {
-      let body = modal.querySelector(".modal-body-custom");
-      $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
-    }
+  // function openModal(modalId) {
+  //   const modal = $(`#${modalId}`);
+  //   document.body.style.overflow = "hidden";
+  //   $("#modalOverlay").show("fade");
+  //   console.log(modal);
+  //   if (modal.id === "newsletterTermsModal") {
+  //     let body = modal.querySelector(".modal-body-custom");
+  //     $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
+  //   }
 
-    if (deviceWidth() <= 767) {
-      modal.show("slide", { direction: "down" });
-    } else {
-      modal.animate(
-        {
-          display: "toggle",
-          opacity: 1,
-          top: "-=50",
-        },
-        400,
-        () => modal.css({ display: "block" })
-      );
-    }
-  }
+  //   if (deviceWidth() <= 767) {
+  //     modal.show("slide", { direction: "down" });
+  //   } else {
+  //     modal.animate(
+  //       {
+  //         display: "toggle",
+  //         opacity: 1,
+  //         top: "-=50",
+  //       },
+  //       400,
+  //       () => modal.css({ display: "block" })
+  //     );
+  //   }
+  // }
 
   // function closeModal(modalId) {
   //   const modal = $(`#${modalId}`);
@@ -272,6 +272,31 @@ function showLoader(){
 function hideLoader(){
   $("#loader-overlay").hide();
   document.getElementsByTagName('body')[0].style.overflow = 'initial';
+}
+
+function openModal(modalId) {
+  const modal = $(`#${modalId}`);
+  document.body.style.overflow = "hidden";
+  $("#modalOverlay").show("fade");
+  console.log(modal);
+  if (modal.id === "newsletterTermsModal") {
+    let body = modal.querySelector(".modal-body-custom");
+    $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
+  }
+
+  if (deviceWidth() <= 767) {
+    modal.show("slide", { direction: "down" });
+  } else {
+    modal.animate(
+      {
+        display: "toggle",
+        opacity: 1,
+        top: "-=50",
+      },
+      400,
+      () => modal.css({ display: "block" })
+    );
+  }
 }
 
 function closeModal(modalId) {
