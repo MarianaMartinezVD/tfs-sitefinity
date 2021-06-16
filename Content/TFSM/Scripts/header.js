@@ -213,6 +213,10 @@ $(document).ready(function () {
   $("#submit-newsletter").click(function () {
     $("#newsletter-form").submit();
   });
+
+  $(".link-aviso-privacidad").click(function(){
+    window.open(window.location.origin + "/legales/aviso-de-privacidad", "_blank");
+  });
 });
 
 function showLoader(){
