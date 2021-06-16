@@ -93,55 +93,6 @@ $(document).ready(function () {
     $(this).html(form);
   });
 
-  // function openModal(modalId) {
-  //   const modal = $(`#${modalId}`);
-  //   document.body.style.overflow = "hidden";
-  //   $("#modalOverlay").show("fade");
-  //   console.log(modal);
-  //   if (modal.id === "newsletterTermsModal") {
-  //     let body = modal.querySelector(".modal-body-custom");
-  //     $(body).animate({ scrollTop: $(body).offset().top - 20 }, "fast");
-  //   }
-
-  //   if (deviceWidth() <= 767) {
-  //     modal.show("slide", { direction: "down" });
-  //   } else {
-  //     modal.animate(
-  //       {
-  //         display: "toggle",
-  //         opacity: 1,
-  //         top: "-=50",
-  //       },
-  //       400,
-  //       () => modal.css({ display: "block" })
-  //     );
-  //   }
-  // }
-
-  // function closeModal(modalId) {
-  //   const modal = $(`#${modalId}`);
-  //   $("#modalOverlay").hide("fade");
-
-  //   if (deviceWidth() <= 767) {
-  //     modal.hide("slide", { direction: "down" });
-  //   } else {
-  //     modal.animate(
-  //       {
-  //         opacity: 0,
-  //         display: "toggle",
-  //         top: "+=50",
-  //       },
-  //       400,
-  //       () => {
-  //         modal.css({ display: "none" });
-  //       }
-  //     );
-  //   }
-  //   document.body.style.overflow = "auto";
-  // }
-
-  // var termsCheckbox = "#termsCheckbox";
-
   $("#newsletterTerms").click(() => {
     termsCheckbox = "#termsCheckbox";
     openModal("newsletterTermsModal");
