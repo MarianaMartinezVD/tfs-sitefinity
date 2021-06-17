@@ -291,7 +291,7 @@ function getDealersByState(select) {
   let _dealers = [];
   $.ajax({
     type: "get",
-    url: window.congig.urlbase + "/getdealersbystate",
+    url: window.config.urlbase + "/getdealersbystate",
     datatype: "json",
     success: function (data) {
       data.results.forEach((s) => {
