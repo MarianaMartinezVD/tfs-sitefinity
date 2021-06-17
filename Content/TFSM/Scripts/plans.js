@@ -127,7 +127,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: "post",
-      url: api_url + "submit-lead",
+      url: window.webkitConvertPointFromPageToNode.urlbase + "/submit-lead",
       processData: false,
       contentType: "application/json",
       datatype: "json",
@@ -177,7 +177,7 @@ $(document).ready(function () {
     let _dealers = [];
     $.ajax({
       type: "get",
-      url: api_url + "getdealersbystate",
+      url: window.config.urlbase + "/getdealersbystate",
       datatype: "json",
       success: function (data) {
         data.results.forEach((s) => {
