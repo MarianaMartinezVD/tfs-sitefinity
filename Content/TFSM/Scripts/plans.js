@@ -3,6 +3,12 @@ const api_url = "https://tfs-sitefinity.virtualdreams.io:444/api/tfsm/";
 var deviceWidth = () =>
   window.innerWidth > 0 ? window.innerWidth : screen.width;
 
+function capitalize(str) {
+  return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+    return letter.toUpperCase();
+  });
+}
+
 $(document).ready(function () {
   const FloatLabel = (() => {
     // add active class
@@ -65,12 +71,6 @@ $(document).ready(function () {
   })();
 
   FloatLabel.init();
-
-  function capitalize(str) {
-    return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
-      return letter.toUpperCase();
-    });
-  }
 
   function openModal(modalId) {
     const modal = $(`#${modalId}`);
@@ -159,7 +159,7 @@ $(document).ready(function () {
 
         Toastnotify.create({
           text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
-          duration: 5000
+          duration: 5000,
         });
       },
       failure: function (err) {
