@@ -1,3 +1,12 @@
+var deviceWidth = () =>
+  window.innerWidth > 0 ? window.innerWidth : screen.width;
+
+function capitalize(str) {
+  return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+    return letter.toUpperCase();
+  });
+}
+
 $(document).ready(function () {
   jQuery.extend(jQuery.validator.messages, {
     required: "Este campo es obligatorio",
@@ -122,14 +131,13 @@ $(document).ready(function () {
   $("#closeNewsletterTerms").click(() => closeModal("newsletterTermsModal"));
 
   $("#modalOverlay").click(function () {
-    $(".modal-custom")
-      .each(function () {
-        let parent = $(this).parent()[0];
-        // console.log(this.parent);
-        if ($(parent).css("display") !== "none") {
-          closeModal(parent.id);
-        }
-      });
+    $(".modal-custom").each(function () {
+      let parent = $(this).parent()[0];
+      // console.log(this.parent);
+      if ($(parent).css("display") !== "none") {
+        closeModal(parent.id);
+      }
+    });
   });
 
   $("#denyNewsletterTerms").click(function () {
@@ -214,19 +222,22 @@ $(document).ready(function () {
     $("#newsletter-form").submit();
   });
 
-  $(".link-aviso-privacidad").click(function(){
-    window.open(window.location.origin + "/legales/aviso-de-privacidad", "_blank");
+  $(".link-aviso-privacidad").click(function () {
+    window.open(
+      window.location.origin + "/legales/aviso-de-privacidad",
+      "_blank"
+    );
   });
 });
 
-function showLoader(){
+function showLoader() {
   $("#loader-overlay").show();
-  document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+  document.getElementsByTagName("body")[0].style.overflow = "hidden";
 }
 
-function hideLoader(){
+function hideLoader() {
   $("#loader-overlay").hide();
-  document.getElementsByTagName('body')[0].style.overflow = 'initial';
+  document.getElementsByTagName("body")[0].style.overflow = "initial";
 }
 
 function openModal(modalId) {
@@ -276,5 +287,33 @@ function closeModal(modalId) {
   document.body.style.overflow = "auto";
 }
 
-var deviceWidth = () =>
-    window.innerWidth > 0 ? window.innerWidth : screen.width;
+function getDealersByState(select) {
+  let _dealers = [];
+  $.ajax({
+    type: "get",
+    url: api_url + "getdealersbystate",
+    datatype: "json",
+    success: function (data) {
+      data.results.forEach((s) => {
+        var state = {
+          text: s.Descripcion,
+          children: [],
+        };
+
+        s.Distribuidores.forEach((d) => {
+          state.children.push({
+            id: d.IdDealer,
+            text: capitalize(d.Dealer),
+          });
+        });
+
+        _dealers.push(state);
+      });
+
+      $(`#${select}`).select2({
+        dropdownParent: $(`#${select}`).parent(),
+        data: _dealers,
+      });
+    },
+  });
+}

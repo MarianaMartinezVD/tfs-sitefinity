@@ -1,14 +1,5 @@
 const api_url = "https://tfs-sitefinity.virtualdreams.io:444/api/tfsm/";
 
-var deviceWidth = () =>
-  window.innerWidth > 0 ? window.innerWidth : screen.width;
-
-function capitalize(str) {
-  return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
-    return letter.toUpperCase();
-  });
-}
-
 $(document).ready(function () {
   const FloatLabel = (() => {
     // add active class
@@ -302,34 +293,3 @@ $(document).ready(function () {
     });
   });
 });
-
-function getDealersByState(select) {
-  let _dealers = [];
-  $.ajax({
-    type: "get",
-    url: api_url + "getdealersbystate",
-    datatype: "json",
-    success: function (data) {
-      data.results.forEach((s) => {
-        var state = {
-          text: s.Descripcion,
-          children: [],
-        };
-
-        s.Distribuidores.forEach((d) => {
-          state.children.push({
-            id: d.IdDealer,
-            text: capitalize(d.Dealer),
-          });
-        });
-
-        _dealers.push(state);
-      });
-
-      $(`#${select}`).select2({
-        dropdownParent: $(`#${select}`).parent(),
-        data: _dealers,
-      });
-    },
-  });
-}
