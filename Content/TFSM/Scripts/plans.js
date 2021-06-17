@@ -302,3 +302,34 @@ $(document).ready(function () {
     });
   });
 });
+
+function getDealersByState(select) {
+  let _dealers = [];
+  $.ajax({
+    type: "get",
+    url: api_url + "getdealersbystate",
+    datatype: "json",
+    success: function (data) {
+      data.results.forEach((s) => {
+        var state = {
+          text: s.Descripcion,
+          children: [],
+        };
+
+        s.Distribuidores.forEach((d) => {
+          state.children.push({
+            id: d.IdDealer,
+            text: capitalize(d.Dealer),
+          });
+        });
+
+        _dealers.push(state);
+      });
+
+      $(`#${select}`).select2({
+        dropdownParent: $(`#${select}`).parent(),
+        data: _dealers,
+      });
+    },
+  });
+}
