@@ -300,10 +300,11 @@ function getDealersByState(select) {
           children: [],
         };
 
-        s.Distribuidores.forEach((d) => {
+        s.Distribuidores.forEach((d, idx) => {
           state.children.push({
             id: d.IdDealer,
             text: capitalize(d.Dealer),
+            codigo: d.Code
           });
         });
 
