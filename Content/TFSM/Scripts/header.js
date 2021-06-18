@@ -31,7 +31,7 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "selectRequired",
     function (value, element) {
-      return [0, "0", "", "null", "undefined"].indexOf(String(value)) === -1;
+      return [0, "0", "-1", "", "null", "undefined"].indexOf(String(value)) === -1;
     },
     "Este campo es obligatorio"
   );
