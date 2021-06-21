@@ -1,27 +1,5 @@
-$(document).ready(function(){
-    let url = window.location.href.split('/');
-    let action = url[url.length - 1];
-    let query = action.split('?');
-    url[url.length - 1] = query[0];
+let isLogged = sessionStorage.getItem("isLogged");
 
-    window.history.pushState("","Mis Cotizaciones","/" + query[0]);
-
-
-});
-
-function getQueryParams(query, params){
-    let res;
-    if(typeof(params) === 'string'){
-        let index = query.search(`(\\?|\\&)*${params}`);
-        console.log('index: ' + index);
-        if(index !== -1){
-            res = query.substr(index, query.indexOf('&'));
-            res = res.substr(res.indexOf('=') + 1);
-            return res;
-        }
-        else{
-            res = null;
-            return res;
-        }
-    }
+if(isLogged !== "true"){
+  window.location.replace(window.location.origin + "/tfsm/my-tfsm/login-clientes");
 }
