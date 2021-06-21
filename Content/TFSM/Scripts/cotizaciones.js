@@ -1,3 +1,9 @@
+function capitalize(str) {
+  return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+    return letter.toUpperCase();
+  });
+}
+
 $(document).ready(async () => {
   /* Se obtienen los valores de los parámetros 
             email y token que llegan en la url 
@@ -26,20 +32,14 @@ $(document).ready(async () => {
     data: JSON.stringify(_data),
     success: (data) => {
       console.log(data);
-
+      
       //Sección de Bienvenida Home Delivery
       var bannerBienvenida = "";
-
-      /*var nombreCompleto = data.esCliente[0].nombre,
-     		    separador = " ", // trunca en el espacio en blanco. 
-                limite = 1, 
-                nombre = nombreCompleto.split(separador, limite); */
-      var nombre = data.esCliente[0].nombre;
-      function capitalize(str) {
-        return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
-          return letter.toUpperCase();
-        });
-      }
+      var nombre = data.esCliente[0].nombre, apellido = data.esCliente[0].apellido;
+      sessionStorage.setItem("name", capitalize(nombre));
+      sessionStorage.setItem("lastname", capitalize(apellido));
+      $("#user-name").html(capitalize(nombre));
+      
       bannerBienvenida +=
         '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
         '<h1 class="cotizaciones-title">Hola ' +
