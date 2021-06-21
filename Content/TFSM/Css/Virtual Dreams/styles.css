@@ -757,7 +757,7 @@ glyphicon-chevron-right:before {
 }
 
 .description {
-  padding: 7% 6%;
+  padding: 5% 6%;
 }
 
 .description .title {
@@ -813,10 +813,6 @@ glyphicon-chevron-right:before {
 
 .form .title {
   margin-bottom: 40px;
-}
-
-.form > div:first-child {
-  margin-top: 81px;
 }
 
 .perks-container {
