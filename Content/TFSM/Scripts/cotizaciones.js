@@ -38,6 +38,7 @@ $(document).ready(async () => {
       var nombre = data.esCliente[0].nombre, apellido = data.esCliente[0].apellido;
       sessionStorage.setItem("name", capitalize(nombre));
       sessionStorage.setItem("lastname", capitalize(apellido));
+      sessionStorage.setItem("isClient", data.esCliente[0].esCliente);
       $(".user-name").html(capitalize(nombre));
       
       bannerBienvenida +=
