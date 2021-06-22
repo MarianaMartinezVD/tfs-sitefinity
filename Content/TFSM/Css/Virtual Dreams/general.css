@@ -12,6 +12,7 @@
 
 .template-body {
   margin-top: 63px;
+  min-height: calc(100vh - 63px);
 }
 
 .swal2-popup {
