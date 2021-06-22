@@ -108,7 +108,7 @@ $(document).ready(async () => {
             '</td><td><a href="https://tfs-sitefinity.virtualdreams.io/tfsm/my-tfsm/solicitud-digital?lead=' +
             cotizacion.id +
             "&token=" +
-            url.searchParams.get("token") +
+            window.btoa(_paramToken) +
             '">' +
             cotizacion.etapa +
             "</div></td></tr>";
