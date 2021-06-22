@@ -31,7 +31,9 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "selectRequired",
     function (value, element) {
-      return [0, "0", "-1", "", "null", "undefined"].indexOf(String(value)) === -1;
+      return (
+        [0, "0", "-1", "", "null", "undefined"].indexOf(String(value)) === -1
+      );
     },
     "Este campo es obligatorio"
   );
@@ -44,6 +46,36 @@ $(document).ready(function () {
     },
     "Ingrese un código postal válido"
   );
+
+  $("#my-tfsm").click(function (e) {
+    let session = sessionStorage.getItem("isLogged");
+    if (session === "true") {
+      e.preventDefault();
+      window.location.replace(
+        window.location.origin + "/tfsm/mis-cotizaciones"
+      );
+    }
+  });
+
+  $("#my-tfsm-menu").click(function (e) {
+    let session = sessionStorage.getItem("isLogged");
+    if (session === "true") {
+      e.preventDefault();
+      window.location.replace(
+        window.location.origin + "/tfsm/mis-cotizaciones"
+      );
+    }
+  });
+
+  $("#link-finan").click(function (e) {
+    let session = sessionStorage.getItem("isLogged");
+    if (session === "true") {
+      e.preventDefault();
+      window.location.replace(
+        window.location.origin + "/tfsm/mis-cotizaciones"
+      );
+    }
+  });
 
   $(".toggleMenu").click(() => {
     let overlay = $("#menuOverlay").css("display");
@@ -304,7 +336,7 @@ function getDealersByState(select) {
           state.children.push({
             id: d.IdDealer,
             text: capitalize(d.Dealer),
-            codigo: d.Code
+            codigo: d.Code,
           });
         });
 
