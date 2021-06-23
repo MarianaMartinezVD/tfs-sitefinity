@@ -264,7 +264,7 @@ $(document).ready(function () {
 
 function showLoader() {
   $("#loader-overlay").show();
-  if (!window.location.href.includes("Action/Edit"))
+  if (!window.location.href.includes("Sitefinity/adminapp"))
     document.getElementsByTagName("body")[0].style.overflow = "hidden";
 }
 
