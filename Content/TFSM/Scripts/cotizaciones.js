@@ -35,11 +35,14 @@ $(document).ready(async () => {
       
       //Sección de Bienvenida Home Delivery
       var bannerBienvenida = "";
-      var nombre = data.esCliente[0].nombre, apellido = data.esCliente[0].apellido;
+      var nombre = data.esCliente[0].nombre, 
+      apellido = data.esCliente[0].apellido,
+      isClient = data.esCliente[0].esCliente;
       sessionStorage.setItem("name", capitalize(nombre));
       sessionStorage.setItem("lastname", capitalize(apellido));
-      sessionStorage.setItem("isClient", data.esCliente[0].esCliente);
+      sessionStorage.setItem("isClient", isClient);
       $(".user-name").html(capitalize(nombre));
+      $("#link-portal").css("display", isClient ? "block" : "none");
       
       bannerBienvenida +=
         '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
