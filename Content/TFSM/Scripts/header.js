@@ -264,7 +264,8 @@ $(document).ready(function () {
 
 function showLoader() {
   $("#loader-overlay").show();
-  document.getElementsByTagName("body")[0].style.overflow = "hidden";
+  if (!window.location.href.includes("Action/Edit"))
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
 }
 
 function hideLoader() {
