@@ -47,27 +47,37 @@ $(document).ready(function () {
     "Ingrese un código postal válido"
   );
 
-  $("#my-tfsm").click(function (e) {
-    let session = sessionStorage.getItem("isLogged");
-    if (session === "true") {
-      e.preventDefault();
-      window.location.replace(
-        window.location.origin + "/tfsm/mis-cotizaciones"
-      );
-    }
-  });
+  // $("#my-tfsm").click(function (e) {
+  //   let session = sessionStorage.getItem("isLogged");
+  //   if (session === "true") {
+  //     e.preventDefault();
+  //     window.location.replace(
+  //       window.location.origin + "/tfsm/mis-cotizaciones"
+  //     );
+  //   }
+  // });
 
-  $("#my-tfsm-menu").click(function (e) {
-    let session = sessionStorage.getItem("isLogged");
-    if (session === "true") {
-      e.preventDefault();
-      window.location.replace(
-        window.location.origin + "/tfsm/mis-cotizaciones"
-      );
-    }
-  });
+  // $("#my-tfsm-menu").click(function (e) {
+  //   let session = sessionStorage.getItem("isLogged");
+  //   if (session === "true") {
+  //     e.preventDefault();
+  //     window.location.replace(
+  //       window.location.origin + "/tfsm/mis-cotizaciones"
+  //     );
+  //   }
+  // });
 
   $("#link-finan").click(function (e) {
+    let session = sessionStorage.getItem("isLogged");
+    if (session === "true") {
+      e.preventDefault();
+      window.location.replace(
+        window.location.origin + "/tfsm/mis-cotizaciones"
+      );
+    }
+  });
+
+  $("#link-finan-menu").click(function (e) {
     let session = sessionStorage.getItem("isLogged");
     if (session === "true") {
       e.preventDefault();
