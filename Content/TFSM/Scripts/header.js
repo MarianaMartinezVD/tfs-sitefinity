@@ -229,13 +229,7 @@ $(document).ready(function () {
         termsCheckbox = "#termsCheckbox";
         openModal("newsletterTermsModal");
       } else {
-        $("#nl-email").val("");
-        $("#termsCheckbox").prop("checked", false);
-
-        Toastnotify.create({
-          text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
-          duration: 5000,
-        });
+        commitNewsletter($("#nl-email").val());
       }
     }
   });
@@ -336,6 +330,35 @@ function getDealersByState(select) {
       $(`#${select}`).select2({
         dropdownParent: $(`#${select}`).parent(),
         data: _dealers,
+      });
+    },
+  });
+}
+
+function commitNewsletter(email) {
+  $.ajax({
+    url: window.config.urlbase + "/SalesforceNewsletter",
+    beforeSend: showLoader,
+    complete: function(){
+      $("#nl-email").val("");
+      $("#termsCheckbox").prop("checked", false);
+      hideLoader();
+    },
+    data: { Email: email, AceptoTerminosYCondiciones: "Si Acepto" },
+    success: function () {
+      Toastnotify.create({
+        text: "Gracias por registrarte! Serás notificado cuando tengamos cosas nuevas.",
+        duration: 5000,
+      });
+    },
+    error: function (err) {
+      console.log(err);
+      Swal.fire({
+        title: "Error",
+        text: "Ocurrió un error al enviar información, intenta mas tarde.",
+        icon: "error",
+        confirmButtonColor: "#cc0000",
+        timer: 5000,
       });
     },
   });
