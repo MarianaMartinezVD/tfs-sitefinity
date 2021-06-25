@@ -338,6 +338,7 @@ function getDealersByState(select) {
 function commitNewsletter(email) {
   $.ajax({
     url: window.config.urlbase + "/SalesforceNewsletter",
+    method: "POST",
     beforeSend: showLoader,
     complete: function(){
       $("#nl-email").val("");
