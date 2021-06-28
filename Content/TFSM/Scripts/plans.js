@@ -152,6 +152,9 @@ $(document).ready(function () {
           text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
           duration: 5000,
         });
+
+        $.ajax(window.location.origin + "/plan-submitted");
+
       },
       failure: function (err) {
         alert("Error al crear el Lead :(");
