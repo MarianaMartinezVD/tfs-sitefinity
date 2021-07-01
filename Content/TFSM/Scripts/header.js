@@ -8,6 +8,9 @@ function capitalize(str) {
 }
 
 $(document).ready(function () {
+
+  $("a.url-mytfsm").attr("href", window.config.urlMyTfsm);
+
   jQuery.extend(jQuery.validator.messages, {
     required: "Este campo es obligatorio",
     email: "Ingrese un valor de email válido",
