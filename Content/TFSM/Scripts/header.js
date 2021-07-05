@@ -237,9 +237,9 @@ $(document).ready(function () {
     }
   });
 
-  // $("#submit-newsletter").click(function () {
-  //   $("#newsletter-form").submit();
-  // });
+  $("#submit-newsletter").click(function () {
+    $("#newsletter-form").submit();
+  });
 
   $(".link-aviso-privacidad").click(function () {
     window.open(
