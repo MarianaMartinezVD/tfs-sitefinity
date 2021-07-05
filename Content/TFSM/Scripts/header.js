@@ -237,9 +237,9 @@ $(document).ready(function () {
     }
   });
 
-  $("#submit-newsletter").click(function () {
-    $("#newsletter-form").submit();
-  });
+  // $("#submit-newsletter").click(function () {
+  //   $("#newsletter-form").submit();
+  // });
 
   $(".link-aviso-privacidad").click(function () {
     window.open(
@@ -366,4 +366,18 @@ function commitNewsletter(email) {
       });
     },
   });
+}
+
+function validateCaptcha(){
+  grecaptcha.ready(function() {
+    grecaptcha.execute(window.config.reCaptchaSiteKey, {action: 'submit'}).then(function(token) {
+        // Add your logic to submit to your backend server here.
+        
+    });
+  });
+}
+
+function submitNewsletter(token){
+  console.log(token);
+  $("#newsletter-form").submit();
 }
