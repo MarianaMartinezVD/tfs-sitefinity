@@ -246,7 +246,7 @@ $(document).ready(function () {
       success: function (data) {
         var _data = data.value.filter((value, index) => data.value.findIndex(x => x.Title === value.Title) === index);
 
-        _data.results.forEach((x) => {
+        _data.forEach((x) => {
           let car = {
             id: x.AutoId,
             text: capitalize(x.Title),
