@@ -865,7 +865,7 @@ glyphicon-chevron-right:before {
 .video-box {
   position: relative;
   width: 100%;
-  height: 23.6vw;
+  /* height: 23.6vw; */
   border-radius: 1.5rem;
   overflow: hidden;
 }
