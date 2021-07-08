@@ -178,7 +178,7 @@ $(document).ready(function () {
 
   $(".video-box").click(function () {
     $(".video-box img").addClass("d-none");
-    $(".video-box video")[0].addClass("d-none");
+    $(".video-box video")[0].removeClass("d-none");
     $(".video-box video")[0].play();
   });
 
