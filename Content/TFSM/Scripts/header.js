@@ -376,8 +376,3 @@ function validateCaptcha(){
     });
   });
 }
-
-// function submitNewsletter(token){
-//   console.log(token);
-//   $("#newsletter-form").submit();
-// }

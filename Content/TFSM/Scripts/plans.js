@@ -170,10 +170,16 @@ $(document).ready(function () {
     getCars();
   }
 
+  // $(".video-box").click(function () {
+  //   $(".video-box img").hide();
+  //   $("#plan-video").show();
+  //   $("#plan-video")[0].play();
+  // });
+
   $(".video-box").click(function () {
-    $(".video-box img").hide();
-    $("#plan-video").show();
-    $("#plan-video")[0].play();
+    $(".video-box img").addClass("d-none");
+    $(".video-box video")[0].addClass("d-none");
+    $(".video-box video")[0].play();
   });
 
   function getDealers() {
