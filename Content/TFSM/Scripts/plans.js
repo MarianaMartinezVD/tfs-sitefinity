@@ -213,17 +213,43 @@ $(document).ready(function () {
     });
   }
 
+  // function getCars() {
+  //   let _cars = [];
+  //   $.ajax({
+  //     type: "get",
+  //     url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
+  //     datatype: "json",
+  //     success: function (data) {
+  //       data.results.forEach((x) => {
+  //         let car = {
+  //           id: x.Id,
+  //           text: capitalize(x.Auto),
+  //         };
+
+  //         _cars.push(car);
+  //       });
+
+  //       $("#vehicle").select2({
+  //         dropdownParent: $("#vehicle").parent(),
+  //         data: _cars,
+  //       });
+  //     },
+  //   });
+  // }
+
   function getCars() {
     let _cars = [];
     $.ajax({
       type: "get",
-      url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
+      url: window.location.origin + "/api/default/autos",
       datatype: "json",
       success: function (data) {
-        data.results.forEach((x) => {
+        var _data = data.value.filter((value, index) => data.value.findIndex(x => x.Title === value.Title) === index);
+
+        _data.results.forEach((x) => {
           let car = {
-            id: x.Id,
-            text: capitalize(x.Auto),
+            id: x.AutoId,
+            text: capitalize(x.Title),
           };
 
           _cars.push(car);
