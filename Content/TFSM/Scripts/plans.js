@@ -184,7 +184,7 @@ $(document).ready(function () {
             state.children.push({
               id: d.IdDealer,
               text: capitalize(d.Dealer),
-              dealerCode: d.Code
+              dealerCode: d.Code,
             });
           });
 
@@ -313,7 +313,7 @@ function commitSalesforcePlan() {
     Marca: $("#vehicle option:selected").html(),
     Ballon: "text_ballon",
     Aseguradora: $("#distributor option:selected").html(),
-    CodigoDistribuidor: $("#distributor").select2('data')[0].dealerCode
+    CodigoDistribuidor: $("#distributor").select2("data")[0].dealerCode,
   };
 
   $.ajax({
@@ -323,6 +323,16 @@ function commitSalesforcePlan() {
     dataType: "json",
     success: function (result) {
       console.log(result);
+
+      $("#phone").val("");
+      $("#email").val("");
+      $("#name").val("");
+      $("#lastname").val("");
+      $("#distributor").val("0");
+      $("#distributor").trigger("change");
+      $("#vehicle").val("0");
+      $("#vehicle").trigger("change");
+      $("#plansTermsCheckbox").prop("checked", false);
 
       Toastnotify.create({
         text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
