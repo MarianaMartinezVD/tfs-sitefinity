@@ -294,3 +294,7 @@ $(document).ready(function () {
     $("#plan-form").submit();
   });
 });
+
+function planSubmitClick(){
+  $("#plan-form").submit();
+}
