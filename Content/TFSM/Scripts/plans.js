@@ -281,8 +281,8 @@ $(document).ready(function () {
       e.preventDefault();
       if ($("#plan-form").valid()) {
         if ($("#plansTermsCheckbox").prop("checked")) {
-          submitLead();
-          // alert("submit lead");
+          // submitLead();
+          commitSalesforcePlan();
         } else {
           termsCheckbox = "#plansTermsCheckbox";
           openModal("newsletterTermsModal");
@@ -302,7 +302,7 @@ function planSubmitClick() {
   $("#plan-form").submit();
 }
 
-function commitSalesforce() {
+function commitSalesforcePlan() {
   var data = {
     Plan: $("#planType").val(),
     Movil: form.Telefono,
