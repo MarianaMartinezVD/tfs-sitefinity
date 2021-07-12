@@ -119,7 +119,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: "post",
-      url: window.webkitConvertPointFromPageToNode.urlbase + "/submit-lead",
+      url: window.config.urlbase + "/submit-lead",
       processData: false,
       contentType: "application/json",
       datatype: "json",
