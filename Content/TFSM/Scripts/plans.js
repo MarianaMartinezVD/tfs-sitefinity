@@ -326,7 +326,7 @@ function commitSalesforcePlan() {
 
       Toastnotify.create({
         text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
-        duration: 5000,
+        duration: 10000,
       });
 
       $.ajax(window.location.origin + "/plan-submitted");
