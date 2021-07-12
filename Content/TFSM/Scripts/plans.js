@@ -96,14 +96,6 @@ $(document).ready(function () {
     minlength: jQuery.validator.format("Mínimo {0} caracteres."),
   });
 
-  // jQuery.validator.addMethod(
-  //   "selectRequired",
-  //   function (value, element) {
-  //     return [0, "0", "", "null", "undefined"].indexOf(String(value)) === -1;
-  //   },
-  //   "Este campo es obligatorio"
-  // );
-
   $.validator.addMethod(
     "valueNotEquals",
     function (value, element, arg) {
@@ -170,12 +162,6 @@ $(document).ready(function () {
     getCars();
   }
 
-  // $(".video-box").click(function () {
-  //   $(".video-box img").hide();
-  //   $("#plan-video").show();
-  //   $("#plan-video")[0].play();
-  // });
-
   $(".video-box").click(function () {
     $(".video-box img").addClass("d-none");
     $(".video-box figure").removeClass("d-none");
@@ -212,30 +198,6 @@ $(document).ready(function () {
       },
     });
   }
-
-  // function getCars() {
-  //   let _cars = [];
-  //   $.ajax({
-  //     type: "get",
-  //     url: "https://www.tfsmpct.com.mx/ServicioTFSM/api/tfsm/getcars",
-  //     datatype: "json",
-  //     success: function (data) {
-  //       data.results.forEach((x) => {
-  //         let car = {
-  //           id: x.Id,
-  //           text: capitalize(x.Auto),
-  //         };
-
-  //         _cars.push(car);
-  //       });
-
-  //       $("#vehicle").select2({
-  //         dropdownParent: $("#vehicle").parent(),
-  //         data: _cars,
-  //       });
-  //     },
-  //   });
-  // }
 
   function getCars() {
     let _cars = [];
@@ -326,5 +288,9 @@ $(document).ready(function () {
         console.log("formulario inválido");
       }
     });
+  });
+
+  $("#submit-plan").click(function () {
+    $("#plan-form").submit();
   });
 });
