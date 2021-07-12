@@ -305,12 +305,12 @@ function planSubmitClick() {
 function commitSalesforcePlan() {
   var data = {
     Plan: $("#planType").val(),
-    Movil: form.Telefono,
+    Movil: $("#phone").val(),
     Email: $("#email").val(),
     Nombre: $("#name").val(),
     Apellido: $("#lastname").val(),
     AceptoTerminosYCondiciones: "SiAcepto",
-    Marca: form.Marca,
+    Marca: $("#vehicle option:selected").html(),
     Ballon: "text_ballon",
     Aseguradora: $("#distributor option:selected").html(),
     CodigoDistribuidor: $("#distributor").select2('data')[0].dealerCode
