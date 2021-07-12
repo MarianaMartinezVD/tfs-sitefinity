@@ -146,7 +146,6 @@ $(document).ready(function () {
         });
 
         $.ajax(window.location.origin + "/plan-submitted");
-
       },
       failure: function (err) {
         alert("Error al crear el Lead :(");
@@ -185,6 +184,7 @@ $(document).ready(function () {
             state.children.push({
               id: d.IdDealer,
               text: capitalize(d.Dealer),
+              dealerCode: d.Code
             });
           });
 
@@ -206,7 +206,10 @@ $(document).ready(function () {
       url: window.location.origin + "/api/default/autos",
       datatype: "json",
       success: function (data) {
-        var _data = data.value.filter((value, index) => data.value.findIndex(x => x.Title === value.Title) === index);
+        var _data = data.value.filter(
+          (value, index) =>
+            data.value.findIndex((x) => x.Title === value.Title) === index
+        );
 
         _data.forEach((x) => {
           let car = {
@@ -295,6 +298,48 @@ $(document).ready(function () {
   });
 });
 
-function planSubmitClick(){
+function planSubmitClick() {
   $("#plan-form").submit();
+}
+
+function commitSalesforce() {
+  var data = {
+    Plan: $("#planType").val(),
+    Movil: form.Telefono,
+    Email: $("#email").val(),
+    Nombre: $("#name").val(),
+    Apellido: $("#lastname").val(),
+    AceptoTerminosYCondiciones: "SiAcepto",
+    Marca: form.Marca,
+    Ballon: "text_ballon",
+    Aseguradora: $("#distributor option:selected").html(),
+    CodigoDistribuidor: $("#distributor").select2('data')[0].dealerCode
+  };
+
+  $.ajax({
+    type: "POST",
+    url: window.config.urlbase + "/SalesForceCommitPlan",
+    data: data,
+    dataType: "json",
+    success: function (result) {
+      console.log(result);
+
+      Toastnotify.create({
+        text: "Gracias por registrarte, en breve uno de nuestros Asesores Digitales Toyota te contactará.",
+        duration: 5000,
+      });
+
+      $.ajax(window.location.origin + "/plan-submitted");
+    },
+    error: function (err) {
+      console.log(err);
+      Swal.fire({
+        title: "Error",
+        text: "Error al enviar información a Salesforce",
+        icon: "error",
+        confirmButtonColor: "#cc0000",
+        timer: 5000,
+      });
+    },
+  });
 }
