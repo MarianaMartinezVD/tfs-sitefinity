@@ -215,7 +215,7 @@ $(document).ready(async () => {
     },
 
     error: (err) => console.log(err),
-    url: "https://toyotafinancial--salt001.my.salesforce.com/services/apexrest/sitefinity",
+    url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
   };
 
   try {
