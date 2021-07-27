@@ -1491,6 +1491,9 @@ label.error {
   .w-lg-75 {
     width: 75% !important;
   }
+  .w-lg-fit{
+    width: fit-content !important;
+  }
 
   .text-lg-medium {
     font-size: 18px !important;
@@ -1514,6 +1517,9 @@ label.error {
   .w-md-75 {
     width: 75% !important;
   }
+  .w-md-fit{
+    width: fit-content !important;
+  }
 
   .text-md-medium {
     font-size: 18px !important;
@@ -1536,6 +1542,9 @@ label.error {
   }
   .w-sm-75 {
     width: 75% !important;
+  }
+  .w-md-fit{
+    width: fit-content !important;
   }
 
   .text-sm-medium {
@@ -1564,5 +1573,8 @@ label.error {
   }
   .w-xs-75 {
     width: 75% !important;
+  }
+  .w-xs-fit{
+    width: fit-content !important;
   }
 }
