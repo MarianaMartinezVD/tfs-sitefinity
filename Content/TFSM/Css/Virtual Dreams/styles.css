@@ -1077,7 +1077,7 @@ video.video-content {
   }
 
   .title-section{
-    max-width: unset;
+    max-width: unset !important;
   }
 
   .title-section .title,
@@ -1442,7 +1442,7 @@ label.error {
 }
 
 .title-section {
-  padding: 6% 7%;
+  padding: 4% 7%;
   max-width: 85%;
 }
 
