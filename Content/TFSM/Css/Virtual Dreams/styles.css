@@ -1095,8 +1095,8 @@ video.video-content {
 
   .title-section .text,
   .text-medium {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 16px !important;
+    line-height: 24px !important;
   }
 
   .text-normal {
