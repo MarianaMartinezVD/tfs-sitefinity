@@ -610,6 +610,7 @@ body p {
 .carousel-caption-mb {
   top: 25%;
   right: 65% !important;
+  left: 20% !important;
 }
 
 .main {
