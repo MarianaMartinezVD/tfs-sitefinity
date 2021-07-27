@@ -761,6 +761,7 @@ glyphicon-chevron-right:before {
   padding: 5%;
 }
 
+.content-section .title,
 .description .title {
   font-size: 36px;
   font-weight: 600;
