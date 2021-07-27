@@ -761,7 +761,7 @@ glyphicon-chevron-right:before {
   padding: 5%;
 }
 
-.content-section .title,
+.title-section .title,
 .description .title {
   font-size: 36px;
   font-weight: 600;
@@ -1076,6 +1076,11 @@ video.video-content {
     padding: 9% 3%;
   }
 
+  .title-section{
+    max-width: unset;
+  }
+
+  .title-section .title,
   .description .title {
     font-size: 24px;
     font-weight: 600;
@@ -1434,6 +1439,11 @@ label.error {
 
 .content-section {
   padding: 7% 0;
+}
+
+.title-section {
+  padding: 6% 7%;
+  max-width: 85%;
 }
 
 .background-white {
