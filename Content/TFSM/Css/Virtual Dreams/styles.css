@@ -1077,6 +1077,7 @@ video.video-content {
   }
 
   .title-section{
+    padding: 9% 7% !important;
     max-width: unset !important;
   }
 
