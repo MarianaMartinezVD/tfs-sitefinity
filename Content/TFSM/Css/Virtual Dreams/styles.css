@@ -1093,6 +1093,10 @@ video.video-content {
     max-width: unset !important;
   }
 
+  .title-section.no-padding{
+    padding: 0% 7% !important;
+  }
+
   .title-section .title,
   .description .title {
     font-size: 24px;
@@ -1458,6 +1462,10 @@ label.error {
 .title-section {
   padding: 4% 7%;
   max-width: 85%;
+}
+
+.title-section.no-padding{
+  padding: 0% 7%;
 }
 
 .title-section .text {
