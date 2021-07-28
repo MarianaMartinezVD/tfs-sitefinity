@@ -1094,7 +1094,7 @@ video.video-content {
   }
 
   .title-section.no-padding{
-    padding: 0% 7% !important;
+    padding: 0 !important;
   }
 
   .title-section .title,
@@ -1465,7 +1465,7 @@ label.error {
 }
 
 .title-section.no-padding{
-  padding: 0% 7%;
+  padding: 0 !important;
 }
 
 .title-section .text {
