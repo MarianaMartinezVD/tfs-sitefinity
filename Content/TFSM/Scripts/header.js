@@ -50,6 +50,15 @@ $(document).ready(function () {
     "Ingrese un código postal válido"
   );
 
+  jQuery.validator.addMethod(
+    "isValidName",
+    function (value, element) {
+      let regex = new RegExp(/^([a-zA-ZÀ-ÿ\u00f1\u00d1]+\.?\s)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+\.?$/);
+      return regex.test(value);
+    },
+    "Formato inválido"
+  );
+
   $("#link-finan").click(function (e) {
     let session = sessionStorage.getItem("isLogged");
     if (session === "true") {
