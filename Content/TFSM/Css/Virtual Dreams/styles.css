@@ -465,7 +465,8 @@ body p {
   justify-content: center;
 }
 
-#newsletterTermsModal {
+#newsletterTermsModal,
+.modal-big {
   display: block;
   width: 620px;
   height: 500px;
@@ -1139,6 +1140,7 @@ video.video-content {
   }
 
   #newsletterTermsModal,
+  .modal-big,
   .siteModal {
     width: 100vw;
     left: 0;
