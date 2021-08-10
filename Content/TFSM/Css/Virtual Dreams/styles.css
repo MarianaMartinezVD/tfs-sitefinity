@@ -466,7 +466,7 @@ body p {
 }
 
 #newsletterTermsModal,
-.modal-big {
+.modal-auto {
   display: block;
   width: 620px;
   height: 500px;
@@ -474,6 +474,10 @@ body p {
   top: calc(50% - 200px);
   left: calc(50% - 310px);
   z-index: 14;
+}
+
+.modal-auto{
+  height: auto !important;
 }
 
 .siteModal {
@@ -1140,7 +1144,7 @@ video.video-content {
   }
 
   #newsletterTermsModal,
-  .modal-big,
+  .modal-auto,
   .siteModal {
     width: 100vw;
     left: 0;
