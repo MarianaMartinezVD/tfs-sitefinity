@@ -65,9 +65,10 @@ $(document).ready(function () {
     "confirmPassword",
     function (value, element, params) {
       console.log(params, element.value, $(`#${params}`).val());
-      return true;
+      
+      return element.value != $(`#${params}`).val();
     },
-    "Formato inválido"
+    "Las contraseñas no coinciden"
   );
 
   $("#link-finan").click(function (e) {
