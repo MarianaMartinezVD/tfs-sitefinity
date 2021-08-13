@@ -64,7 +64,7 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "confirmPassword",
     function (value, element, params) {
-      console.log(params);
+      console.log(params, element.value, $(`#${params}`).val());
       return true;
     },
     "Formato inválido"
