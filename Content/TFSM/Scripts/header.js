@@ -66,7 +66,7 @@ $(document).ready(function () {
     function (value, element, params) {
       console.log(params, value, $(`#${params}`).val());
       
-      return value != $(`#${params}`).val();
+      return value === $(`#${params}`).val();
     },
     "Las contraseñas no coinciden"
   );
