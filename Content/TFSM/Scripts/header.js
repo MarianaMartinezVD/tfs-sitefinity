@@ -61,6 +61,15 @@ $(document).ready(function () {
     "Formato inválido"
   );
 
+  jQuery.validator.addMethod(
+    "confirmPassword",
+    function (value, element, params) {
+      console.log(params);
+      return true;
+    },
+    "Formato inválido"
+  );
+
   $("#link-finan").click(function (e) {
     let session = sessionStorage.getItem("isLogged");
     if (session === "true") {
