@@ -64,8 +64,6 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "confirmPassword",
     function (value, element, params) {
-      console.log(params, value, $(`#${params}`).val());
-      
       return value === $(`#${params}`).val();
     },
     "Las contraseñas no coinciden"
