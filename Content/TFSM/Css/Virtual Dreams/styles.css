@@ -198,7 +198,7 @@ body p {
   width: 100vw;
   height: calc(100vh - 63px);
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
