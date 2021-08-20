@@ -8,7 +8,6 @@ function capitalize(str) {
 }
 
 $(document).ready(function () {
-
   $("a.url-mytfsm").attr("href", window.config.urlMyTfsm);
 
   jQuery.extend(jQuery.validator.messages, {
@@ -55,7 +54,9 @@ $(document).ready(function () {
   jQuery.validator.addMethod(
     "isValidName",
     function (value, element) {
-      let regex = new RegExp(/^([a-zA-ZÀ-ÿ\u00f1\u00d1]+\.?\s)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+\.?$/);
+      let regex = new RegExp(
+        /^([a-zA-ZÀ-ÿ\u00f1\u00d1]+\.?\s)*[a-zA-ZÀ-ÿ\u00f1\u00d1]+\.?$/
+      );
       return regex.test(value);
     },
     "Formato inválido"
@@ -221,10 +222,7 @@ $(document).ready(function () {
         window.open("https://www.facebook.com/TFSMexico/", "_blank");
         break;
       case "linkedin":
-        window.open(
-          "https://www.linkedin.com/company/toyota-financial-services-mx/",
-          "_blank"
-        );
+        window.open("https://www.linkedin.com/company/tfsm/", "_blank");
         break;
       case "youtube":
         window.open(
@@ -362,7 +360,7 @@ function commitNewsletter(email) {
     url: window.config.urlbase + "/SalesforceNewsletter",
     method: "POST",
     beforeSend: showLoader,
-    complete: function(){
+    complete: function () {
       $("#nl-email").val("");
       $("#termsCheckbox").prop("checked", false);
       hideLoader();
@@ -387,11 +385,12 @@ function commitNewsletter(email) {
   });
 }
 
-function validateCaptcha(){
-  grecaptcha.ready(function() {
-    grecaptcha.execute(window.config.reCaptchaSiteKey, {action: 'submit'}).then(function(token) {
+function validateCaptcha() {
+  grecaptcha.ready(function () {
+    grecaptcha
+      .execute(window.config.reCaptchaSiteKey, { action: "submit" })
+      .then(function (token) {
         // Add your logic to submit to your backend server here.
-        
-    });
+      });
   });
 }
