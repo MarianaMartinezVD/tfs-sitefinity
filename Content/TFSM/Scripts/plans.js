@@ -268,6 +268,11 @@ $(document).ready(function () {
           required: true,
           isEmail: true,
         },
+        phone: {
+          required: true,
+          minlength: 10,
+          maxlength: 10
+        },
         vehicle: {
           selectRequired: true,
         },
