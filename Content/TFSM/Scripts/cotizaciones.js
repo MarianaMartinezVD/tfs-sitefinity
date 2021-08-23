@@ -1,16 +1,16 @@
 var eliminarCotizacionModal = "eliminarCotizacionModal";
 
-  function capitalize(str) {
-    return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
-      return letter.toUpperCase();
-    });
-  }
+function capitalize(str) {
+  return str.toLowerCase().replace(/\b[a-z]/g, function (letter) {
+    return letter.toUpperCase();
+  });
+}
 
 $(document).ready(() => {
-  // Se obtienen los valores de los parámetros email y token que llegan en la url para hacer el request. 
+  // Se obtienen los valores de los parámetros email y token que llegan en la url para hacer el request.
   var url_string = window.location.href;
   var url = new URL(url_string);
-  // Se almacenan en Session Storage. 
+  // Se almacenan en Session Storage.
   var _paramEmail = sessionStorage.getItem("email");
   var _paramToken = sessionStorage.getItem("token");
 
@@ -35,37 +35,39 @@ $(document).ready(() => {
       //Sección de Bienvenida Home Delivery
       var bannerBienvenida = "";
       var nombre = data.esCliente[0].nombre,
-          apellido = data.esCliente[0].apellido,
-          isClient = data.esCliente[0].esCliente;
+        apellido = data.esCliente[0].apellido,
+        isClient = data.esCliente[0].esCliente;
       sessionStorage.setItem("name", capitalize(nombre));
       sessionStorage.setItem("lastname", capitalize(apellido));
       sessionStorage.setItem("isClient", isClient);
       $(".user-name").html(capitalize(nombre));
       $("#link-portal").css("display", isClient ? "block" : "none");
 
-      // Hola 
-      // Nos da mucho gusto que quieras ser parte de la familia Toyota. 
-      bannerBienvenida += '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
-      '<h1 class="cotizaciones-title">Hola ' + capitalize(nombre) +
-      "<br />Nos da mucho gusto que quieras ser parte de la familia Toyota." +
-      '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
-      "En él podrás iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
-      '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
-      '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
-      '</div><div class="col-md-1"></div>';
+      // Hola
+      // Nos da mucho gusto que quieras ser parte de la familia Toyota.
+      bannerBienvenida +=
+        '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
+        '<h1 class="cotizaciones-title">Hola ' +
+        capitalize(nombre) +
+        "<br />Nos da mucho gusto que quieras ser parte de la familia Toyota." +
+        '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
+        "En él podrás iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
+        '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
+        '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
+        '</div><div class="col-md-1"></div>';
 
       $("#bannerBienvenida").append(bannerBienvenida);
 
       // Tablero Iniciar Cotización y Estatus de Procesos
       var dashboard = "";
       var sin_procesos_msj = "";
-      dashboard += '<div class="mt-5"><div class="col-md-6 p-5 cotizaciones-card">' +
-      '<h3 class="cotizaciones-card-title">¡Hoy es el mejor día para iniciar ' +
-      'tu proceso de crédito para Estrenar un Toyota!</h3><a href="/cotizador" class="btn cotizacion-btn mt-5">' +
-      'iniciar cotización</a></div><div class="col-md-6 p-5 cotizaciones-card">' +
-      '<h3 class="cotizaciones-card-title">Estatus de tu proceso de crédito</h3>' +
-      '<div id="dashboard-msj"></div>';
-      
+      dashboard +=
+        '<div class="mt-5"><div class="col-md-6 p-5 cotizaciones-card">' +
+        '<h3 class="cotizaciones-card-title">El mejor plan es estrenar un Toyota</h3><a href="/cotizador" class="btn cotizacion-btn mt-5">' +
+        'iniciar cotización</a></div><div class="col-md-6 p-5 cotizaciones-card">' +
+        '<h3 class="cotizaciones-card-title">Estatus de tu proceso de crédito</h3>' +
+        '<div id="dashboard-msj"></div>';
+
       $("#dashboard").append(dashboard);
 
       var noCotizacionesHTML = "";
@@ -73,8 +75,8 @@ $(document).ready(() => {
       var tableCotizacionesHTML = "";
       var closeTableCotizacionesHTML = "";
       var tableCotizacionesMobileHTML = "";
-      
-      // Sin cotizaciones. 
+
+      // Sin cotizaciones.
       noCotizacionesHTML +=
         '<div class="col-md-12 cotizaciones-row p-5 mt-5">' +
         '<h3 class="cotizaciones-card-title">Cotizaciones realizadas</h3>' +
@@ -86,9 +88,7 @@ $(document).ready(() => {
 
       if (data.cotizaciones.length <= 0) {
         $("#cotizaciones").append(noCotizacionesHTML);
-      } 
-      
-      else {
+      } else {
         //CREACIÓN DE LA TABLA DE COTIZACIONES
         tableCotizacionesHTML +=
           '<div class="col-md-12 cotizaciones-row p-5 mt-2 mb-3">' +
@@ -108,51 +108,63 @@ $(document).ready(() => {
             cotizacion.fecha +
             "</td><td>" +
             cotizacion.modelo +
-            '</td><td><a class="' + cotizacion.clickeable + '" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
+            '</td><td><a class="' +
+            cotizacion.clickeable +
+            '" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
             cotizacion.id +
             '">' +
             cotizacion.etapa +
             "</div></td>" +
-            '<td><img onclick="openModal(eliminarCotizacionModal)" data-lead="' + cotizacion.id + 
+            '<td><img onclick="openModal(eliminarCotizacionModal)" data-lead="' +
+            cotizacion.id +
             '" class="eliminarCotizacion" src="/images/default-source/tfsm/my-tfsm/fi_x" style="cursor:pointer;" />' +
             "</td></tr>";
         });
 
-        closeTableCotizacionesHTML += "</tbody></table></div>"; 
+        closeTableCotizacionesHTML += "</tbody></table></div>";
 
-        /*Mobile*/ 
+        /*Mobile*/
         $.each(data.cotizaciones, function (c, cotizacion) {
-          tableCotizacionesMobileHTML +=  
-          '<div class="container d-block d-md-none">' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left"></span>' + 
-            '<span class="float-right">' + 
-            '<img onclick="openModal(eliminarCotizacionModal)" data-lead="' + cotizacion.id + 
-            '" class="eliminarCotizacion" src="/images/default-source/tfsm/my-tfsm/fi_x" style="cursor:pointer;" />' + 
-            '</span></div>' + 
-            '</div>' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Vehículo</span>' + 
-            '<span class="float-right">' + cotizacion.vehiculo + '</span></div>' + 
-            '</div>' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Versión</span>' + 
-            '<span class="float-right">' + cotizacion.version + '</span></div>' + 
-            '</div>' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Fecha de cotización</span>' + 
-            '<span class="float-right">' + cotizacion.fecha + '</span></div>' + 
-            '</div>' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Modelo</span>' + 
-            '<span class="float-right">' + cotizacion.modelo + '</span></div>' + 
-            '</div>' + 
-            '<div class="row">' + 
-            '<div class="col-sm-12 mb-table-title mb-table-link text-center">' + 
-            cotizacion.etapa + 
-            '</div>' + 
-            '</div>' + 
-            '</div>'; 
+          tableCotizacionesMobileHTML +=
+            '<div class="container d-block d-md-none">' +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left"></span>' +
+            '<span class="float-right">' +
+            '<img onclick="openModal(eliminarCotizacionModal)" data-lead="' +
+            cotizacion.id +
+            '" class="eliminarCotizacion" src="/images/default-source/tfsm/my-tfsm/fi_x" style="cursor:pointer;" />' +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Vehículo</span>' +
+            '<span class="float-right">' +
+            cotizacion.vehiculo +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Versión</span>' +
+            '<span class="float-right">' +
+            cotizacion.version +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Fecha de cotización</span>' +
+            '<span class="float-right">' +
+            cotizacion.fecha +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Modelo</span>' +
+            '<span class="float-right">' +
+            cotizacion.modelo +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row">' +
+            '<div class="col-sm-12 mb-table-title mb-table-link text-center">' +
+            cotizacion.etapa +
+            "</div>" +
+            "</div>" +
+            "</div>";
         });
 
         $("#cotizaciones").append(tableCotizacionesHTML);
@@ -162,7 +174,7 @@ $(document).ready(() => {
       }
 
       //
-      $(".eliminarCotizacion").click(function () { 
+      $(".eliminarCotizacion").click(function () {
         sessionStorage.setItem("leadId", this.dataset.lead);
       });
 
@@ -172,7 +184,7 @@ $(document).ready(() => {
       var trProcesosHTML = "";
       var tableProcesosHTML = "";
       var closeTableProcesosHTML = "";
-      var tableProcesosMobileHTML = ""; 
+      var tableProcesosMobileHTML = "";
       var solicitud_read_only = "";
       noProcesosHTML +=
         '<div class="col-md-12 cotizaciones-row p-5 my-5">' +
@@ -196,13 +208,13 @@ $(document).ready(() => {
       } else {
         //CREACIÓN DE LA TABLA PROCESOS DE CRÉDITO ACTIVOS.
         tableProcesosHTML +=
-        '<div class="col-md-12 cotizaciones-row p-5 my-2">' +
-        '<h3 class="cotizaciones-card-title">Procesos de crédito activos</h3><div id="mis-procesos"></div>' +
-        '<table id="procesos_table" class="table cotizaciones-table mt-5 d-none d-md-table" id="con-cotizaciones mt-5"><thead>' +
-        '<tr><th scope="col">Vehículo</th>' +
-        '<th scope="col">Versión</th>' +
-        '<th scope="col">Modelo</th><th scope="col">Distribuidor</th>' +
-        '<th scope="col"></th></tr></thead><tbody>';
+          '<div class="col-md-12 cotizaciones-row p-5 my-2">' +
+          '<h3 class="cotizaciones-card-title">Procesos de crédito activos</h3><div id="mis-procesos"></div>' +
+          '<table id="procesos_table" class="table cotizaciones-table mt-5 d-none d-md-table" id="con-cotizaciones mt-5"><thead>' +
+          '<tr><th scope="col">Vehículo</th>' +
+          '<th scope="col">Versión</th>' +
+          '<th scope="col">Modelo</th><th scope="col">Distribuidor</th>' +
+          '<th scope="col"></th></tr></thead><tbody>';
 
         $.each(data.solicitudes, function (s, solicitud) {
           trProcesosHTML +=
@@ -219,34 +231,43 @@ $(document).ready(() => {
             "</td></tr>";
         });
 
-        closeTableProcesosHTML += "</tbody></table></div></div><div id='solicitud-readonly'></div>";
+        closeTableProcesosHTML +=
+          "</tbody></table></div></div><div id='solicitud-readonly'></div>";
 
         //MOBILE
         $.each(data.solicitudes, function (s, solicitud) {
-        tableProcesosMobileHTML +=  
-          '<div class="container d-block d-md-none">' +  
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Vehículo</span>' + 
-            '<span class="float-right">' + solicitud.vehiculo + '</span></div>' + 
-            '</div>' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Versión</span>' + 
-            '<span class="float-right">' + solicitud.version + '</span></div>' + 
-            '</div>' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Modelo</span>' + 
-            '<span class="float-right">' + solicitud.modelo + '</span></div>' + 
-            '</div>' + 
-            '<div class="row tfs-fila">' + 
-            '<div class="col-sm-12"><span class="mb-table-title float-left">Distribuidor</span>' + 
-            '<span class="float-right">' + solicitud.distribuidor + '</span></div>' + 
-            '</div>' + 
-            '<div class="row">' + 
-            '<div class="col-sm-12 mb-table-title mb-table-link text-center">' + 
-            solicitud.etapa + 
-            '</div>' + 
-            '</div>' + 
-            '</div>'; 
+          tableProcesosMobileHTML +=
+            '<div class="container d-block d-md-none">' +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Vehículo</span>' +
+            '<span class="float-right">' +
+            solicitud.vehiculo +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Versión</span>' +
+            '<span class="float-right">' +
+            solicitud.version +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Modelo</span>' +
+            '<span class="float-right">' +
+            solicitud.modelo +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row tfs-fila">' +
+            '<div class="col-sm-12"><span class="mb-table-title float-left">Distribuidor</span>' +
+            '<span class="float-right">' +
+            solicitud.distribuidor +
+            "</span></div>" +
+            "</div>" +
+            '<div class="row">' +
+            '<div class="col-sm-12 mb-table-title mb-table-link text-center">' +
+            solicitud.etapa +
+            "</div>" +
+            "</div>" +
+            "</div>";
         });
 
         $("#procesos").append(tableProcesosHTML);
@@ -255,15 +276,16 @@ $(document).ready(() => {
         $("#mis-procesos").append(tableProcesosMobileHTML);
 
         //ESTATUS DE PROCESO DE CRÉDITO (último realizado)
-        
+
         // "Tienes un proceso de crédito activo. Podrás iniciar otro proceso hasta concluirlo."
-        solicitud_read_only += '<div class="row mt-5 mx-1">' +
-          '<img class="img-fluid" src="/images/default-source/tfsm/my-tfsm/proceso-activo.png" />' + 
-          '<span class="ml-3 sin-procesos text-center">Tienes un proceso de crédito activo. Podrás iniciar otro proceso hasta concluirlo.' + 
-          '</span></div>';
+        solicitud_read_only +=
+          '<div class="row mt-5 mx-1">' +
+          '<img class="img-fluid" src="/images/default-source/tfsm/my-tfsm/proceso-activo.png" />' +
+          '<span class="ml-3 sin-procesos text-center">Tienes un proceso de crédito activo. Podrás iniciar otro proceso hasta concluirlo.' +
+          "</span></div>";
 
         switch (data.solicitudes[data.solicitudes.length - 1].etapa) {
-          case "Completar solicitud":
+          case "Solicitud incompleta":
             //document.getElementById("recibida").classList.add("active-red");
             //Mensaje de proceso activo:
 
@@ -281,9 +303,10 @@ $(document).ready(() => {
               data.solicitudes[data.solicitudes.length - 1].parentId +
               "&token=" +
               url.searchParams.get("token") +
-              '">aquí</a> para verla.</p></div></div></div>';
-            
+              '">aquí</a> para completarla y dar un paso más para estrenar el Toyota de tus sueños.p></div></div></div>';
+
             $("#dashboard-msj").append(con_proceso_msj);
+            $(".eliminarCotizacion").css("display", "none");
             //Inserta el msje de validación
             //$("#solicitud-readonly").append(solicitud_read_only);
             break;
@@ -312,23 +335,23 @@ $(document).ready(() => {
   });
 
   //Elimina cotizaciones.
-  $( "#cotizacionModalDelete" ).click(function() {
-  
+  $("#cotizacionModalDelete").click(function () {
     var _paramLeadId = sessionStorage.getItem("leadId");
     var _paramTokenForLead = sessionStorage.getItem("token");
     let _dataForLead = {
-    leadId: _paramLeadId,
-  	};
-  
+      leadId: _paramLeadId,
+    };
+
     let _myHeaderForLead = {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "application/json",
       Authorization: "Bearer " + _paramTokenForLead,
       "Access-Control-Allow-Credentials": true,
     };
-  
+
     const settingsForLead = {
-      url: window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
+      url:
+        window.config.urlToyotaCotizaciones + "/services/apexrest/sitefinity",
       method: "PUT",
       headers: _myHeaderForLead,
       data: JSON.stringify(_dataForLead),
@@ -336,19 +359,17 @@ $(document).ready(() => {
         console.log(data);
         console.log(_dataForLead);
         window.location.reload();
-      }, error: (data) => { 
+      },
+      error: (data) => {
         console.log(data);
-      } 
-    }
-    
-
+      },
+    };
 
     try {
       $.ajax(settingsForLead);
     } catch (e) {
       console.log(e);
       return e;
-      }
+    }
   });
-
 });
