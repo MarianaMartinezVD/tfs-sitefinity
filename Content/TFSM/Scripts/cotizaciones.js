@@ -285,7 +285,7 @@ $(document).ready(() => {
           "</span></div>";
 
         switch (data.solicitudes[data.solicitudes.length - 1].etapa) {
-          case "Solicitud incompleta":
+          case "Solicitud Incompleta":
             //document.getElementById("recibida").classList.add("active-red");
             //Mensaje de proceso activo:
 
