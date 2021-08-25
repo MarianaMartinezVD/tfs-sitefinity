@@ -113,15 +113,17 @@ $(document).ready(() => {
             '" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
             cotizacion.id +
             '">' +
-            cotizacion.etapa;
+            cotizacion.etapa +
+            "</div></td>";
 
-          if (cotizacion.etapa != "Solicitud en proceso") {
+          if (cotizacion.etapa !== "Solicitud en proceso") {
             trCotizacionesHTML +=
-              "</div></td>" +
               '<td><img onclick="openModal(eliminarCotizacionModal)" data-lead="' +
               cotizacion.id +
               '" class="eliminarCotizacion" src="/images/default-source/tfsm/my-tfsm/fi_x" style="cursor:pointer;" />' +
               "</td></tr>";
+          } else {
+            trCotizacionesHTML += "</tr>";
           }
         });
 
@@ -307,7 +309,7 @@ $(document).ready(() => {
               data.solicitudes[data.solicitudes.length - 1].parentId +
               "&token=" +
               url.searchParams.get("token") +
-              '">aquí</a> para completarla y dar un paso más para estrenar el Toyota de tus sueños.p></div></div></div>';
+              '">aquí</a> para completarla y dar un paso más para estrenar el Toyota de tus sueños.</p></div></div></div>';
 
             $("#dashboard-msj").append(con_proceso_msj);
             //Inserta el msje de validación
