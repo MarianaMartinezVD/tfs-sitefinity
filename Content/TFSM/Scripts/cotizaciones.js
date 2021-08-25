@@ -123,7 +123,7 @@ $(document).ready(() => {
               '" class="eliminarCotizacion" src="/images/default-source/tfsm/my-tfsm/fi_x" style="cursor:pointer;" />' +
               "</td></tr>";
           } else {
-            trCotizacionesHTML += "</tr>";
+            trCotizacionesHTML += "<td></td></tr>";
           }
         });
 
