@@ -302,7 +302,7 @@ $(document).ready(() => {
                               data.solicitudes[data.solicitudes.length - 1].parentId + '&token=' + url.searchParams.get("token") + '">aquí</a> para verla.</p></div></div></div>'; */
 
             con_proceso_msj +=
-              '<div class="row mt-5 mx-1">' +
+              '<div class="d-flex mt-5 mx-1">' +
               '<img class="img-pesos" src="/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="w-80 sin-procesos text-center">' +
               data.solicitudes[data.solicitudes.length - 1].etapa +
               '. Ingresa <a class="proceso-activo-a" href="/tfsm/my-tfsm/solicitud-digital?lead=' +
