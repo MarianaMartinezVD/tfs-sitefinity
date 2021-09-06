@@ -45,17 +45,30 @@ $(document).ready(() => {
 
       // Hola
       // Nos da mucho gusto que quieras ser parte de la familia Toyota.
-      bannerBienvenida +=
-        '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
-        '<h1 class="cotizaciones-title">Hola ' +
-        capitalize(nombre) +
-        "<br />Nos da mucho gusto que quieras ser parte de la familia Toyota." +
-        '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
-        "En él podrás iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
-        '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
-        '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
-        '</div><div class="col-md-1"></div>';
 
+      if (sessionStorage.getItem("isClient")) {
+        bannerBienvenida +=
+          '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
+          '<h1 class="cotizaciones-title">Hola ' +
+          capitalize(nombre) +
+          "<br />Nos da mucho gusto que sigas siendo parte de la familia Toyota." +
+          '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
+          "En él podrás iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
+          '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
+          '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
+          '</div><div class="col-md-1"></div>';
+      } else {
+        bannerBienvenida +=
+          '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
+          '<h1 class="cotizaciones-title">Hola ' +
+          capitalize(nombre) +
+          "<br />Nos da mucho gusto que quieras ser parte de la familia Toyota." +
+          '</h1><p class="cotizaciones-p">Te presentamos tu tablero Home Delivery. ' +
+          "En él podrás iniciar y darle seguimiento a tu proceso de financiamiento.</p></div>" +
+          '<div class="col-md-3 mt-5 col d-flex align-items-center justify-content-center">' +
+          '<img src="/images/default-source/tfsm/my-tfsm/logo-home-delivery-lg.png?Status=Master&sfvrsn=bebd466a_3/Logo-home-delivery-lg" class="img-fluid" />' +
+          '</div><div class="col-md-1"></div>';
+      }
       $("#bannerBienvenida").append(bannerBienvenida);
 
       // Tablero Iniciar Cotización y Estatus de Procesos
