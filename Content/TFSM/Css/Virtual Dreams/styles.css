@@ -636,6 +636,10 @@ body p {
   margin-top: 2.5%;
 }
 
+.border-radius-custom{
+  border-radius: 12px;
+}
+
 .custom-card {
   overflow: hidden;
   border-radius: 1.2rem;
