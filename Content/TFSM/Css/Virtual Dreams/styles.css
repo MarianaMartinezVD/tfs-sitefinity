@@ -637,7 +637,7 @@ body p {
 }
 
 .rounded-custom,
-.rounded-custom-child{
+.rounded-custom-child>*{
   border-radius: 12px;
   overflow: hidden;
 }
