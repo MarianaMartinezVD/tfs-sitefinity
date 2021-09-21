@@ -259,10 +259,14 @@ $(document).ready(function () {
     plan_validator = $("#plan-form").validate({
       rules: {
         name: {
-          required: true,
+              required: true,
+              isValidName: true,
+              minlength: 2
         },
         lastname: {
-          required: true,
+            required: true,
+            isValidName: true,
+            minlength: 2
         },
         email: {
           required: true,
