@@ -198,7 +198,7 @@ body p {
   width: 100vw;
   height: calc(100vh - 63px);
   background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
+  position: fixed !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -636,7 +636,14 @@ body p {
   margin-top: 2.5%;
 }
 
+.rounded-custom,
+.rounded-custom-child>*{
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .custom-card {
+  overflow: hidden;
   border-radius: 1.2rem;
   background-color: #fff;
   border: #fff;
