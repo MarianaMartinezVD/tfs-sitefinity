@@ -46,7 +46,7 @@ $(document).ready(() => {
       // Hola
       // Nos da mucho gusto que quieras ser parte de la familia Toyota.
 
-      if (sessionStorage.getItem("isClient")) {
+      if (sessionStorage.getItem("isClient") === "true") {
         bannerBienvenida +=
           '<div class="col-md-1"></div><div class="col-md-7 mt-5">' +
           '<h1 class="cotizaciones-title">Hola ' +
