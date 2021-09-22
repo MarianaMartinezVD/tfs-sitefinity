@@ -331,7 +331,7 @@ $(document).ready(() => {
           case "Enviada":
             con_proceso_msj +=
               '<div class="d-flex mt-5 mx-1">' +
-              '<img class="img-pesos" src="/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="w-80 sin-procesos">Solicitud Enviada</p></div> '
+              '<img class="img-pesos" src="/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="w-80 sin-procesos ml-3">Solicitud Enviada</p></div> '
             $("#dashboard-msj").append(con_proceso_msj);
             break;
         }
