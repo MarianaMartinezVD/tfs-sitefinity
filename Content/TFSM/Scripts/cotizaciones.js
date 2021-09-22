@@ -329,9 +329,10 @@ $(document).ready(() => {
             //$("#solicitud-readonly").append(solicitud_read_only);
             break;
           case "Enviada":
-            //document.getElementById("recibida").classList.add("active-red");
-            //document.getElementById("condicionada").classList.add("active-red");
-            //document.getElementById("aprobada").classList.add("active-red");
+            con_proceso_msj +=
+              '<div class="d-flex mt-5 mx-1">' +
+              '<img class="img-pesos" src="/images/default-source/tfsm/my-tfsm/sin-procesos-activos" /><p class="w-80 sin-procesos ml-3">Solicitud Enviada</p></div> '
+            $("#dashboard-msj").append(con_proceso_msj);
             break;
         }
       }
